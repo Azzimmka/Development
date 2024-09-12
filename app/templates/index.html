@@ -1,0 +1,938 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="banner-section">
+    <div class="main-slider-carousel owl-carousel owl-theme">
+
+
+        <div class="slide" style="background-image: url('{% static "images/imorat/bgrasm.jpg" %}'); background-position:center;">
+
+        
+            <div class="auto-container" >
+
+                <!-- Content Boxed -->
+                <div class="content-boxed">
+                    <div class="inner-boxed" >
+                        <div class="title"></div>
+                        <h1>Imorat <br> Development <span><i>Since</i> 2019</span></h1>
+                        <p>Biz murakkablikdan voz kechdik <br> </p>
+                        <div class="btn-box">
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('{% static 'images/imorat/bgimgasd.png' %}'); ">
+            <div class="auto-container">
+
+                <!-- Content Boxed -->
+                <div class="content-boxed">
+                    <div class="inner-boxed">
+                        <div class="title"></div>
+                        <h1>Imorat <br> Development <span><i>Since</i> 2019</span></h1>
+                        <p>Biz murakkablikdan voz kechdik<br></p>
+                        <div class="btn-box">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('{% static "images/imorat/IMG_1836.JPG" %}'); background-position:center; background-repeat:no-repeat; background-size:cover;">
+            <div class="auto-container">
+
+                <!-- Content Boxed -->
+                <div class="content-boxed">
+                    <div class="inner-boxed">
+                        <div class="title"></div>
+                        <h1>Imorat <br> Development <span><i>Sice</i> 2019</span></h1>
+                        <p>Biz murakkablikdan voz kechdik <br> </p>
+                        <div class="btn-box">
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Scroll Dwwn Btn-->
+    <div class="mouse-btn-down scroll-to-target" data-target=".experiance-section">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+    </div>
+
+    <!-- Social Box -->
+    <ul class="social-box">
+        <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-instagram"></a></li>
+        <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-facebook"></a></li>
+        <li><a href="https://t.me/freedom_architecture" class="fab fa-telegram"></a></li>
+    </ul>
+
+    <!-- Info -->
+    <div class="info"><a href="tel:+998-33-055-10-00">(+998) 33 055-10-00</a> / <a
+            href="tel:imoratdevelopment@gmail.com">imoratdevelopment@gmail.com</a>
+    </div>
+
+</section>
+
+<section id="news" class="news-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Yangiliklar</h2>
+            <p>So'nggi yangiliklar va yangilanishlar</p>
+        </div>
+        <div class="news-grid">
+            <article class="news-item">
+                <div class="news-image">
+                    <img src="{% static 'images/imorat/news-1.jpg' %}" alt="Yangilik 1">
+                </div>
+                <div class="news-content">
+                    <h3 class="news-title">Yangilik sarlavhasi 1</h3>
+                    <p class="news-description">Yangilik haqida qisqacha ma'lumot. Bu yerda yangilikning qisqacha tavsifi bo'ladi.</p>
+                    <a href="#" class="read-more">Batafsil o'qish</a>
+                </div>
+            </article>
+            <article class="news-item">
+                <div class="news-image">
+                    <img src="{% static 'images/imorat/news-2.jpg' %}" alt="Yangilik 2">
+                </div>
+                <div class="news-content">
+                    <h3 class="news-title">Yangilik sarlavhasi 2</h3>
+                    <p class="news-description">Yangilik haqida qisqacha ma'lumot. Bu yerda yangilikning qisqacha tavsifi bo'ladi.</p>
+                    <a href="#" class="read-more">Batafsil o'qish</a>
+                </div>
+            </article>
+            <article class="news-item">
+                <div class="news-image">
+                    <img src="{% static 'images/imorat/news-2.jpg' %}" alt="Yangilik 2">
+                </div>
+                <div class="news-content">
+                    <h3 class="news-title">Yangilik sarlavhasi 3</h3>
+                    <p class="news-description">Yangilik haqida qisqacha ma'lumot. Bu yerda yangilikning qisqacha tavsifi bo'ladi.</p>
+                    <a href="#" class="read-more">Batafsil o'qish</a>
+                </div>
+            </article>
+
+            
+            <!-- Qo'shimcha yangiliklar qo'shishingiz mumkin -->
+        </div>
+    </div>
+</section>
+
+<style>
+    .news-section {
+        padding: 60px 0;
+        background-color: #f4f4f4;
+    }
+    
+    .news-section .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .news-section .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .news-section .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .news-section .section-header p {
+        font-size: 1.2rem;
+        color: #666;
+    }
+    
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    
+    .news-item {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .news-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .news-item .news-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .news-item .news-content {
+        padding: 20px;
+    }
+    
+    .news-item .news-title {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .news-item .news-description {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 15px;
+    }
+    
+    .news-item .read-more {
+        font-size: 1rem;
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .news-item .read-more:hover {
+        text-decoration: underline;
+    }
+    
+</style>
+
+
+<section class="experiance-section" id="section_1">
+    <div class="auto-container">
+        <div class="row clearfix" >
+
+            <!-- Title Column -->
+            <div class="title-column col-lg-5 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="image">
+                        <img src="{% static 'images/imorat/Untitled-1.png' %}" alt="" / id="lg1">
+                    </div>
+                    <h2> +10 yil tajriba<br>  </h2>
+                    <div class="text">Yuqori tajribaga ega arxitektor <br> va injener-konstruktorlar</div>
+                </div>
+                
+                
+                
+            </div>
+
+            <!-- Content Column -->
+            <div class="content-column col-lg-7 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="title-box">
+                        <h2>Imorat Development</h2>
+                        <p>  2019 yilda Buxoroda tashkil topib "Freedom Investment MCHJ"  "Imorat Development" arxitektura kompaniyasi qisqa vaqt ichida O'zbekistonda xususan Buxoro va Toshkentda murakkab,premium qurilish loyihalari,katta davlat buyurtmalari hamda madniy meros obyektlari restavratsiyasida yuqori ko'rsatkichlarga erishdi. <br> 
+                            </p>
+                        <p>Biz III - darajali murakkablikdagi qurilish obyektlari,premium ko'p qavatli uylar,restoranlar, 4-5 yulduzli mehmonxonalar eksteryeri va interyeri,landshaft dizayni,massivlar va kichik shaharchalar bosh rejalarini yaratishga 
+                        shuningdek qadimiy obidalar restavratsiyasi hamda madaniy meros himoyasi hududidagi yangi qurilishlarni loyihalashga ixtisoslashganmiz.
+                        </p>
+                        <p>Portfoliomizda yuqoridagi yo'nalishlar bo'yicha eng sara namunalarni ko'rishingiz mumkin.</p>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            
+            <div class="specialization-box">
+                <h2 class="text-center">Bizning yo'nalishlar</h2>
+                <br><br>
+
+                <!-- Specialise Box -->
+                <div class="specialise-box">
+                    <div class="inner-box">
+                        <div class="content">
+                            <div class="icon icofont-building-alt"></div>
+                            <h5><a href="projects-detail.html">Arxitektura</a></h5>
+                            <p>Biz bo'lajak qurilishning bosh rejasi,landshafti,fasadi,planirovkasi,shakli,qavat rejasi uchun eng sara yechimlarni taqdim etamiz. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialise Box -->
+                <div class="specialise-box">
+                    <div class="inner-box">
+                        <div class="content">
+                            <div class="icon icofont-livejournal"></div>
+                            <h5><a href="projects-detail.html">Interior Dizayn</a></h5>
+                            <p>Dizaynerlarimiz bino va xonalarning bo'lajak holatini siz istagan shinamlikda va jozibada taqdim qilishadi. Ulardan VR(virtual reallik 360)da ham bahramand bo'lishingiz mumkin.  
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialise Box -->
+                
+                <div class="specialise-box">
+                    <div class="inner-box">
+                        <div class="content">
+                            <div class="icon icofont-engineer"></div>
+                            <h5><a href="projects-detail.html">Konstruksiya</a></h5>
+                            <p>Katta loyihalar noodatiy shakldagi binolar,sesmik o'ziga xosliklarga ega hududlardagi obyektlar qurilishi,qurilish mollarining optimal sarflanishi, yuklamalarning to'g'ri taqsimlanishi, qurilish hajmining aniq o'lchanishi uchun malakali injener-muhandislarimiz eng ishonchli va zamonaviy dasturiy ta'minotlardan foydalanishadi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="specialise-box">
+                    <div class="inner-box">
+                        <div class="content">
+                            <div class="icon icofont-computer"></div>
+                            <h5><a href="projects-detail.html">VR model</a></h5>
+                            <p>Bunda rejadagi bino yoki interyer virtual ekizagi yaratilib uni oldindan real hajmda VR ko'zaoynaklar orqali kuzatish mumkin bo'ladi. </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-section" id="loyihalar">
+
+    <!-- Project Tabs -->
+    <div class="project-tab">
+        <div class="auto-container">
+            <div class="tab-btns-box">
+                <!--Tabs Header-->
+                <div class="tabs-header">
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <!-- Sec Title -->
+                            <div class="sec-title">
+                                <h2>Bizning loyihalar</h2>
+                            </div>
+                        </div>
+                        <div class="pull-left">
+                            <ul class="product-tab-btns clearfix">
+                                <li class="p-tab-btn active-btn" data-tab="#p-tab-1">Hammasi</li>
+                                <li class="p-tab-btn" data-tab="#p-tab-2">Arxitektura</li>
+                                <li class="p-tab-btn" data-tab="#p-tab-3">Interyer</li>
+                                <li class="p-tab-btn" data-tab="#p-tab-4">Madaniy me'ros</li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                            <a href="projects.html" class="projects">barcha loyihalarni ko'rish <span
+                                    class="arrow icofont-rounded-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Tabs Content-->
+        <div class="p-tabs-content">
+
+            <!-- Portfolio Tab / Active Tab -->
+            <div class="p-tab active-tab" id="p-tab-1">
+                <div class="project-carousel owl-theme owl-carousel">
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-1.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Savdo majmuasi</div>
+                                        <h2><a href="projects-detail.html">Toshkent</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-2 (1).jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Savdo majmuasi </div>
+                                        <h2><a href="projects-detail.html">Urganch</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/bgox-3.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Ko'p qavatli uy</div>
+                                        <h2><a href="projects-detail.html">Toshkent</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-4 (1).jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Savdo majmuasi</div>
+                                        <h2><a href="projects-detail.html">Toshkent</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-5.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Mehmonxona</div>
+                                        <h2><a href="projects-detail.html">Toshkent</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-6.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Masjid loyihasi</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-8.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Co-working zone</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/bgox-7.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Garden Plaza</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Portfolio Tab -->
+            <div class="p-tab" id="p-tab-2">
+                <div class="project-carousel owl-theme owl-carousel">
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-6.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Masjid loyihasi</div>
+                                        <h2><a href="">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-1.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Savdo majmuasi</div>
+                                        <h2><a href="projects-detail.html">Toshkent</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-2 (1).jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Savdo majmuasi</div>
+                                        <h2><a href="projects-detail.html">Urganch</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-4 (1).jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Savdo majmuasi</div>
+                                        <h2><a href="projects-detail.html">Toshkent</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-5.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Mehmonxona</div>
+                                        <h2><a href="projects-detail.html">Toshkent</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/bgox-7.jpg' %}" alt="" />
+
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Garden Plaza</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-8.jpg' %}" alt="" />
+
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Co-working zone</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Portfolio Tab -->
+            <div class="p-tab" id="p-tab-3">
+                <div class="project-carousel owl-theme owl-carousel">
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-8.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Co-working zone</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-6.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Masjid loyihasi</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/bgox-7.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Garden Plaza</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-5.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Mehmonxona</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-4 (1).jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Savdo majmuasi</div>
+                                        <h2><a href="projects-detail.html">Toshkent</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-1.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Savdo majmuasi</div>
+                                        <h2><a href="projects-detail.html">Toshkent</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+
+            <!-- Portfolio Tab -->
+            <div class="p-tab" id="p-tab-4">
+                <div class="project-carousel owl-theme owl-carousel">
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-6.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Masjid loyihasi</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-8.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Co-working zone</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-1.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Savdo majmuasi</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/gbox-5.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Mehmonxona</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Block -->
+                    <div class="gallery-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="{% static 'images/imorat/bgox-7.jpg' %}" alt="" />
+                                <div class="overlay-box">
+                                    <div class="content">
+                                        <div class="category">Garden Plaza</div>
+                                        <h2><a href="projects-detail.html">Buxoro</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="auto-container">
+        <div class="sec-title">
+            <h2>Bizni nima uchun tanlashadi</h2>
+        </div>
+        <div class="inner-container">
+            <div class="clearfix">
+
+                <!-- Service Block -->
+                <div class="service-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <h5><a href="projects-detail.html">Profressional va fidoyi jamoa</a></h5>
+                        <p>Arxitekturani zamonaviy texnologiyalar bilan yaratish.</p>
+                        <div class="icon icofont-labour"></div>
+                        <a href="projects-detail.html" class="more">ko'proq</a>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <h5><a href="projects-detail.html">Takrorlanmas dizayn</a></h5>
+                        <p>Loyihangizga joziba bering va bahra oling.</p>
+                        <div class="icon icofont-ruler-compass-alt"></div>
+                        <a href="projects-detail.html" class="more">ko'proq</a>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <h5><a href="projects-detail.html">Sifat va narx hamohangligi</a></h5>
+                        <p>Premium xizmat paketlari.
+                            
+                        </p>
+                        <br>
+                        <div class="icon icofont-credit-card"></div>
+                        <a href="projects-detail.html" class="more">ko'proq</a>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <h5><a href="projects-detail.html">24/7 qo'llab quvvatlash</a></h5>
+                        <p>Konsalting yechimlar va qulay takliflar. </p>
+                        <div class="icon icofont-live-support"></div>
+                        <a href="projects-detail.html" class="more">ko'proq</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<section id="blog" class="work-section" style="background-image: url('{% static 'images/imorat/photo_2022-12-09_12-30-31.jpg' %}'); background-position:center;">
+    <div class="auto-container">
+        <div class="content">
+            <div class="title">Biz qanday ishlaymiz</div>
+            <h1>Oson & Ishonchli <br> Jarayon</h1>
+            <p>
+                Biz shuni tushunamizki siz bizga fikringizni eshitishimiz <br> va eng muhimi sizning qarashlaringizni tushunishimiz <br> uchun murojaat qilasiz.<br> Shunday ekan, avvalo, loyiha yakunlangach, unda o'z <br> xohishlaringiz aksini ko'rishingiz uchun harakat qilamiz.   </p>
+                
+            <a href="https://www.instagram.com/imorat_development/" class="lightbox-image video-box clearfix"><br><span class="fa fa-play" ><i class="ripple"></i></span></a>
+
+        </div>
+    </div>
+</section>
+
+<section  class="testimonial-section" style="background-image: url('{% static "images/background/pattern-1.png" %}')">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!-- Carousel Column -->
+            <div class="carousel-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="single-item-carousel owl-carousel owl-theme">
+
+                        <!-- Testimonial Block -->
+                        <div class="testimonial-block">
+                            <div class="inner-box">
+                                <div class="quote-icon ion-quote"></div>
+                                <h2>Arxitekturaga o'rgatib - bo'lmaydi <br>faqatgina odamlarni ilhomlantirish mumkin. <br><br><br>Zaha Hadid</h2>
+                                
+                                <div class="category"><span></span> </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Block -->
+                        <div class="testimonial-block">
+                            <div class="inner-box">
+                                <div class="quote-icon ion-quote"></div>
+                                <h2>"12000 dollarlik uyni  <br> 12000 dollarga qura olaman",- deb o'ylagan odam optimistdir. <br><br><br> Frensis Rodman</h2>
+                                
+                                <div class="category"><span></span> </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Block -->
+                        <div class="testimonial-block">
+                            <div class="inner-box">
+                                <div class="quote-icon ion-quote"></div>
+                                <h2>Arxitektura bu ovozsiz musiqadir. <br><br><br> Iogan Volfgang Fon Gyote.</h2>
+                                
+                                <div class="category"><span></span>  </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Column -->
+            <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="image wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <img src="{% static 'images/imorat/kaska.jpg' %}" alt="" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="sponsors-section">
+    <div class="auto-container">
+
+        <div class="carousel-outer">
+            <!--Sponsors Slider-->
+            <ul class="sponsors-carousel owl-carousel owl-theme">
+                <li>
+                    <div class="image-box"><a href="#"><img src="{% static 'images/ProUnity.png' %}" alt=""></a></div>
+                </li>
+                <li>
+                    <div class="image-box"><a href="#"><img src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt=""></a></div>
+                </li>
+                <li>
+                    <div class="image-box" ><a href="#"><img id="qrl" src="https://navqurilish.uz/wp-content/uploads/2021/09/logoqurilish.png" alt=""></a></div>
+                </li>
+                <li>
+                    <div class="image-box"><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Turizm_va_madaniy_meros_vazirligi.png" alt=""></a></div>
+                </li>
+                <li>
+                    <div  class="image-box"><a href="#"><img src="https://yait.uz/media/partners/2021/11/Logo.png" alt="" id="qrl"></a></div>
+                </li>
+                <li>
+                    <div class="image-box"><a href="#"><img src="{% static 'images/ProUnity.png' %}" alt=""></a></div>
+                </li>
+                <li>
+                    <div class="image-box"><a href="#"><img src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt=""></a></div>
+                </li>
+                <li>
+                    <div class="image-box" ><a href="#"><img id="qrl" src="https://navqurilish.uz/wp-content/uploads/2021/09/logoqurilish.png" alt=""></a></div>
+                </li>
+                
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<div class="section" id="contact">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2425.6237248463085!2d64.43200287408627!3d39.77422972524733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f500741f58f7703%3A0x9e4e35c6256f9fe!2sPro%20Unity!5e0!3m2!1sru!2s!4v1666612350833!5m2!1sru!2s" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+{% endblock %}
