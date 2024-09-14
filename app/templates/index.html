@@ -2,212 +2,8 @@
 {% load static %}
 
 {% block content %}
-<section class="banner-section">
-    <div class="main-slider-carousel owl-carousel owl-theme">
 
-
-        <div class="slide" style="background-image: url('{% static "images/imorat/bgrasm.jpg" %}'); background-position:center;">
-
-        
-            <div class="auto-container" >
-
-                <!-- Content Boxed -->
-                <div class="content-boxed">
-                    <div class="inner-boxed" >
-                        <div class="title"></div>
-                        <h1>Imorat <br> Development <span><i>Since</i> 2019</span></h1>
-                        <p>Biz murakkablikdan voz kechdik <br> </p>
-                        <div class="btn-box">
-                            
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="slide" style="background-image: url('{% static 'images/imorat/bgimgasd.png' %}'); ">
-            <div class="auto-container">
-
-                <!-- Content Boxed -->
-                <div class="content-boxed">
-                    <div class="inner-boxed">
-                        <div class="title"></div>
-                        <h1>Imorat <br> Development <span><i>Since</i> 2019</span></h1>
-                        <p>Biz murakkablikdan voz kechdik<br></p>
-                        <div class="btn-box">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="slide" style="background-image: url('{% static "images/imorat/IMG_1836.JPG" %}'); background-position:center; background-repeat:no-repeat; background-size:cover;">
-            <div class="auto-container">
-
-                <!-- Content Boxed -->
-                <div class="content-boxed">
-                    <div class="inner-boxed">
-                        <div class="title"></div>
-                        <h1>Imorat <br> Development <span><i>Sice</i> 2019</span></h1>
-                        <p>Biz murakkablikdan voz kechdik <br> </p>
-                        <div class="btn-box">
-                            
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-    <!--Scroll Dwwn Btn-->
-    <div class="mouse-btn-down scroll-to-target" data-target=".experiance-section">
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-    </div>
-
-    <!-- Social Box -->
-    <ul class="social-box">
-        <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-instagram"></a></li>
-        <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-facebook"></a></li>
-        <li><a href="https://t.me/freedom_architecture" class="fab fa-telegram"></a></li>
-    </ul>
-
-    <!-- Info -->
-    <div class="info"><a href="tel:+998-33-055-10-00">(+998) 33 055-10-00</a> / <a
-            href="tel:imoratdevelopment@gmail.com">imoratdevelopment@gmail.com</a>
-    </div>
-
-</section>
-
-<section id="news" class="news-section">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2>Yangiliklar</h2>
-            <p>So'nggi yangiliklar va yangilanishlar</p>
-        </div>
-        <div class="news-grid">
-            <article class="news-item">
-                <div class="news-image">
-                    <img src="{% static 'images/imorat/news-1.jpg' %}" alt="Yangilik 1">
-                </div>
-                <div class="news-content">
-                    <h3 class="news-title">Yangilik sarlavhasi 1</h3>
-                    <p class="news-description">Yangilik haqida qisqacha ma'lumot. Bu yerda yangilikning qisqacha tavsifi bo'ladi.</p>
-                    <a href="#" class="read-more">Batafsil o'qish</a>
-                </div>
-            </article>
-            <article class="news-item">
-                <div class="news-image">
-                    <img src="{% static 'images/imorat/news-2.jpg' %}" alt="Yangilik 2">
-                </div>
-                <div class="news-content">
-                    <h3 class="news-title">Yangilik sarlavhasi 2</h3>
-                    <p class="news-description">Yangilik haqida qisqacha ma'lumot. Bu yerda yangilikning qisqacha tavsifi bo'ladi.</p>
-                    <a href="#" class="read-more">Batafsil o'qish</a>
-                </div>
-            </article>
-            <article class="news-item">
-                <div class="news-image">
-                    <img src="{% static 'images/imorat/news-2.jpg' %}" alt="Yangilik 2">
-                </div>
-                <div class="news-content">
-                    <h3 class="news-title">Yangilik sarlavhasi 3</h3>
-                    <p class="news-description">Yangilik haqida qisqacha ma'lumot. Bu yerda yangilikning qisqacha tavsifi bo'ladi.</p>
-                    <a href="#" class="read-more">Batafsil o'qish</a>
-                </div>
-            </article>
-
-            
-            <!-- Qo'shimcha yangiliklar qo'shishingiz mumkin -->
-        </div>
-    </div>
-</section>
-
-<style>
-    .news-section {
-        padding: 60px 0;
-        background-color: #f4f4f4;
-    }
-    
-    .news-section .container {
-        width: 90%;
-        margin: 0 auto;
-    }
-    
-    .news-section .section-header {
-        margin-bottom: 40px;
-    }
-    
-    .news-section .section-header h2 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        color: #333;
-    }
-    
-    .news-section .section-header p {
-        font-size: 1.2rem;
-        color: #666;
-    }
-    
-    .news-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
-    }
-    
-    .news-item {
-        background: #fff;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .news-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-    
-    .news-item .news-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-    .news-item .news-content {
-        padding: 20px;
-    }
-    
-    .news-item .news-title {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-        color: #333;
-    }
-    
-    .news-item .news-description {
-        font-size: 1rem;
-        color: #666;
-        margin-bottom: 15px;
-    }
-    
-    .news-item .read-more {
-        font-size: 1rem;
-        color: #007bff;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    
-    .news-item .read-more:hover {
-        text-decoration: underline;
-    }
-    
-</style>
-
+{% include 'includes/news_detail.html' %}
 
 <section class="experiance-section" id="section_1">
     <div class="auto-container">
@@ -217,7 +13,7 @@
             <div class="title-column col-lg-5 col-md-12 col-sm-12">
                 <div class="inner-column">
                     <div class="image">
-                        <img src="{% static 'images/imorat/Untitled-1.png' %}" alt="" / id="lg1">
+                        <img src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt="" / id="lg1">
                     </div>
                     <h2> +10 yil tajriba<br>  </h2>
                     <div class="text">Yuqori tajribaga ega arxitektor <br> va injener-konstruktorlar</div>
@@ -301,6 +97,8 @@
         </div>
     </div>
 </section>
+
+
 
 <section class="project-section" id="loyihalar">
 
@@ -936,3 +734,121 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2425.6237248463085!2d64.43200287408627!3d39.77422972524733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f500741f58f7703%3A0x9e4e35c6256f9fe!2sPro%20Unity!5e0!3m2!1sru!2s!4v1666612350833!5m2!1sru!2s" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 {% endblock %}
+
+
+<!-- 
+
+<br><br>
+<div class="custom-card-container1">
+    {% for new in news %}
+    <div class="custom-card">
+        <img src="{{ new.logo.url }}" class="custom-card-img-top" alt="News Image">
+        <div class="custom-card-body">
+            <h5 class="custom-card-title">{{ new.title }}</h5>
+            <p class="custom-card-text">{{ new.description }}.</p>
+            <p class="custom-card-date">Опубликовано: {{ new.created|date:"d M Y H:i" }}</p>
+            <a href="#" class="custom-btn custom-btn-secondary">Узнать больше</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<br><br>
+
+<style>
+    .custom-card-container1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Распределяет карточки с равными промежутками */
+        gap: 20px; /* Отступы между карточками */
+        padding: 1px; /* Внутренний отступ контейнера */
+
+    }
+
+    .custom-card {
+        flex: 1 1 calc(33.333% - 40px); /* Карточки будут занимать 1/3 ширины контейнера с отступом */
+        max-width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        transition: transform 1s ease, box-shadow 1s ease;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+    }
+
+    .custom-card:hover {
+        transform: rotateY(20deg) rotateX(10deg) scale(1.05);
+        box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+    }
+
+    .custom-card-img-top {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 1s ease, filter 1s ease;
+    }
+
+    .custom-card:hover .custom-card-img-top {
+        transform: scale(1.1);
+        filter: brightness(65%);
+    }
+
+    .custom-card-body {
+        padding: 20px;
+        text-align: center;
+        
+    }
+
+    .custom-card-title {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        color: #222;
+        font-weight: 700;
+    }
+
+    .custom-card-text {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .custom-card-date {
+        font-size: 0.9rem;
+        color: gray;
+        margin-top: 10px;
+    }
+
+    .custom-btn {
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin: 10px 0;
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .custom-btn-secondary {
+        background: linear-gradient(135deg, rgb(235, 182, 49), rgb(235, 182, 49));
+    }
+
+    .custom-btn-secondary:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Медиа-запросы для адаптации под разные экраны */
+    @media (max-width: 1200px) {
+        .custom-card {
+            flex: 1 1 calc(20% - 40px); /* Для планшетов — карточки по 2 в ряд */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .custom-card {
+            flex: 1 1 calc(100% - 40px); /* Для телефонов — одна карточка в ряд */
+        }
+    }
+</style> -->

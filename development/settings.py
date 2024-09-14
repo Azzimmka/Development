@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'rosetta',
+    'parler',
 ]
 
 MIDDLEWARE = [
@@ -110,13 +111,26 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'uz'
 
 LANGUAGES = [
     ('ru', _('Russian')),
     ('en', _('English')),
     ('uz', _('Uzbek')),
 ]
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'ru',},
+        {'code': 'en',},
+        {'code': 'uz',},
+    ),
+    'default': {
+        'fallbacks': ['ru', 'en', 'uz'],
+        'hide_untranslated': False,
+    }
+}
+
 
 TIME_ZONE = 'UTC'
 

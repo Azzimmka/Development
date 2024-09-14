@@ -1,0 +1,42 @@
+{% load static %}
+{% load  i18n %}
+<footer class="main-footer">
+    <div class="auto-container">
+        <style>
+            .logog {
+                font-size: 100px;
+            }
+            .logog img {
+                width: 200px; /* Установите нужную ширину */
+                height: 200px; /* Автоматическая высота, сохраняющая пропорции */
+            }
+        </style>
+        
+        <div class="logog">
+            <img  src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt="{% trans 'Logo' %}"  style=""/>
+        </div>
+        
+        
+        <ul class="footer-page-nav">
+            <li><a href="#">Asosiy sahifa</a></li>
+            <li><a href="#">Loyihalar</a></li>
+            <li><a href="#">Yangiliklar</a></li>
+            <li><a href="#">Biz haqimizda</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="contact-info">Islom Karimov 1 Buxoro, O'zbekiston<br> <a
+                href="tel:+998-33-055-10-00">(+998) 33 055-10-00</a> <br> <a
+                href="mailto:imoratdevelopment@gmail.com">imoratdevelopment@gmail.com</a></div>
+        <ul class="footer-social-icons">
+            <li><a href="https://www.instagram.com/imorat_development/" class="icofont-facebook"></a></li>
+            <li><a href="https://www.instagram.com/imorat_development/" class="icofont-instagram"></a></li>
+            <li><a href="https://t.me/azizbekhmr" class="fab fa-telegram"></a></li>
+        
+        </ul>
+        <div class="copyright">Copyright ©
+            <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+            <script type="text/javascript">document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a
+                href="https://t.me/khamrayevbb" target="_blank">Khamrayev Bobur</a>
+        </div>
+    </div>
+</footer>

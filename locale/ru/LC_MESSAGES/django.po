@@ -8,25 +8,78 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-11 21:51-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-09-14 09:37+0000\n"
+"PO-Revision-Date: 2024-09-14 09:52+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: development/settings.py:112
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: app/models.py:9
+msgid "title"
+msgstr "Заголовок "
+
+#: app/models.py:10
+msgid "description"
+msgstr "Описание "
+
+#: app/models.py:18
+msgid "New"
+msgstr "Новость "
+
+#: app/models.py:19
+msgid "News"
+msgstr "Новости "
+
+#: app/templates/base.html:41 app/templates/base.html:103
+#: app/templates/includes/footer.html:16
+msgid "Logo"
+msgstr " Логотип"
+
+#: app/templates/base.html:51 app/templates/base.html:83
+msgid "Menu"
+msgstr " Меню"
+
+#: app/templates/base.html:58
+msgid "Toggle navigation"
+msgstr "Переключить навигацию"
+
+#: app/templates/base.html:67
+msgid "Asosiy sahifa"
+msgstr "Главная "
+
+#: app/templates/base.html:68
+msgid "Biz haqimizda"
+msgstr "О Нас "
+
+#: app/templates/base.html:69
+msgid "Loyihalar"
+msgstr "Проекты"
+
+#: app/templates/base.html:70
+msgid "Yangiliklar"
+msgstr "Новости "
+
+#: app/templates/base.html:71
+msgid "Contact"
+msgstr "Контакты "
+
+#: app/templates/base.html:129
+msgid "Biz murakkablikdan voz kechdik "
+msgstr "Мы отказались от сложности"
+
+#: development/settings.py:117
 msgid "Russian"
 msgstr "Русский"
 
-#: development/settings.py:113
+#: development/settings.py:118
 msgid "English"
 msgstr "Англиский"
 
-#: development/settings.py:114
+#: development/settings.py:119
 msgid "Uzbek"
 msgstr "Узбекский"

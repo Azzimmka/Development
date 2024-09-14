@@ -8,23 +8,78 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-11 21:51-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-09-14 09:37+0000\n"
+"PO-Revision-Date: 2024-09-13 13:32+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: development/settings.py:112
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: app/models.py:9
+msgid "title"
+msgstr "Title"
+
+#: app/models.py:10
+msgid "description"
+msgstr "Description"
+
+#: app/models.py:18
+msgid "New"
+msgstr "New"
+
+#: app/models.py:19
+msgid "News"
+msgstr "News"
+
+#: app/templates/base.html:41 app/templates/base.html:103
+#: app/templates/includes/footer.html:16
+msgid "Logo"
+msgstr "Logo"
+
+#: app/templates/base.html:51 app/templates/base.html:83
+msgid "Menu"
+msgstr "Menu"
+
+#: app/templates/base.html:58
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+#: app/templates/base.html:67
+msgid "Asosiy sahifa"
+msgstr "Home"
+
+#: app/templates/base.html:68
+msgid "Biz haqimizda"
+msgstr "About Us "
+
+#: app/templates/base.html:69
+msgid "Loyihalar"
+msgstr "Projects"
+
+#: app/templates/base.html:70
+msgid "Yangiliklar"
+msgstr "News "
+
+#: app/templates/base.html:71
+msgid "Contact"
+msgstr "Contact"
+
+#: app/templates/base.html:129
+msgid "Biz murakkablikdan voz kechdik "
+msgstr ""
+
+#: development/settings.py:117
 msgid "Russian"
 msgstr "Russian"
 
-#: development/settings.py:113
+#: development/settings.py:118
 msgid "English"
 msgstr "English"
 
-#: development/settings.py:114
+#: development/settings.py:119
 msgid "Uzbek"
 msgstr "Uzbek"

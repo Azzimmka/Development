@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,53 +9,75 @@
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
-
-    
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="shortcut icon" href="{% static 'images/imorat/logo.jpg' %}" type="image/x-icon">
     <link rel="icon" href="{% static 'images/imorat/logo.jpg' %}" type="image/x-icon">
     <meta name="msapplication-TileImage" content="images/imorat/logo tayyor.png" />
 </head>
 <body>
     <div class="page-wrapper" id="home">
-        <header class="main-header">
-
+        <header class="main-header" >
+    
             <!-- Header Upper -->
             <div class="header-upper">
-                <div class="outer-container">
-                    <div class="inner-container clearfix">
-    
+                <div class="outer-container" >
+                    <div class="inner-container clearfix" >
+                        <style>
+                            @media (min-width: 940px) {
+                                .logo-box {
+                                    /* Поднимаем логотип выше только для экранов шире 940px */
+                                    font-size: 30px;
+                                }
+                                .logo img {
+                                    width: 130px;
+                                    height: 130px;
+                                }
+                            }
+                        </style>
+                        
                         <div class="pull-left logo-box">
-                            <div class="logo"><a href="index.html"><img src="{% static 'images/imorat/logo tayyor.png' %}" alt="" title=""></a></div>
+                            <div class="logo">
+                                <a href="{% url 'index' %}">
+                                    <img src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt="{% trans 'Logo' %}" title="{% trans 'Logo' %}" style=" margin-top: -15px;">
+                                </a>
+                            </div>
                         </div>
-    
+                        
+                        
                         <div class="nav-outer pull-left clearfix">
                             <!-- Mobile Navigation Toggler -->
-                            <div class="mobile-nav-toggler"><span class="icon ti-menu"></span></div>
+                            <div class="mobile-nav-toggler">
+                                <span class="icon ti-menu"></span>
+                                {% trans 'Menu' %}
+                            </div>
                             <!-- Main Menu -->
                             <nav class="main-menu navbar-expand-md">
                                 <div class="navbar-header">
                                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                                        aria-label="Toggle navigation">
+                                        aria-label="{% trans 'Toggle navigation' %}">
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                     </button>
                                 </div>
     
-                                <div class="navbar-collapse show collapse clearfix " id="navbarSupportedContent">
-                                    <ul class="navigation clearfix" >
-                                        <li><a href="#home">Asosiy sahifa</a></li>
-                                        <li><a  href="#section_1">Biz haqimizda</a></li>
-                                        <li><a href="#loyihalar">Loyihalar</a>
-                                            
-                                        </li>
-                                        <li ><a href="#blog">Blog</a>
-                                            
-                                        </li>
-                                        <li><a href="#contact">Contact</a></li>
+                                <div class="navbar-collapse show collapse clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="{% url 'index' %}">{% trans 'Asosiy sahifa' %}</a></li>
+                                        <li><a href="{% url 'index' %}#section_1">{% trans 'Biz haqimizda' %}</a></li>
+                                        <li><a href="{% url 'index' %}#loyihalar">{% trans 'Loyihalar' %}</a></li>
+                                        <li><a href="{% url 'news' %}#allnews">{% trans 'Yangiliklar' %}</a></li>
+                                        <li><a href="{% url 'index' %}#contact">{% trans 'Contact' %}</a></li>
+                                        {% get_current_language as CURRENT_LANGUAGE %}
+                                        {% get_available_languages as AVAILABLE_LANGUAGES %}
+                                        {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+                                            {% for language in languages %}
+                                                <a class="{% if language.code == CURRENT_LANGUAGE %}active{% endif %}" 
+                                                   href="{% if language.code == 'uz' %}/{% else %}/{{ language.code }}/{% endif %}">
+                                                    <img style="max-width: 25px; margin: 3px;" src="{% static 'images/' %}{{ language.code }}.png" alt="{{ language.name_local }} logo">
+                                                </a>
+                                            {% endfor %}
                                     </ul>
                                 </div>
     
@@ -64,9 +87,10 @@
     
                         <!-- Outer Box -->
                         <div class="outer-box clearfix">
-                            
                             <!-- Mobile Navigation Toggler -->
-                            <div class="mobile-nav-toggler">menu <span class="icon ion-android-menu"></span></div>
+                            <div class="mobile-nav-toggler">
+                                {% trans 'Menu' %} <span class="icon ion-android-menu"></span>
+                            </div>
                         </div>
     
                     </div>
@@ -74,13 +98,20 @@
             </div>
             <!--End Header Upper-->
     
-            <!-- Mobile Menu  -->
+            <!-- Mobile Menu -->
             <div class="mobile-menu">
                 <div class="menu-backdrop"></div>
-                <div class="close-btn"><span class="icon lnr lnr-cross"></span></div>
+                <div class="close-btn">
+                    <span class="icon lnr lnr-cross"></span>
+                    
+                </div>
     
                 <nav class="menu-box">
-                    <div class="nav-logo"><a href="index.html"><img src="{% static 'images/imorat/Untitled-1.png' %}" alt="" title=""></a></div>
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt="{% trans 'Logo' %}" title="{% trans 'Logo' %}">
+                        </a>
+                    </div>
                     <div class="menu-outer">
                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                     </div>
@@ -89,41 +120,100 @@
     
         </header>
     </div>
+    
+    <section class="banner-section">
+        <div class="main-slider-carousel owl-carousel owl-theme">
+    
+    
+            <div class="slide" style="background-image: url('{% static "images/imorat/bgrasm.jpg" %}'); background-position:center;">
+    
+            
+                <div class="auto-container" >
+    
+                    <!-- Content Boxed -->
+                    <div class="content-boxed">
+                        <div class="inner-boxed" >
+                            <div class="title"></div>
+                            <h1>Imorat <br> Development <span><i>Since</i> 2019</span></h1>
+                            <p>{% trans 'Biz murakkablikdan voz kechdik ' %}<br> </p>
+                            <div class="btn-box">
+                                
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="slide" style="background-image: url('{% static 'images/imorat/bgimgasd.png' %}'); ">
+                <div class="auto-container">
+    
+                    <!-- Content Boxed -->
+                    <div class="content-boxed">
+                        <div class="inner-boxed">
+                            <div class="title"></div>
+                            <h1>Imorat <br> Development <span><i>Since</i> 2019</span></h1>
+                            <p>Biz murakkablikdan voz kechdik<br></p>
+                            <div class="btn-box">
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="slide" style="background-image: url('{% static "images/imorat/IMG_1836.JPG" %}'); background-position:center; background-repeat:no-repeat; background-size:cover;">
+                <div class="auto-container">
+    
+                    <!-- Content Boxed -->
+                    <div class="content-boxed">
+                        <div class="inner-boxed">
+                            <div class="title"></div>
+                            <h1>Imorat <br> Development <span><i>Since</i> 2019</span></h1>
+                            <p>Biz murakkablikdan voz kechdik <br> </p>
+                            <div class="btn-box">
+                                
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+        </div>
+    
+        <!--Scroll Dwwn Btn-->
+        <div class="mouse-btn-down scroll-to-target" data-target=".experiance-section">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
+    
+        <!-- Social Box -->
+        <ul class="social-box">
+            <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-instagram"></a></li>
+            <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-facebook"></a></li>
+            <li><a href="https://t.me/freedom_architecture" class="fab fa-telegram"></a></li>
+        </ul>
+    
+        <!-- Info -->
+        <div class="info"><a href="tel:+998-33-055-10-00">(+998) 33 055-10-00</a> / <a
+                href="tel:imoratdevelopment@gmail.com">imoratdevelopment@gmail.com</a>
+        </div>
+    
+    </section>
 
     {% block content %}
 
-    {% endblock %}
+    {% endblock content %}
 
-    <footer class="main-footer">
-        <div class="auto-container">
-            <div class="logo">
-                <a href="index.html"><img id="log" src="{% static 'images/imorat/logo tayyor.png' %}" alt="" /></a>
-                
-            </div>
-            <ul class="footer-page-nav">
-                <li><a href="#">Asosiy sahifa</a></li>
-                <li><a href="#">Loyihalar</a></li>
-                <li><a href="#">Yangiliklar</a></li>
-                <li><a href="#">Biz haqimizda</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <div class="contact-info">Islom Karimov 1 Buxoro, O'zbekiston<br> <a
-                    href="tel:+998-33-055-10-00">(+998) 33 055-10-00</a> <br> <a
-                    href="mailto:imoratdevelopment@gmail.com">imoratdevelopment@gmail.com</a></div>
-            <ul class="footer-social-icons">
-                <li><a href="https://www.instagram.com/imorat_development/" class="icofont-facebook"></a></li>
-                <li><a href="https://www.instagram.com/imorat_development/" class="icofont-instagram"></a></li>
-                <li><a href="https://t.me/azizbekhmr" class="fab fa-telegram"></a></li>
-            
-            </ul>
-            <div class="copyright">Copyright ©
-                <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-                <script type="text/javascript">document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a
-                    href="https://t.me/khamrayevbb" target="_blank">Khamrayev Bobur</a>
-            </div>
-        </div>
-    </footer>
 
+    {% block news %}
+
+    {% endblock news %}
+
+
+    {% include 'includes/footer.html' %}
     <!-- Scripts -->
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
@@ -139,6 +229,7 @@
     <script src="{% static 'js/jquery-ui.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
 
+    
     
 </body>
 </html>

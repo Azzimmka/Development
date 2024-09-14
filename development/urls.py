@@ -24,6 +24,7 @@ urlpatterns = i18n_patterns (
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
     path('rosetta/', include('rosetta.urls')),
+    prefix_default_language=False,
 )
 
 if settings.DEBUG:
