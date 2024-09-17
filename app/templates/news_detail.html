@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block news %}
+
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 28px;
+            color: #333;
+        }
+        .h2 {
+            font-family:'Times New Roman', Times, serif ;
+        }
+
+        /* Ограничение на 3 строки текста */
+        .news-card p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3; /* Ограничение в 3 строки */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            color: #777;
+            max-height: 4.5em; /* Высота для 3 строк текста */
+            transition: max-height 0.3s ease;
+        }
+
+        .news-card.expanded p {
+            -webkit-line-clamp: unset; /* Снимаем ограничение по строкам */
+            max-height: none;
+        }
+
+        .read-more-btn {
+            color: #007bff;
+            cursor: pointer;
+            font-size: 14px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Стили контейнера новостей */
+        .news-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Карточка новости */
+        .news-card {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Изображение новости */
+        .news-card img {
+            width: 500px;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        /* Контент внутри карточки */
+        .news-card-content {
+            flex: 1;
+
+        }
+
+        .news-card h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .news-card .date {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .comments-section {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+        }
+
+        .comments-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .comments-section .comment {
+            margin-bottom: 10px;
+        }
+
+        .comments-section .comment p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .comment-form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .comment-form button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .news-card {
+                flex-direction: column; /* Переводим карточку в колонку на мобильных */
+                align-items: center;
+            }
+
+            .news-card img {
+                width: 100%;
+                height: auto;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+    <!-- Контейнер для новостей -->
+
+    <h1 id="allnews" style="font-size: 60px;">{% trans 'Yangiliklar' %}</h1>
+    <hr>
+    <div class="news-container">
+        <!-- Одна карточка новости -->
+        <div class="news-card">
+            <img src="{{ news.logo.url }}" alt="News Image">
+            <div class="news-card-content">
+                <h2 style='font-size: 50px; font-family: "Rubik Mono One", monospace;  font-weight: 400; font-style: normal;'>{{ news.title }}</h2>
+                <p class="date">{% trans "E'lon qilingan" %}: {{ news.created|date:"d M Y H:i" }}</p>
+                <p class="news-text">{{ news.description }}</p>
+                <span class="read-more-btn" onclick="toggleReadMore(this)">{% trans "Davomini o'qish" %}</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleReadMore(btn) {
+            const card = btn.closest('.news-card');
+            const text = card.querySelector('.news-text');
+            const isExpanded = card.classList.toggle('expanded');
+            
+            btn.textContent = isExpanded ? '{% trans "Read less" %}' : '{% trans "Davomini oqish" %}';
+        }
+    </script>
+
+{% endblock %}

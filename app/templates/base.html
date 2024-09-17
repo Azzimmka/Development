@@ -39,6 +39,7 @@
                             <div class="logo">
                                 <a href="{% url 'index' %}">
                                     <img src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt="{% trans 'Logo' %}" title="{% trans 'Logo' %}" style=" margin-top: -15px;">
+                                    
                                 </a>
                             </div>
                         </div>
@@ -48,38 +49,37 @@
                             <!-- Mobile Navigation Toggler -->
                             <div class="mobile-nav-toggler">
                                 <span class="icon ti-menu"></span>
+
                                 {% trans 'Menu' %}
                             </div>
                             <!-- Main Menu -->
                             <nav class="main-menu navbar-expand-md">
                                 <div class="navbar-header">
+
                                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                                         aria-label="{% trans 'Toggle navigation' %}">
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
+                                        
                                     </button>
+                                    
                                 </div>
     
                                 <div class="navbar-collapse show collapse clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
+                                        
                                         <li><a href="{% url 'index' %}">{% trans 'Asosiy sahifa' %}</a></li>
-                                        <li><a href="{% url 'index' %}#section_1">{% trans 'Biz haqimizda' %}</a></li>
+
                                         <li><a href="{% url 'index' %}#loyihalar">{% trans 'Loyihalar' %}</a></li>
-                                        <li><a href="{% url 'news' %}#allnews">{% trans 'Yangiliklar' %}</a></li>
+                                        <li><a href="#allnews">{% trans 'Yangiliklar' %}</a></li>
                                         <li><a href="{% url 'index' %}#contact">{% trans 'Contact' %}</a></li>
-                                        {% get_current_language as CURRENT_LANGUAGE %}
-                                        {% get_available_languages as AVAILABLE_LANGUAGES %}
-                                        {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
-                                            {% for language in languages %}
-                                                <a class="{% if language.code == CURRENT_LANGUAGE %}active{% endif %}" 
-                                                   href="{% if language.code == 'uz' %}/{% else %}/{{ language.code }}/{% endif %}">
-                                                    <img style="max-width: 25px; margin: 3px;" src="{% static 'images/' %}{{ language.code }}.png" alt="{{ language.name_local }} logo">
-                                                </a>
-                                            {% endfor %}
+                                        <li><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></li>
                                     </ul>
+                                    {% include 'includes/language.html' %}  
                                 </div>
+                                
     
                             </nav>
     
@@ -121,68 +121,67 @@
         </header>
     </div>
     
+
+
+        <style>
+            .slide {
+                background-image: url('{% static 'images/bgimgasd.jpg' %}');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+    
+            /* Для мобильных устройств */
+            @media only screen and (max-width: 768px) {
+                .slide {
+                    background-image: url('{% static 'images/bgimgasd.jpg' %}'); /* Версия изображения для мобильных */
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+    
+            /* Для устройств с высоким разрешением (Retina-дисплеи) */
+            @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+                .slide {
+                    background-image: url('{% static 'images/bgimgasd.jpg' %}'); /* Изображение с высоким разрешением */
+                }
+            }
+        </style>
+
+    
     <section class="banner-section">
         <div class="main-slider-carousel owl-carousel owl-theme">
-    
-    
-            <div class="slide" style="background-image: url('{% static "images/imorat/bgrasm.jpg" %}'); background-position:center;">
-    
             
-                <div class="auto-container" >
-    
-                    <!-- Content Boxed -->
-                    <div class="content-boxed">
-                        <div class="inner-boxed" >
-                            <div class="title"></div>
-                            <h1>Imorat <br> Development <span><i>Since</i> 2019</span></h1>
-                            <p>{% trans 'Biz murakkablikdan voz kechdik ' %}<br> </p>
-                            <div class="btn-box">
-                                
-                            </div>
-                        </div>
-                    </div>
-    
-                </div>
-            </div>
-    
-            <div class="slide" style="background-image: url('{% static 'images/imorat/bgimgasd.png' %}'); ">
+            <div class="slide">
                 <div class="auto-container">
-    
                     <!-- Content Boxed -->
                     <div class="content-boxed">
                         <div class="inner-boxed">
                             <div class="title"></div>
-                            <h1>Imorat <br> Development <span><i>Since</i> 2019</span></h1>
-                            <p>Biz murakkablikdan voz kechdik<br></p>
-                            <div class="btn-box">
-                            </div>
+                            <h1>NeftGazTadqiqot</h1>
+                            <p>{% trans 'Biz murakkablikdan voz kechdik ' %}</p>
+                            <div class="btn-box"></div>
                         </div>
                     </div>
-    
                 </div>
             </div>
     
-            <div class="slide" style="background-image: url('{% static "images/imorat/IMG_1836.JPG" %}'); background-position:center; background-repeat:no-repeat; background-size:cover;">
+            <div class="slide">
                 <div class="auto-container">
-    
                     <!-- Content Boxed -->
                     <div class="content-boxed">
                         <div class="inner-boxed">
                             <div class="title"></div>
-                            <h1>Imorat <br> Development <span><i>Since</i> 2019</span></h1>
-                            <p>Biz murakkablikdan voz kechdik <br> </p>
-                            <div class="btn-box">
-                                
-                            </div>
+                            <h1>NeftGazTadqiqot</h1>
+                            <p>{% trans 'Biz murakkablikdan voz kechdik ' %}</p>
+                            <div class="btn-box"></div>
                         </div>
                     </div>
-    
                 </div>
             </div>
-    
         </div>
     
-        <!--Scroll Dwwn Btn-->
+        <!--Scroll Down Btn-->
         <div class="mouse-btn-down scroll-to-target" data-target=".experiance-section">
             <div class="chevron"></div>
             <div class="chevron"></div>
@@ -195,13 +194,8 @@
             <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-facebook"></a></li>
             <li><a href="https://t.me/freedom_architecture" class="fab fa-telegram"></a></li>
         </ul>
-    
-        <!-- Info -->
-        <div class="info"><a href="tel:+998-33-055-10-00">(+998) 33 055-10-00</a> / <a
-                href="tel:imoratdevelopment@gmail.com">imoratdevelopment@gmail.com</a>
-        </div>
-    
     </section>
+    
 
     {% block content %}
 

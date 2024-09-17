@@ -1,0 +1,68 @@
+{% load i18n %}
+{% load static %}
+
+<style>
+    .language-switcher {
+        display: flex;
+        gap: 1rem; /* Расстояние между флагами */
+        justify-content: center; /* Выровнять языки по центру по горизонтали */
+        align-items: center; /* Выровнять языки по вертикали */
+    }
+    
+    .language-link {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .language-link.active {
+        border-color: #4f46e5; /* Синяя рамка для активного языка */
+        background-color: #f3f4f6; /* Лёгкий фон для активного языка */
+    }
+    
+    .language-link:hover {
+        background-color: #f9fafb;
+        border-color: #d1d5db;
+    }
+    
+    .flag-icon {
+        width: 50px; /* Размер иконок-флагов */
+        height: auto;
+    }
+    
+    .language-name {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #333;
+    }
+    
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 640px) {
+        .language-name {
+            display: none; /* Скрыть названия языков на мобильных */
+        }
+    }
+    
+</style>
+
+
+
+
+
+
+<div class="language-switcher">
+    {% get_current_language as CURRENT_LANGUAGE %}
+    {% get_available_languages as AVAILABLE_LANGUAGES %}
+    {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+    {% for language in languages %}
+    <a href="{% if language.code == 'uz' %}/{% else %}/{{ language.code }}/{% endif %}"
+       class="language-link {% if language.code == CURRENT_LANGUAGE %}active{% endif %}"
+       aria-label="{{ language.name_local }}">
+        <img src="{% static 'images/' %}{{ language.code }}.png" alt="{{ language.name_local }} logo" class="flag-icon">
+    </a>
+    {% endfor %}
+</div>
+

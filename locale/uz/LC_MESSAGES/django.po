@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-14 09:37+0000\n"
-"PO-Revision-Date: 2024-09-13 13:31+0000\n"
+"POT-Creation-Date: 2024-09-17 03:13+0000\n"
+"PO-Revision-Date: 2024-09-17 03:53+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,57 +19,321 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: app/models.py:9
+#: app/models.py:10
 msgid "title"
 msgstr "Sarlavha"
 
-#: app/models.py:10
+#: app/models.py:11
 msgid "description"
 msgstr "Tavsif"
 
-#: app/models.py:18
+#: app/models.py:19
 msgid "New"
 msgstr "Yangilik "
 
-#: app/models.py:19
+#: app/models.py:20
 msgid "News"
 msgstr "Yangiliklar"
 
-#: app/templates/base.html:41 app/templates/base.html:103
+#: app/templates/base.html:41 app/templates/base.html:112
 #: app/templates/includes/footer.html:16
 msgid "Logo"
 msgstr "Logo"
 
-#: app/templates/base.html:51 app/templates/base.html:83
+#: app/templates/base.html:53 app/templates/base.html:92
 msgid "Menu"
 msgstr "Menu"
 
-#: app/templates/base.html:58
+#: app/templates/base.html:61
 msgid "Toggle navigation"
 msgstr "Navigatsiyani almashtirish"
 
-#: app/templates/base.html:67
+#: app/templates/base.html:73 app/templates/includes/footer.html:21
 msgid "Asosiy sahifa"
 msgstr "Asosiy sahifa"
 
-#: app/templates/base.html:68
-msgid "Biz haqimizda"
-msgstr "Biz haqimizda"
-
-#: app/templates/base.html:69
+#: app/templates/base.html:75 app/templates/includes/footer.html:23
 msgid "Loyihalar"
 msgstr "Loyihalar"
 
-#: app/templates/base.html:70
+#: app/templates/base.html:76 app/templates/includes/footer.html:24
+#: app/templates/includes/news_detail.html:162
+#: app/templates/news_detail.html:164
 msgid "Yangiliklar"
 msgstr "Yangiliklar"
 
-#: app/templates/base.html:71
+#: app/templates/base.html:77 app/templates/includes/footer.html:25
 msgid "Contact"
 msgstr "Contact"
 
-#: app/templates/base.html:129
+#: app/templates/base.html:78 app/templates/includes/footer.html:26
+#: app/templates/license.html:9
+msgid "Akkreditsiya"
+msgstr "Akkreditsiya"
+
+#: app/templates/base.html:162 app/templates/base.html:176
 msgid "Biz murakkablikdan voz kechdik "
+msgstr "Biz murakkablikdan voz kechdik"
+
+#: app/templates/includes/footer.html:22
+msgid "Biz haqimizda"
+msgstr "Biz haqimizda"
+
+#: app/templates/includes/news_detail.html:171
+#: app/templates/news_detail.html:172
+msgid "E'lon qilingan"
+msgstr "E'lon qilingan"
+
+#: app/templates/includes/news_detail.html:174
+#: app/templates/news_detail.html:174
+msgid "Davomini o'qish"
+msgstr "Davomini o'qish"
+
+#: app/templates/includes/news_detail.html:176
+msgid "Ko'proq bilib olish"
+msgstr "Ko'proq bilib olish"
+
+#: app/templates/index.html:19
+msgid "+10 yil tajriba"
+msgstr "+65 yil tajriba"
+
+#: app/templates/index.html:20
+msgid "Yuqori tajribaga ega arxitektor va injener-konstruktorlar"
+msgstr "Yuqori tajribaga ega arxitektor va injener-konstruktorlar"
+
+#: app/templates/index.html:32
+msgid "Imorat Development"
+msgstr "Imorat Development"
+
+#: app/templates/index.html:34
+msgid ""
+"2019 yilda Buxoroda tashkil topib 'Freedom Investment MCHJ' 'Imorat "
+"Development' arxitektura kompaniyasi qisqa vaqt ichida O'zbekistonda xususan"
+" Buxoro va Toshkentda murakkab, premium qurilish loyihalari, katta davlat "
+"buyurtmalari hamda madniy meros obyektlari restavratsiyasida yuqori "
+"ko'rsatkichlarga erishdi."
+msgstr ""
+"Корхона 1959 йилда Бухоро вилояти худудида илк нефт ва газ конларини ишга тушириш асносида ўз фаолиятини бошлаган.\n"
+"\n"
+"Корхонанинг ташкил этилишидан асосий мақсад: • Нефт ва газни қазиб олиш, уларни транспортга тайёрлаш ҳамда ташиш (ўтказиш) технологияларини такомиллаштиришга қаратилган тадқиқот ишларини амалга ошириш."
+
+#: app/templates/index.html:37
+msgid ""
+"Biz III - darajali murakkablikdagi qurilish obyektlari, premium ko'p qavatli"
+" uylar, restoranlar, 4-5 yulduzli mehmonxonalar eksteryeri va interyeri, "
+"landshaft dizayni, massivlar va kichik shaharchalar bosh rejalarini "
+"yaratishga shuningdek qadimiy obidalar restavratsiyasi hamda madaniy meros "
+"himoyasi hududidagi yangi qurilishlarni loyihalashga ixtisoslashganmiz."
+msgstr ""
+"Ҳамкорларимиз — Ўзбекистон Республикасининг турли ҳудудларида фаолият юритаётган йирик ва кичик нефть ва газ қазиб чиқарувчи ҳамда қайта ишловчи корхоналар.\n"
+"\n"
+"«Нефтгазтадқиқот» АЖда ўз олдига қўйилган вазифаларни мукаммал даражада бажарадиган ва муштарак мақсадлар билан бирлашган мутахассислар фаолият кўрсатадилар."
+
+#: app/templates/index.html:40
+msgid ""
+"Portfoliomizda yuqoridagi yo'nalishlar bo'yicha eng sara namunalarni "
+"ko'rishingiz mumkin."
+msgstr ""
+"Portfoliomizda yuqoridagi yo'nalishlar bo'yicha eng sara namunalarni "
+"ko'rishingiz mumkin."
+
+#: app/templates/index.html:54
+msgid "Bizning yo'nalishlar"
+msgstr "Loyihalar"
+
+#: app/templates/index.html:62
+msgid "Neft va gazni qayta ishlash mahsulotlari sinov laboratoriyasi"
+msgstr "Neft va gazni qayta ishlash mahsulotlari sinov laboratoriyasi"
+
+#: app/templates/index.html:63
+msgid ""
+"«Нефтгазтажкикот» АЖ таркибидаги нефт ва газни қайта ишлаш маҳсулотлари "
+"синов лабораторияси Ўзбекистон Республикаси Миллий сертификатлаштириш "
+"тизимида аккредитация қилинган."
+msgstr ""
+"«Нефтгазтажкикот» АЖ таркибидаги нефт ва газни қайта ишлаш маҳсулотлари "
+"синов лабораторияси Ўзбекистон Республикаси Миллий сертификатлаштириш "
+"тизимида аккредитация қилинган."
+
+#: app/templates/index.html:73
+msgid "Ekologik-analitik laboratoriya"
+msgstr "Ekologik-analitik laboratoriya"
+
+#: app/templates/index.html:74
+msgid ""
+"Ўзбекистон Республикаси Табиатни муҳофаза қилиш Давлат қўмитаси томонидан "
+"аттестация қилинган экоаналитик лаборатория."
+msgstr ""
+"Ўзбекистон Республикаси Табиатни муҳофаза қилиш Давлат қўмитаси томонидан "
+"аттестация қилинган экоаналитик лаборатория."
+
+#: app/templates/index.html:84
+msgid "Inhibitor ximoyasi va elektr-kimyoviy muxofaza laboratoriyasi"
+msgstr "Inhibitor ximoyasi va elektr-kimyoviy muxofaza laboratoriyasi"
+
+#: app/templates/index.html:85
+msgid ""
+"«Ўзстандарт» агентлиги томонидан аттестация қилинган ингибитор химояси ҳамда"
+" электр-кимёвий муҳофаза синов лабораториялари."
+msgstr ""
+"«Ўзстандарт» агентлиги томонидан аттестация қилинган ингибитор химояси ҳамда"
+" электр-кимёвий муҳофаза синов лабораториялари."
+
+#: app/templates/index.html:95
+msgid ""
+"Xalqaro standartlar talablariga javob beradigan tadqiqot laboratoriyalari"
+msgstr ""
+"Xalqaro standartlar talablariga javob beradigan tadqiqot laboratoriyalari"
+
+#: app/templates/index.html:96
+msgid ""
+"Лабораториялар халқаро стандартлар талабларига жавоб беради ва тадқиқотларни"
+" юқори даражада ўтказади."
+msgstr ""
+"Лабораториялар халқаро стандартлар талабларига жавоб беради ва тадқиқотларни"
+" юқори даражада ўтказади."
+
+#: app/templates/index.html:121
+msgid "Bizning loyihalar"
+msgstr "Loyihalar"
+
+#: app/templates/index.html:229
+msgid "Bizni nima uchun tanlashadi"
+msgstr "Bizni nima uchun tanlashadi"
+
+#: app/templates/index.html:237
+msgid "Professional va fidoyi jamoa"
+msgstr "Professional va fidoyi jamoa"
+
+#: app/templates/index.html:238
+msgid "Arxitekturani zamonaviy texnologiyalar bilan yaratish."
+msgstr "Arxitekturani zamonaviy texnologiyalar bilan yaratish."
+
+#: app/templates/index.html:240 app/templates/index.html:251
+#: app/templates/index.html:262 app/templates/index.html:272
+msgid "ko'proq"
+msgstr "ko'proq"
+
+#: app/templates/index.html:248
+msgid "Takrorlanmas dizayn"
+msgstr "Takrorlanmas dizayn"
+
+#: app/templates/index.html:249
+msgid "Loyihangizga joziba bering va bahra oling."
+msgstr "Loyihangizga joziba bering va bahra oling."
+
+#: app/templates/index.html:259
+msgid "Sifat va narx hamohangligi"
+msgstr "Sifat va narx hamohangligi"
+
+#: app/templates/index.html:260
+msgid "Premium xizmat paketlari."
+msgstr "Premium xizmat paketlari."
+
+#: app/templates/index.html:269
+msgid "24/7 qo'llab quvvatlash"
+msgstr "24/7 qo'llab quvvatlash"
+
+#: app/templates/index.html:270
+msgid "Konsalting yechimlar va qulay takliflar."
+msgstr "Konsalting yechimlar va qulay takliflar."
+
+#: app/templates/index.html:286
+msgid "Biz qanday ishlaymiz"
+msgstr "Biz qanday ishlaymiz"
+
+#: app/templates/index.html:287
+msgid "Oson & Ishonchli"
+msgstr "Oson & Ishonchli"
+
+#: app/templates/index.html:287
+msgid "Jarayon"
+msgstr "Jarayon"
+
+#: app/templates/index.html:289
+msgid "Biz shuni tushunamizki siz bizga fikringizni eshitishimiz"
+msgstr "Biz shuni tushunamizki siz bizga fikringizni eshitishimiz"
+
+#: app/templates/index.html:290
+msgid "va eng muhimi sizning qarashlaringizni tushunishimiz"
+msgstr "va eng muhimi sizning qarashlaringizni tushunishimiz"
+
+#: app/templates/index.html:291
+msgid "uchun murojaat qilasiz."
+msgstr "uchun murojaat qilasiz."
+
+#: app/templates/index.html:292
+msgid "Shunday ekan, avvalo, loyiha yakunlangach, unda o'z"
+msgstr "Shunday ekan, avvalo, loyiha yakunlangach, unda o'z"
+
+#: app/templates/index.html:293
+msgid "xohishlaringiz aksini ko'rishingiz uchun harakat qilamiz."
+msgstr "xohishlaringiz aksini ko'rishingiz uchun harakat qilamiz."
+
+#: app/templates/index.html:315
+msgid "Arxitekturaga o'rgatib - bo'lmaydi"
+msgstr "Arxitekturaga o'rgatib - bo'lmaydi"
+
+#: app/templates/index.html:315
+msgid "faqatgina odamlarni ilhomlantirish mumkin."
+msgstr "faqatgina odamlarni ilhomlantirish mumkin."
+
+#: app/templates/index.html:315
+msgid "Zaha Hadid"
+msgstr "Zaha Hadid"
+
+#: app/templates/index.html:325
+msgid "12000 dollarlik uyni"
+msgstr "12000 dollarlik uyni"
+
+#: app/templates/index.html:325
+msgid "12000 dollarga qura olaman,- deb o'ylagan odam optimistdir."
+msgstr "12000 dollarga qura olaman,- deb o'ylagan odam optimistdir."
+
+#: app/templates/index.html:325
+msgid "Frensis Rodman"
+msgstr "Frensis Rodman"
+
+#: app/templates/index.html:336
+msgid "Arxitektura bu ovozsiz musiqadir."
+msgstr "Arxitektura bu ovozsiz musiqadir."
+
+#: app/templates/index.html:336
+msgid "Iogan Volfgang Fon Gyote."
+msgstr "Iogan Volfgang Fon Gyote."
+
+#: app/templates/license.html:12
+#| msgid ""
+#| "Ushbu bo‘limda siz kompaniyangizning Akkreditsiya hujjatining PDF-faylini "
+#| "ko‘rishingiz yoki yuklab olishingiz mumkin. Biz shaffoflikka ahamiyat "
+#| "beramiz va faoliyatimizga bo‘lgan ishonchingiz uchun barcha zarur "
+#| "hujjatlarni taqdim etamiz."
+msgid ""
+"Ushbu bo‘limda siz kompaniyangizning Akkreditsiya hujjatining PDF-fayllarini"
+" ko‘rishingiz yoki yuklab olishingiz mumkin. Biz shaffoflikka ahamiyat "
+"beramiz va faoliyatimizga bo‘lgan ishonchingiz uchun barcha зарур "
+"hujjatlarni taqdim etamiz."
+msgstr ""
+"Ushbu bo‘limda siz kompaniyangizning Akkreditsiya hujjatining PDF-faylini "
+"ko‘rishingiz yoki yuklab olishingiz mumkin. Biz shaffoflikka ahamiyat "
+"beramiz va faoliyatimizga bo‘lgan ishonchingiz uchun barcha zarur "
+"hujjatlarni taqdim etamiz."
+
+#: app/templates/license.html:22
+msgid "PDF Akkreditsiyani yuklab olish"
+msgstr "PDF Akkreditsiyani yuklab olish"
+
+#: app/templates/license.html:24
+msgid "Akkreditsiya hujjati mavjud emas"
+msgstr "Akkreditsiya hujjati mavjud emas"
+
+#: app/templates/news_detail.html:185
+#| msgid "Read more"
+msgid "Read less"
+msgstr ""
+
+#: app/templates/news_detail.html:185
+msgid "Davomini oqish"
 msgstr ""
 
 #: development/settings.py:117
@@ -83,3 +347,100 @@ msgstr "Ingliz"
 #: development/settings.py:119
 msgid "Uzbek"
 msgstr "O'zbek"
+
+#~ msgid "Hammasi"
+#~ msgstr "Hammasi"
+
+#~ msgid "Arxitektura"
+#~ msgstr "Arxitektura"
+
+#~ msgid "Interyer"
+#~ msgstr "Interyer"
+
+#~ msgid "Madaniy me'ros"
+#~ msgstr "Madaniy me'ros"
+
+#~ msgid "barcha loyihalarni ko'rish"
+#~ msgstr "barcha loyihalarni ko'rish"
+
+#~ msgid "Savdo majmuasi"
+#~ msgstr "Savdo majmuasi"
+
+#~ msgid "Toshkent"
+#~ msgstr "Toshkent"
+
+#~ msgid "Urganch"
+#~ msgstr "Urganch"
+
+#~ msgid "Ko'p qavatli uy"
+#~ msgstr "Ko'p qavatli uy"
+
+#~ msgid "Mehmonxona"
+#~ msgstr "Mehmonxona"
+
+#~ msgid "Masjid loyihasi"
+#~ msgstr "Masjid loyihasi"
+
+#~ msgid "Buxoro"
+#~ msgstr "Buxoro"
+
+#~ msgid "Co-working zone"
+#~ msgstr "Co-working zone"
+
+#~ msgid "Garden Plaza"
+#~ msgstr "Garden Plaza"
+
+#~ msgid "Yopish"
+#~ msgstr "Yopish"
+
+#~ msgid ""
+#~ "Biz bo'lajak qurilishning bosh rejasi, landshafti, fasadi, planirovkasi, "
+#~ "shakli, qavat rejasi uchun eng sara yechimlarni taqdim etamiz."
+#~ msgstr ""
+#~ "Biz bo'lajak qurilishning bosh rejasi, landshafti, fasadi, planirovkasi, "
+#~ "shakli, qavat rejasi uchun eng sara yechimlarni taqdim etamiz."
+
+#~ msgid "Interior Dizayn"
+#~ msgstr "Interior Dizayn"
+
+#~ msgid ""
+#~ "Dizaynerlarimiz bino va xonalarning bo'lajak holatini siz istagan "
+#~ "shinamlikda va jozibada taqdim qilishadi. Ulardan VR (virtual reallik 360)da"
+#~ " ham bahramand bo'lishingiz mumkin."
+#~ msgstr ""
+#~ "Dizaynerlarimiz bino va xonalarning bo'lajak holatini siz istagan "
+#~ "shinamlikda va jozibada taqdim qilishadi. Ulardan VR (virtual reallik 360)da"
+#~ " ham bahramand bo'lishingiz mumkin."
+
+#~ msgid "Konstruksiya"
+#~ msgstr "Konstruksiya"
+
+#~ msgid ""
+#~ "Katta loyihalar noodatiy shakldagi binolar, seysmik o'ziga xosliklarga ega "
+#~ "hududlardagi obyektlar qurilishi, qurilish mollarining optimal sarflanishi, "
+#~ "yuklamalarning to'g'ri taqsimlanishi, qurilish hajmining aniq o'lchanishi "
+#~ "uchun malakali injener-muhandislarimiz eng ishonchli va zamonaviy dasturiy "
+#~ "ta'minotlardan foydalanishadi."
+#~ msgstr ""
+#~ "Katta loyihalar noodatiy shakldagi binolar, seysmik o'ziga xosliklarga ega "
+#~ "hududlardagi obyektlar qurilishi, qurilish mollarining optimal sarflanishi, "
+#~ "yuklamalarning to'g'ri taqsimlanishi, qurilish hajmining aniq o'lchanishi "
+#~ "uchun malakali injener-muhandislarimiz eng ishonchli va zamonaviy dasturiy "
+#~ "ta'minotlardan foydalanishadi."
+
+#~ msgid "VR model"
+#~ msgstr "VR model"
+
+#~ msgid ""
+#~ "Bunda rejadagi bino yoki interyer virtual ekizagi yaratilib uni oldindan "
+#~ "real hajmda VR ko'zoynaklar orqali kuzatish mumkin bo'ladi."
+#~ msgstr ""
+#~ "Bunda rejadagi bino yoki interyer virtual ekizagi yaratilib uni oldindan "
+#~ "real hajmda VR ko'zoynaklar orqali kuzatish mumkin bo'ladi."
+
+#~ msgid "Litsenziya"
+#~ msgstr "Litsenziya"
+
+#, fuzzy
+#~ msgid "Litsenziya hujjati"
+#~ msgstr "Litsenziya"

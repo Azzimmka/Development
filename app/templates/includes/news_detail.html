@@ -1,5 +1,6 @@
 {% block news %}
 {% load static %}
+{% load i18n %}
     <style>
         /* Основные стили */
         body {
@@ -69,7 +70,7 @@
 
         /* Стили контейнера новостей */
         .news-container {
-            max-width: 1000px;
+            max-width: 2000px;
             margin: 0 auto;
             padding: 20px;
             display: grid;
@@ -94,8 +95,8 @@
 
         /* Изображение новости */
         .news-card img {
-            width: 100%;
-            height: auto;
+            width: 600px;
+            height: 500px;
             border-radius: 6px;
             object-fit: cover;
             margin-bottom: 15px;
@@ -158,18 +159,23 @@
     <!-- Контейнер для новостей -->
      <br>
      <hr>
-    <h1>Yangiliklar</h1>
+    <h1 style="font-size: 60px;">{% trans 'Yangiliklar' %}</h1>
     <hr>
     <div class="news-container" id="news-container">
         {% for new in news %}
         <!-- Одна карточка новости -->
         <div class="news-card" data-category="{{ new.category }}">
-            <img src="{{ new.logo.url }}" alt="News Image">
+            <a href="{% url 'news_detail' new.slug %}"><img  src="{{ new.logo.url }}" alt="News Image"></a>
             <div class="news-card-content">
                 <h2>{{ new.title }}</h2>
+                <p class="date">{% trans "E'lon qilingan" %}: {{ new.created|date:"d M Y H:i" }}</p>
+                <hr>
                 <p class="news-text">{{ new.description }}</p>
-                <span class="read-more-btn" onclick="toggleReadMore(this)">Читать далее</span>
-                <span class="read-more-btn"><a href="{% url 'news' %}#allnews">Узнать больше</a></span>
+                <span class="read-more-btn" onclick="toggleReadMore(this)">{% trans "Davomini o'qish" %}</span>
+                <span class="read-more-btn">
+                    <a href="{% url 'news_detail' new.slug %}#allnews">{% trans "Ko'proq bilib olish" %}</a>
+                </span>
+                
             </div>
         </div>
         {% endfor %}

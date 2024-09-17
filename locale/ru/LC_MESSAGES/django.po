@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-14 09:37+0000\n"
-"PO-Revision-Date: 2024-09-14 09:52+0000\n"
+"POT-Creation-Date: 2024-09-17 03:13+0000\n"
+"PO-Revision-Date: 2024-09-17 03:51+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,58 +19,323 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: app/models.py:9
+#: app/models.py:10
 msgid "title"
 msgstr "Заголовок "
 
-#: app/models.py:10
+#: app/models.py:11
 msgid "description"
 msgstr "Описание "
 
-#: app/models.py:18
+#: app/models.py:19
 msgid "New"
 msgstr "Новость "
 
-#: app/models.py:19
+#: app/models.py:20
 msgid "News"
 msgstr "Новости "
 
-#: app/templates/base.html:41 app/templates/base.html:103
+#: app/templates/base.html:41 app/templates/base.html:112
 #: app/templates/includes/footer.html:16
 msgid "Logo"
 msgstr " Логотип"
 
-#: app/templates/base.html:51 app/templates/base.html:83
+#: app/templates/base.html:53 app/templates/base.html:92
 msgid "Menu"
 msgstr " Меню"
 
-#: app/templates/base.html:58
+#: app/templates/base.html:61
 msgid "Toggle navigation"
 msgstr "Переключить навигацию"
 
-#: app/templates/base.html:67
+#: app/templates/base.html:73 app/templates/includes/footer.html:21
 msgid "Asosiy sahifa"
 msgstr "Главная "
 
-#: app/templates/base.html:68
-msgid "Biz haqimizda"
-msgstr "О Нас "
-
-#: app/templates/base.html:69
+#: app/templates/base.html:75 app/templates/includes/footer.html:23
 msgid "Loyihalar"
 msgstr "Проекты"
 
-#: app/templates/base.html:70
+#: app/templates/base.html:76 app/templates/includes/footer.html:24
+#: app/templates/includes/news_detail.html:162
+#: app/templates/news_detail.html:164
 msgid "Yangiliklar"
 msgstr "Новости "
 
-#: app/templates/base.html:71
+#: app/templates/base.html:77 app/templates/includes/footer.html:25
 msgid "Contact"
 msgstr "Контакты "
 
-#: app/templates/base.html:129
+#: app/templates/base.html:78 app/templates/includes/footer.html:26
+#: app/templates/license.html:9
+msgid "Akkreditsiya"
+msgstr "Аккредитация"
+
+#: app/templates/base.html:162 app/templates/base.html:176
 msgid "Biz murakkablikdan voz kechdik "
 msgstr "Мы отказались от сложности"
+
+#: app/templates/includes/footer.html:22
+msgid "Biz haqimizda"
+msgstr "О Нас "
+
+#: app/templates/includes/news_detail.html:171
+#: app/templates/news_detail.html:172
+msgid "E'lon qilingan"
+msgstr "Опубликовано"
+
+#: app/templates/includes/news_detail.html:174
+#: app/templates/news_detail.html:174
+msgid "Davomini o'qish"
+msgstr "Читать далее"
+
+#: app/templates/includes/news_detail.html:176
+msgid "Ko'proq bilib olish"
+msgstr " Узнать больше"
+
+#: app/templates/index.html:19
+msgid "+10 yil tajriba"
+msgstr "+65 лет опыта"
+
+#: app/templates/index.html:20
+msgid "Yuqori tajribaga ega arxitektor va injener-konstruktorlar"
+msgstr " Архитекторы и строительные инженеры с высоким опытом"
+
+#: app/templates/index.html:32
+msgid "Imorat Development"
+msgstr "NeftGazTadqiqot"
+
+#: app/templates/index.html:34
+msgid ""
+"2019 yilda Buxoroda tashkil topib 'Freedom Investment MCHJ' 'Imorat "
+"Development' arxitektura kompaniyasi qisqa vaqt ichida O'zbekistonda xususan"
+" Buxoro va Toshkentda murakkab, premium qurilish loyihalari, katta davlat "
+"buyurtmalari hamda madniy meros obyektlari restavratsiyasida yuqori "
+"ko'rsatkichlarga erishdi."
+msgstr ""
+"Предприятие начало свою деятельность в 1959 году в ходе запуска первых нефтегазовых месторождений на территории Бухарской области.\n"
+"Основная цель создания предприятия: • Добыча нефти и газа, их подготовка к транспортировке, а также проведение исследований, направленных на совершенствование технологий транспортировки (передачи)."
+
+#: app/templates/index.html:37
+msgid ""
+"Biz III - darajali murakkablikdagi qurilish obyektlari, premium ko'p qavatli"
+" uylar, restoranlar, 4-5 yulduzli mehmonxonalar eksteryeri va interyeri, "
+"landshaft dizayni, massivlar va kichik shaharchalar bosh rejalarini "
+"yaratishga shuningdek qadimiy obidalar restavratsiyasi hamda madaniy meros "
+"himoyasi hududidagi yangi qurilishlarni loyihalashga ixtisoslashganmiz."
+msgstr ""
+"Наши партнёры — это крупные и мелкие предприятия, занимающиеся добычей и переработкой нефти и газа в различных регионах Республики Узбекистан.\n"
+"\n"
+"В АО «Нефтгазтадқиқот» работают специалисты, которые на высоком уровне выполняют поставленные задачи и работают ради общих целей."
+
+#: app/templates/index.html:40
+msgid ""
+"Portfoliomizda yuqoridagi yo'nalishlar bo'yicha eng sara namunalarni "
+"ko'rishingiz mumkin."
+msgstr ""
+"В нашем портфолио вы можете увидеть лучшие примеры в вышеупомянутых "
+"областях."
+
+#: app/templates/index.html:54
+msgid "Bizning yo'nalishlar"
+msgstr "Проекты"
+
+#: app/templates/index.html:62
+msgid "Neft va gazni qayta ishlash mahsulotlari sinov laboratoriyasi"
+msgstr "Лаборатория испытаний продукции переработки нефти и газа"
+
+#: app/templates/index.html:63
+msgid ""
+"«Нефтгазтажкикот» АЖ таркибидаги нефт ва газни қайта ишлаш маҳсулотлари "
+"синов лабораторияси Ўзбекистон Республикаси Миллий сертификатлаштириш "
+"тизимида аккредитация қилинган."
+msgstr ""
+"Лаборатория испытаний продукции переработки нефти и газа при АО "
+"«Нефтгазтажкикот» аккредитована в Национальной системе сертификации "
+"Республики Узбекистан."
+
+#: app/templates/index.html:73
+msgid "Ekologik-analitik laboratoriya"
+msgstr "Экологическая-аналитическая лаборатория."
+
+#: app/templates/index.html:74
+msgid ""
+"Ўзбекистон Республикаси Табиатни муҳофаза қилиш Давлат қўмитаси томонидан "
+"аттестация қилинган экоаналитик лаборатория."
+msgstr ""
+"Экоаналитическая лаборатория, аттестованная Государственным комитетом "
+"Республики Узбекистан по охране природы."
+
+#: app/templates/index.html:84
+msgid "Inhibitor ximoyasi va elektr-kimyoviy muxofaza laboratoriyasi"
+msgstr "Лаборатория ингибиторной защиты и электрохимической защиты."
+
+#: app/templates/index.html:85
+msgid ""
+"«Ўзстандарт» агентлиги томонидан аттестация қилинган ингибитор химояси ҳамда"
+" электр-кимёвий муҳофаза синов лабораториялари."
+msgstr ""
+"Лаборатории ингибиторной защиты и электрохимической защиты, аттестованные "
+"агентством «Узстандарт»."
+
+#: app/templates/index.html:95
+msgid ""
+"Xalqaro standartlar talablariga javob beradigan tadqiqot laboratoriyalari"
+msgstr ""
+"Исследовательские лаборатории, соответствующие требованиям международных "
+"стандартов."
+
+#: app/templates/index.html:96
+msgid ""
+"Лабораториялар халқаро стандартлар талабларига жавоб беради ва тадқиқотларни"
+" юқори даражада ўтказади."
+msgstr ""
+"Лаборатории соответствуют требованиям международных стандартов и проводят "
+"исследования на высоком уровне."
+
+#: app/templates/index.html:121
+msgid "Bizning loyihalar"
+msgstr "Наши проекты"
+
+#: app/templates/index.html:229
+msgid "Bizni nima uchun tanlashadi"
+msgstr "Почему выбирают нас"
+
+#: app/templates/index.html:237
+msgid "Professional va fidoyi jamoa"
+msgstr "Профессиональная и преданная команда"
+
+#: app/templates/index.html:238
+msgid "Arxitekturani zamonaviy texnologiyalar bilan yaratish."
+msgstr "Создание архитектуры с использованием современных технологий"
+
+#: app/templates/index.html:240 app/templates/index.html:251
+#: app/templates/index.html:262 app/templates/index.html:272
+msgid "ko'proq"
+msgstr "больше"
+
+#: app/templates/index.html:248
+msgid "Takrorlanmas dizayn"
+msgstr "Уникальный дизайн"
+
+#: app/templates/index.html:249
+msgid "Loyihangizga joziba bering va bahra oling."
+msgstr "Придайте вашему проекту привлекательность и наслаждайтесь им."
+
+#: app/templates/index.html:259
+msgid "Sifat va narx hamohangligi"
+msgstr "Соотношение качества и цены"
+
+#: app/templates/index.html:260
+msgid "Premium xizmat paketlari."
+msgstr "Премиум пакеты услуг"
+
+#: app/templates/index.html:269
+msgid "24/7 qo'llab quvvatlash"
+msgstr "Поддержка 24/7"
+
+#: app/templates/index.html:270
+msgid "Konsalting yechimlar va qulay takliflar."
+msgstr "Консультационные решения и удобные предложения"
+
+#: app/templates/index.html:286
+msgid "Biz qanday ishlaymiz"
+msgstr "Как мы работаем "
+
+#: app/templates/index.html:287
+msgid "Oson & Ishonchli"
+msgstr "Просто & Надежный"
+
+#: app/templates/index.html:287
+msgid "Jarayon"
+msgstr "Процесс"
+
+#: app/templates/index.html:289
+msgid "Biz shuni tushunamizki siz bizga fikringizni eshitishimiz"
+msgstr "Мы понимаем, что ваше мнение для нас важно."
+
+#: app/templates/index.html:290
+msgid "va eng muhimi sizning qarashlaringizni tushunishimiz"
+msgstr " и что для нас особенно важно"
+
+#: app/templates/index.html:291
+msgid "uchun murojaat qilasiz."
+msgstr " понимать ваши взгляды."
+
+#: app/templates/index.html:292
+msgid "Shunday ekan, avvalo, loyiha yakunlangach, unda o'z"
+msgstr "Поэтому, в первую очередь, мы стараемся сделать так, "
+
+#: app/templates/index.html:293
+msgid "xohishlaringiz aksini ko'rishingiz uchun harakat qilamiz."
+msgstr "чтобы после завершения проекта в нем отразились ваши пожелания."
+
+#: app/templates/index.html:315
+msgid "Arxitekturaga o'rgatib - bo'lmaydi"
+msgstr "Архитектуру нельзя научить"
+
+#: app/templates/index.html:315
+msgid "faqatgina odamlarni ilhomlantirish mumkin."
+msgstr "ее можно только вдохновить людей"
+
+#: app/templates/index.html:315
+msgid "Zaha Hadid"
+msgstr "Захи Хадид"
+
+#: app/templates/index.html:325
+msgid "12000 dollarlik uyni"
+msgstr "Дом за 12000 долларов"
+
+#: app/templates/index.html:325
+msgid "12000 dollarga qura olaman,- deb o'ylagan odam optimistdir."
+msgstr ""
+"человек, который думает, что сможет построить его за 12 000 долларов, "
+"является оптимистом."
+
+#: app/templates/index.html:325
+msgid "Frensis Rodman"
+msgstr "Frensis Rodman"
+
+#: app/templates/index.html:336
+msgid "Arxitektura bu ovozsiz musiqadir."
+msgstr "Архитектура — это безмолвная музыка."
+
+#: app/templates/index.html:336
+msgid "Iogan Volfgang Fon Gyote."
+msgstr "Иоганн Вольфганг фон Гёте"
+
+#: app/templates/license.html:12
+#| msgid ""
+#| "Ushbu bo‘limda siz kompaniyangizning Akkreditsiya hujjatining PDF-faylini "
+#| "ko‘rishingiz yoki yuklab olishingiz mumkin. Biz shaffoflikka ahamiyat "
+#| "beramiz va faoliyatimizga bo‘lgan ishonchingiz uchun barcha zarur "
+#| "hujjatlarni taqdim etamiz."
+msgid ""
+"Ushbu bo‘limda siz kompaniyangizning Akkreditsiya hujjatining PDF-fayllarini"
+" ko‘rishingiz yoki yuklab olishingiz mumkin. Biz shaffoflikka ahamiyat "
+"beramiz va faoliyatimizga bo‘lgan ishonchingiz uchun barcha зарур "
+"hujjatlarni taqdim etamiz."
+msgstr ""
+"В этом разделе вы можете просмотреть или скачать PDF-файл аккредитации вашей"
+" компании. Мы придаем большое значение прозрачности и предоставляем все "
+"необходимые документы для вашей уверенности в нашей деятельности."
+
+#: app/templates/license.html:22
+msgid "PDF Akkreditsiyani yuklab olish"
+msgstr "Скачать PDF аккредитацию"
+
+#: app/templates/license.html:24
+msgid "Akkreditsiya hujjati mavjud emas"
+msgstr "Документ аккредитации отсутствует."
+
+#: app/templates/news_detail.html:185
+#| msgid "Read more"
+msgid "Read less"
+msgstr "Скрыть "
+
+#: app/templates/news_detail.html:185
+msgid "Davomini oqish"
+msgstr "Читать далее"
 
 #: development/settings.py:117
 msgid "Russian"
@@ -83,3 +348,101 @@ msgstr "Англиский"
 #: development/settings.py:119
 msgid "Uzbek"
 msgstr "Узбекский"
+
+#~ msgid "Hammasi"
+#~ msgstr "Все "
+
+#~ msgid "Arxitektura"
+#~ msgstr "Архитектура "
+
+#~ msgid "Interyer"
+#~ msgstr " Интерьер"
+
+#~ msgid "Madaniy me'ros"
+#~ msgstr " Культурное наследие"
+
+#~ msgid "barcha loyihalarni ko'rish"
+#~ msgstr "посмотреть все проекты"
+
+#~ msgid "Savdo majmuasi"
+#~ msgstr "Торговый комплекс"
+
+#~ msgid "Toshkent"
+#~ msgstr "Ташкент "
+
+#~ msgid "Urganch"
+#~ msgstr "Ургенч "
+
+#~ msgid "Ko'p qavatli uy"
+#~ msgstr "Многоэтажное здание"
+
+#~ msgid "Mehmonxona"
+#~ msgstr "Отель"
+
+#~ msgid "Masjid loyihasi"
+#~ msgstr "Проект мечети"
+
+#~ msgid "Buxoro"
+#~ msgstr "Бухара "
+
+#~ msgid "Co-working zone"
+#~ msgstr "Зона коворкинга"
+
+#~ msgid "Garden Plaza"
+#~ msgstr "Garden Plaza"
+
+#~ msgid "Yopish"
+#~ msgstr "Скрыть "
+
+#~ msgid ""
+#~ "Biz bo'lajak qurilishning bosh rejasi, landshafti, fasadi, planirovkasi, "
+#~ "shakli, qavat rejasi uchun eng sara yechimlarni taqdim etamiz."
+#~ msgstr ""
+#~ "Мы предлагаем лучшие решения для генерального плана, ландшафта, фасада, "
+#~ "планировки, формы и планировки этажей будущих построек."
+
+#~ msgid "Interior Dizayn"
+#~ msgstr "Дизайн интерьера"
+
+#~ msgid ""
+#~ "Dizaynerlarimiz bino va xonalarning bo'lajak holatini siz istagan "
+#~ "shinamlikda va jozibada taqdim qilishadi. Ulardan VR (virtual reallik 360)da"
+#~ " ham bahramand bo'lishingiz mumkin."
+#~ msgstr ""
+#~ "Наши дизайнеры представят будущее состояние зданий и помещений с комфортом и"
+#~ " привлекательностью, которые вы желаете. Вы также можете оценить это в VR "
+#~ "(виртуальная реальность 360)."
+
+#~ msgid "Konstruksiya"
+#~ msgstr "Строительство"
+
+#~ msgid ""
+#~ "Katta loyihalar noodatiy shakldagi binolar, seysmik o'ziga xosliklarga ega "
+#~ "hududlardagi obyektlar qurilishi, qurilish mollarining optimal sarflanishi, "
+#~ "yuklamalarning to'g'ri taqsimlanishi, qurilish hajmining aniq o'lchanishi "
+#~ "uchun malakali injener-muhandislarimiz eng ishonchli va zamonaviy dasturiy "
+#~ "ta'minotlardan foydalanishadi."
+#~ msgstr ""
+#~ "Для крупных проектов, таких как здания с необычными формами, объекты в "
+#~ "сейсмически активных зонах, оптимальное использование строительных "
+#~ "материалов, правильное распределение нагрузок и точное измерение объемов "
+#~ "строительства, наши квалифицированные инженеры используют самые надежные и "
+#~ "современные программные средства."
+
+#~ msgid "VR model"
+#~ msgstr "VR модель "
+
+#~ msgid ""
+#~ "Bunda rejadagi bino yoki interyer virtual ekizagi yaratilib uni oldindan "
+#~ "real hajmda VR ko'zoynaklar orqali kuzatish mumkin bo'ladi."
+#~ msgstr ""
+#~ " В этом процессе создается виртуальная копия здания или интерьера на основе "
+#~ "планов, которую затем можно просматривать в реальном масштабе с помощью VR-"
+#~ "очков."
+
+#~ msgid "Litsenziya"
+#~ msgstr "Лицензия "
+
+#, fuzzy
+#~ msgid "Litsenziya hujjati"
+#~ msgstr "Лицензия "

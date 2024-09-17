@@ -18,11 +18,12 @@
         
         
         <ul class="footer-page-nav">
-            <li><a href="#">Asosiy sahifa</a></li>
-            <li><a href="#">Loyihalar</a></li>
-            <li><a href="#">Yangiliklar</a></li>
-            <li><a href="#">Biz haqimizda</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{% url 'index' %}">{% trans 'Asosiy sahifa' %}</a></li>
+            <li><a href="{% url 'index' %}#section_1">{% trans 'Biz haqimizda' %}</a></li>
+            <li><a href="{% url 'index' %}#loyihalar">{% trans 'Loyihalar' %}</a></li>
+            <li><a href="#allnews">{% trans 'Yangiliklar' %}</a></li>
+            <li><a href="{% url 'index' %}#contact">{% trans 'Contact' %}</a></li>
+            <li><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></li>
         </ul>
         <div class="contact-info">Islom Karimov 1 Buxoro, O'zbekiston<br> <a
                 href="tel:+998-33-055-10-00">(+998) 33 055-10-00</a> <br> <a
