@@ -140,6 +140,7 @@
 
 
         <style>
+
             .slide {
                 background-image: url('{% static 'images/bgimgasd.jpg' %}');
                 background-size: cover;
@@ -173,9 +174,29 @@
                     <!-- Content Boxed -->
                     <div class="content-boxed">
                         <div class="inner-boxed">
+                            <style>
+                                /* Общий стиль для заголовка */
+                                h1 {
+                                    font-size: 24px; /* Начальный размер для устройств с большим экраном */
+                                }
+
+                                /* Для экранов от 768px (планшеты) и выше */
+                                @media (min-width: 768px) {
+                                    h1 {
+                                        font-size: 32px; /* Размер для экранов средних размеров */
+                                    }
+                                }
+
+                                /* Для экранов от 1200px (десктопы) и выше */
+                                @media (min-width: 1200px) {
+                                    h1 {
+                                        font-size: 40px; /* Размер для больших экранов */
+                                    }
+                                }
+
+                            </style>
                             <div class="title"></div>
-                            <h1>NeftGazTadqiqot</h1>
-                            <p>{% trans 'Biz murakkablikdan voz kechdik ' %}</p>
+                                <h1>NeftGazTadqiqot</h1>
                             <div class="btn-box"></div>
                         </div>
                     </div>
@@ -187,9 +208,27 @@
                     <!-- Content Boxed -->
                     <div class="content-boxed">
                         <div class="inner-boxed">
+                            <style>
+                                h1 {
+                                    font-size: 24px; /* Начальный размер */
+                                }
+                                
+                                @media (min-width: 768px) {
+                                    h1 {
+                                        font-size: 32px !important; /* Размер для экранов средних размеров */
+                                    }
+                                }
+                                
+                                @media (min-width: 1200px) {
+                                    h1 {
+                                        font-size: 40px !important; /* Размер для больших экранов */
+                                    }
+                                }
+                                
+                            </style>
                             <div class="title"></div>
-                            <h1>NeftGazTadqiqot</h1>
-                            <p>{% trans 'Biz murakkablikdan voz kechdik ' %}</p>
+                            <h1 style="font-size: 60px;" >NeftGazTadqiqot</h1>
+
                             <div class="btn-box"></div>
                         </div>
                     </div>

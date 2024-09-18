@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-17 04:35+0000\n"
+"POT-Creation-Date: 2024-09-18 07:47+0000\n"
 "PO-Revision-Date: 2024-09-17 03:53+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,6 +40,10 @@ msgstr "Yangiliklar"
 msgid "Logo"
 msgstr "Logo"
 
+#: app/templates/base.html:68
+msgid "Menu"
+msgstr "Menu"
+
 #: app/templates/base.html:77
 msgid "Toggle navigation"
 msgstr "Navigatsiyani almashtirish"
@@ -66,14 +70,6 @@ msgstr "Contact"
 #: app/templates/license.html:9
 msgid "Akkreditsiya"
 msgstr "Akkreditsiya"
-
-#: app/templates/base.html:108
-msgid "Menu"
-msgstr "Menu"
-
-#: app/templates/base.html:178 app/templates/base.html:192
-msgid "Biz murakkablikdan voz kechdik "
-msgstr "Biz murakkablikdan voz kechdik"
 
 #: app/templates/includes/footer.html:22
 msgid "Biz haqimizda"
@@ -222,12 +218,15 @@ msgid "ko'proq"
 msgstr "ko'proq"
 
 #: app/templates/index.html:248
-msgid "Takrorlanmas dizayn"
-msgstr "Takrorlanmas dizayn"
+#, fuzzy
+#| msgid "Bizning yo'nalishlar"
+msgid "Bizning afzalliklarimiz"
+msgstr "Loyihalar"
 
 #: app/templates/index.html:249
-msgid "Loyihangizga joziba bering va bahra oling."
-msgstr "Loyihangizga joziba bering va bahra oling."
+msgid ""
+"Faoliyat yo'nalishlari bo'yicha yuqori malakali mutaxassislarning mavjudligi."
+msgstr ""
 
 #: app/templates/index.html:259
 msgid "Sifat va narx hamohangligi"
@@ -348,6 +347,15 @@ msgstr "Ingliz"
 #: development/settings.py:119
 msgid "Uzbek"
 msgstr "O'zbek"
+
+#~ msgid "Biz murakkablikdan voz kechdik "
+#~ msgstr "Biz murakkablikdan voz kechdik"
+
+#~ msgid "Takrorlanmas dizayn"
+#~ msgstr "Takrorlanmas dizayn"
+
+#~ msgid "Loyihangizga joziba bering va bahra oling."
+#~ msgstr "Loyihangizga joziba bering va bahra oling."
 
 #~ msgid "Hammasi"
 #~ msgstr "Hammasi"
