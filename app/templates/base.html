@@ -19,18 +19,34 @@
         <header class="main-header" >
     
             <!-- Header Upper -->
-            <div class="header-upper">
+            <div class="header-upper" style="background-color: rgb(91, 91, 91);">
                 <div class="outer-container" >
                     <div class="inner-container clearfix" >
                         <style>
-                            @media (min-width: 940px) {
-                                .logo-box {
-                                    /* Поднимаем логотип выше только для экранов шире 940px */
-                                    font-size: 30px;
+                            @media (min-width: 1200px) {
+                                .logo-box img{
+                                    font-size: 60px;
+                                    /* Поднимаем логотип выше для экранов шире 1200px */
+                                    margin-top: -5px; /* Отрегулируйте это значение по вашему усмотрению */
                                 }
                                 .logo img {
-                                    width: 130px;
-                                    height: 130px;
+                                    width: 140px;
+                                    height: 120px;
+                                }
+                            }
+                        
+                            @media (min-width: 200px) {
+                                .logo-box {
+                                    /* Можно добавить стили для экранов шире 630px, если это необходимо */
+                                    font-size: 100px;
+                                    margin-top: -20px; /* Отрегулируйте это значение по вашему усмотрению */
+                                    /* Поднимаем логотип выше для экранов шире 1200px */
+
+                                }
+                                .logo img {
+                                    /* Можно добавить стили для изображений на экранах шире 630px, если это необходимо */
+                                    max-width: 120px;
+
                                 }
                             }
                         </style>
@@ -38,19 +54,19 @@
                         <div class="pull-left logo-box">
                             <div class="logo">
                                 <a href="{% url 'index' %}">
-                                    <img src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt="{% trans 'Logo' %}" title="{% trans 'Logo' %}" style=" margin-top: -15px;">
-                                    
+                                    <img src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt="{% trans 'Logo' %}" title="{% trans 'Logo' %}" >
                                 </a>
                             </div>
                         </div>
+                        
                         
                         
                         <div class="nav-outer pull-left clearfix">
                             <!-- Mobile Navigation Toggler -->
                             <div class="mobile-nav-toggler">
                                 <span class="icon ti-menu"></span>
-
                                 {% trans 'Menu' %}
+
                             </div>
                             <!-- Main Menu -->
                             <nav class="main-menu navbar-expand-md">
@@ -89,7 +105,7 @@
                         <div class="outer-box clearfix">
                             <!-- Mobile Navigation Toggler -->
                             <div class="mobile-nav-toggler">
-                                {% trans 'Menu' %} <span class="icon ion-android-menu"></span>
+                                <span class="icon ion-android-menu"></span>
                             </div>
                         </div>
     

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-17 03:13+0000\n"
+"POT-Creation-Date: 2024-09-17 04:35+0000\n"
 "PO-Revision-Date: 2024-09-17 03:51+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,43 +35,43 @@ msgstr "New"
 msgid "News"
 msgstr "News"
 
-#: app/templates/base.html:41 app/templates/base.html:112
+#: app/templates/base.html:57 app/templates/base.html:128
 #: app/templates/includes/footer.html:16
 msgid "Logo"
 msgstr "Logo"
 
-#: app/templates/base.html:53 app/templates/base.html:92
-msgid "Menu"
-msgstr "Menu"
-
-#: app/templates/base.html:61
+#: app/templates/base.html:77
 msgid "Toggle navigation"
 msgstr "Toggle navigation"
 
-#: app/templates/base.html:73 app/templates/includes/footer.html:21
+#: app/templates/base.html:89 app/templates/includes/footer.html:21
 msgid "Asosiy sahifa"
 msgstr "Home"
 
-#: app/templates/base.html:75 app/templates/includes/footer.html:23
+#: app/templates/base.html:91 app/templates/includes/footer.html:23
 msgid "Loyihalar"
 msgstr "Projects"
 
-#: app/templates/base.html:76 app/templates/includes/footer.html:24
+#: app/templates/base.html:92 app/templates/includes/footer.html:24
 #: app/templates/includes/news_detail.html:162
 #: app/templates/news_detail.html:164
 msgid "Yangiliklar"
 msgstr "News "
 
-#: app/templates/base.html:77 app/templates/includes/footer.html:25
+#: app/templates/base.html:93 app/templates/includes/footer.html:25
 msgid "Contact"
 msgstr "Contact"
 
-#: app/templates/base.html:78 app/templates/includes/footer.html:26
+#: app/templates/base.html:94 app/templates/includes/footer.html:26
 #: app/templates/license.html:9
 msgid "Akkreditsiya"
 msgstr "Accreditation"
 
-#: app/templates/base.html:162 app/templates/base.html:176
+#: app/templates/base.html:108
+msgid "Menu"
+msgstr "Menu"
+
+#: app/templates/base.html:178 app/templates/base.html:192
 msgid "Biz murakkablikdan voz kechdik "
 msgstr "We gave up on complexity"
 
@@ -108,25 +108,30 @@ msgstr "Imorat Development"
 #: app/templates/index.html:34
 msgid ""
 "2019 yilda Buxoroda tashkil topib 'Freedom Investment MCHJ' 'Imorat "
-"Development' arxitektura kompaniyasi qisqa vaqt ichida O'zbekistonda xususan"
-" Buxoro va Toshkentda murakkab, premium qurilish loyihalari, katta davlat "
+"Development' arxitektura kompaniyasi qisqa vaqt ichida O'zbekistonda xususan "
+"Buxoro va Toshkentda murakkab, premium qurilish loyihalari, katta davlat "
 "buyurtmalari hamda madniy meros obyektlari restavratsiyasida yuqori "
 "ko'rsatkichlarga erishdi."
 msgstr ""
-"The enterprise began its operations in 1959 during the initial development of oil and gas fields in the Bukhara region.\n"
-"The main purpose of establishing the enterprise is to: • Extract oil and gas, prepare them for transportation, and conduct research to improve transportation (transmission) technologies."
+"The enterprise began its operations in 1959 during the initial development "
+"of oil and gas fields in the Bukhara region.\n"
+"The main purpose of establishing the enterprise is to: • Extract oil and "
+"gas, prepare them for transportation, and conduct research to improve "
+"transportation (transmission) technologies."
 
 #: app/templates/index.html:37
 msgid ""
-"Biz III - darajali murakkablikdagi qurilish obyektlari, premium ko'p qavatli"
-" uylar, restoranlar, 4-5 yulduzli mehmonxonalar eksteryeri va interyeri, "
+"Biz III - darajali murakkablikdagi qurilish obyektlari, premium ko'p qavatli "
+"uylar, restoranlar, 4-5 yulduzli mehmonxonalar eksteryeri va interyeri, "
 "landshaft dizayni, massivlar va kichik shaharchalar bosh rejalarini "
 "yaratishga shuningdek qadimiy obidalar restavratsiyasi hamda madaniy meros "
 "himoyasi hududidagi yangi qurilishlarni loyihalashga ixtisoslashganmiz."
 msgstr ""
-"Our partners are large and small companies engaged in oil and gas extraction and processing in various regions of the Republic of Uzbekistan.\n"
+"Our partners are large and small companies engaged in oil and gas extraction "
+"and processing in various regions of the Republic of Uzbekistan.\n"
 "\n"
-"\"Neftgaztadqiqot\" JSC employs specialists who fully accomplish the set tasks and work together towards common goals."
+"\"Neftgaztadqiqot\" JSC employs specialists who fully accomplish the set "
+"tasks and work together towards common goals."
 
 #: app/templates/index.html:40
 msgid ""
@@ -163,8 +168,8 @@ msgid ""
 "Ўзбекистон Республикаси Табиатни муҳофаза қилиш Давлат қўмитаси томонидан "
 "аттестация қилинган экоаналитик лаборатория."
 msgstr ""
-"Eco-analytical laboratory certified by the State Committee for Environmental"
-" Protection of the Republic of Uzbekistan."
+"Eco-analytical laboratory certified by the State Committee for Environmental "
+"Protection of the Republic of Uzbekistan."
 
 #: app/templates/index.html:84
 msgid "Inhibitor ximoyasi va elektr-kimyoviy muxofaza laboratoriyasi"
@@ -172,8 +177,8 @@ msgstr "Inhibitor protection and electrochemical protection laboratory."
 
 #: app/templates/index.html:85
 msgid ""
-"«Ўзстандарт» агентлиги томонидан аттестация қилинган ингибитор химояси ҳамда"
-" электр-кимёвий муҳофаза синов лабораториялари."
+"«Ўзстандарт» агентлиги томонидан аттестация қилинган ингибитор химояси ҳамда "
+"электр-кимёвий муҳофаза синов лабораториялари."
 msgstr ""
 "Inhibitor protection and electrochemical protection testing laboratories "
 "accredited by the \"Uzstandard\" Agency."
@@ -185,11 +190,11 @@ msgstr "Research laboratories that meet international standards requirements."
 
 #: app/templates/index.html:96
 msgid ""
-"Лабораториялар халқаро стандартлар талабларига жавоб беради ва тадқиқотларни"
-" юқори даражада ўтказади."
+"Лабораториялар халқаро стандартлар талабларига жавоб беради ва тадқиқотларни "
+"юқори даражада ўтказади."
 msgstr ""
-"The laboratories meet international standards and conduct research at a high"
-" level."
+"The laboratories meet international standards and conduct research at a high "
+"level."
 
 #: app/templates/index.html:121
 msgid "Bizning loyihalar"
@@ -262,8 +267,7 @@ msgstr "your perspectives."
 
 #: app/templates/index.html:292
 msgid "Shunday ekan, avvalo, loyiha yakunlangach, unda o'z"
-msgstr ""
-"Therefore, first of all, we strive to ensure that after the project is"
+msgstr "Therefore, first of all, we strive to ensure that after the project is"
 
 #: app/templates/index.html:293
 msgid "xohishlaringiz aksini ko'rishingiz uchun harakat qilamiz."
@@ -302,14 +306,9 @@ msgid "Iogan Volfgang Fon Gyote."
 msgstr "Iogan Volfgang Fon Gyote."
 
 #: app/templates/license.html:12
-#| msgid ""
-#| "Ushbu bo‘limda siz kompaniyangizning Akkreditsiya hujjatining PDF-faylini "
-#| "ko‘rishingiz yoki yuklab olishingiz mumkin. Biz shaffoflikka ahamiyat "
-#| "beramiz va faoliyatimizga bo‘lgan ishonchingiz uchun barcha zarur "
-#| "hujjatlarni taqdim etamiz."
 msgid ""
-"Ushbu bo‘limda siz kompaniyangizning Akkreditsiya hujjatining PDF-fayllarini"
-" ko‘rishingiz yoki yuklab olishingiz mumkin. Biz shaffoflikka ahamiyat "
+"Ushbu bo‘limda siz kompaniyangizning Akkreditsiya hujjatining PDF-fayllarini "
+"ko‘rishingiz yoki yuklab olishingiz mumkin. Biz shaffoflikka ahamiyat "
 "beramiz va faoliyatimizga bo‘lgan ishonchingiz uchun barcha зарур "
 "hujjatlarni taqdim etamiz."
 msgstr ""
@@ -326,7 +325,6 @@ msgid "Akkreditsiya hujjati mavjud emas"
 msgstr "Accreditation document is not available."
 
 #: app/templates/news_detail.html:185
-#| msgid "Read more"
 msgid "Read less"
 msgstr "Read less"
 
@@ -403,27 +401,27 @@ msgstr "Uzbek"
 
 #~ msgid ""
 #~ "Dizaynerlarimiz bino va xonalarning bo'lajak holatini siz istagan "
-#~ "shinamlikda va jozibada taqdim qilishadi. Ulardan VR (virtual reallik 360)da"
-#~ " ham bahramand bo'lishingiz mumkin."
+#~ "shinamlikda va jozibada taqdim qilishadi. Ulardan VR (virtual reallik "
+#~ "360)da ham bahramand bo'lishingiz mumkin."
 #~ msgstr ""
-#~ "Our designers will present the future state of buildings and rooms with the "
-#~ "comfort and appeal you desire. You can also experience it in VR (virtual "
-#~ "reality 360)."
+#~ "Our designers will present the future state of buildings and rooms with "
+#~ "the comfort and appeal you desire. You can also experience it in VR "
+#~ "(virtual reality 360)."
 
 #~ msgid "Konstruksiya"
 #~ msgstr "Construction"
 
 #~ msgid ""
-#~ "Katta loyihalar noodatiy shakldagi binolar, seysmik o'ziga xosliklarga ega "
-#~ "hududlardagi obyektlar qurilishi, qurilish mollarining optimal sarflanishi, "
-#~ "yuklamalarning to'g'ri taqsimlanishi, qurilish hajmining aniq o'lchanishi "
-#~ "uchun malakali injener-muhandislarimiz eng ishonchli va zamonaviy dasturiy "
-#~ "ta'minotlardan foydalanishadi."
+#~ "Katta loyihalar noodatiy shakldagi binolar, seysmik o'ziga xosliklarga "
+#~ "ega hududlardagi obyektlar qurilishi, qurilish mollarining optimal "
+#~ "sarflanishi, yuklamalarning to'g'ri taqsimlanishi, qurilish hajmining "
+#~ "aniq o'lchanishi uchun malakali injener-muhandislarimiz eng ishonchli va "
+#~ "zamonaviy dasturiy ta'minotlardan foydalanishadi."
 #~ msgstr ""
-#~ "For large projects, such as buildings with unconventional shapes, objects in"
-#~ " seismically active areas, optimal use of construction materials, accurate "
-#~ "distribution of loads, and precise measurement of construction volumes, our "
-#~ "skilled engineers use the most reliable and modern software."
+#~ "For large projects, such as buildings with unconventional shapes, objects "
+#~ "in seismically active areas, optimal use of construction materials, "
+#~ "accurate distribution of loads, and precise measurement of construction "
+#~ "volumes, our skilled engineers use the most reliable and modern software."
 
 #~ msgid "VR model"
 #~ msgstr "VR model"
