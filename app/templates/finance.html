@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+    <style>
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px; /* Минимальная ширина для корректного отображения на мобильных */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            white-space: nowrap; /* Запрещаем перенос текста для корректного отображения */
+        }
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+            font-weight: bold;
+        }
+        .highlight {
+            background: linear-gradient(90deg, #66a6ff 0%, #89f7fe 100%);
+            color: white;
+        }
+        td {
+            background: linear-gradient(90deg, #8e2de2 0%, #4a00e0 100%);
+            color: white;
+        }
+        .section-title {
+            font-weight: bold;
+            text-align: left;
+            background-color: #3a3a3a;
+            color: white;
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            th, td {
+                padding: 8px;
+            }
+            table {
+                font-size: 12px;
+            }
+        }
+        @media (max-width: 480px) {
+            table {
+                font-size: 10px;
+            }
+        }
+    </style>
+
+    <h2 style="text-align: center;" id="finances"> {% trans "2018 - 2020 yil yakunlari bo‘yicha «Neftgaztadqiqot» AJ asosiy moliyaviy-iqtisodiy ko‘rsatkichlari haqida ma'lumot" %}</h2>
+    <hr>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Показатели</th>
+                    <th rowspan="2">Ед. изм.</th>
+                    <th colspan="{{ years.count }}">Итоги деятельности в</th>
+                </tr>
+                <tr>
+                    {% for year in years %}
+                        <th>{{ year.year }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in financial_data %}
+                    <tr>
+                        <td>{{ data.indicator_name }}</td>
+                        <td>{{ data.unit }}</td>
+                        {% for year in years %}
+                            <td>
+                                {% for value in data.financialyeardata_set.all %}
+                                    {% if value.year.year == year.year %}
+                                        {{ value.value }}
+                                    {% endif %}
+                                {% endfor %}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+{% endblock %}

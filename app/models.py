@@ -23,19 +23,91 @@ class News(TranslatableModel):
         return self.title
 
     def save(self, *args, **kwargs):
-        # Генерация slug, если он не задан
         if not self.slug:
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
 
+class Person(TranslatableModel):
+    translations = TranslatedFields(
+        name = models.CharField(_('name'), max_length=1500),
+        department = models.CharField(_('department'), max_length=1500),
+        share_capital = models.CharField(_('share_capital'), max_length=1500),
+        share_fund = models.CharField(_('share_fund'), max_length=1500),
+    )
+
+    class Meta:
+        verbose_name = _('Person')
+        verbose_name_plural = _('Persons')
+
+    def __str__(self):
+        return self.name
     
+class Tenders(TranslatableModel):
+    translations = TranslatedFields(
+        title =  models.CharField(_('title'), max_length=1000),
+        description = models.TextField(_('description')),
+    )
+    pdf = models.FileField(upload_to='tenders/', null=True, blank=True) 
+    start_time = models.DateField(null=True, blank=True)
+    end_time = models.DateField(null=True, blank=True)
+
+    class Meta:
+        verbose_name = _('Tender')
+        verbose_name_plural = _('Tenders')
+    
+    def __str__(self):
+        return f"{self.title} | {self.start_time}"
 
 class License(models.Model):
     name = models.CharField(max_length=255)  # Имя лицензии
     pdf = models.FileField(upload_to='licenses/', null=True, blank=True) 
 
+    class Meta:
+        verbose_name = _('License')
+        verbose_name_plural = _('Licenses')
+
     def __str__(self):
         return self.name
 
 
+
+
+class Year(models.Model):
+    year = models.PositiveIntegerField(verbose_name="Год") 
+    
+    class Meta:
+        verbose_name = _('Year')
+        verbose_name_plural = _('Years')
+
+    def __str__(self):
+        return str(self.year)
+
+
+class FinancialData(TranslatableModel):
+    translations = TranslatedFields(
+        indicator_name = models.CharField(max_length=255, verbose_name=_("Показатель")),
+        unit = models.CharField(max_length=50, verbose_name=_("Ед. изм."))
+    )
+
+    values = models.ManyToManyField(Year, through='FinancialYearData', )
+
+    class Meta:
+        verbose_name = _('FinancialData')
+        verbose_name_plural = _('FinancialData')
+
+    def __str__(self):
+        return self.safe_translation_getter('indicator_name', any_language=True)
+
+
+class FinancialYearData(models.Model):
+    financial_data = models.ForeignKey(FinancialData, on_delete=models.CASCADE)
+    year = models.ForeignKey(Year, on_delete=models.CASCADE)
+    value = models.CharField(max_length=200 , verbose_name="Значение", blank=True, null=True)
+
+    class Meta:
+        verbose_name = _('FinancialYearData')
+        verbose_name_plural = _('FinancialYearData')
+
+    def __str__(self):
+        return f'{self.financial_data.safe_translation_getter("indicator_name", any_language=True)} - {self.year.year}'

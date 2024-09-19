@@ -8,8 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2024-09-18 07:47+0000\n"
 "PO-Revision-Date: 2024-09-17 03:51+0000\n"
+=======
+"POT-Creation-Date: 2024-09-19 08:16+0000\n"
+"PO-Revision-Date: 2024-09-19 08:18+0000\n"
+>>>>>>> 8325d2a
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -21,11 +26,11 @@ msgstr ""
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: app/models.py:10
+#: app/models.py:10 app/models.py:48
 msgid "title"
 msgstr "Заголовок "
 
-#: app/models.py:11
+#: app/models.py:11 app/models.py:49
 msgid "description"
 msgstr "Описание "
 
@@ -37,11 +42,80 @@ msgstr "Новость "
 msgid "News"
 msgstr "Новости "
 
+<<<<<<< HEAD
 #: app/templates/base.html:57 app/templates/base.html:128
+=======
+#: app/models.py:33
+msgid "name"
+msgstr "Имя "
+
+#: app/models.py:34
+msgid "department"
+msgstr "Отдел"
+
+#: app/models.py:35
+msgid "share_capital"
+msgstr "Доля Капитала "
+
+#: app/models.py:36
+msgid "share_fund"
+msgstr "Доля Капитала "
+
+#: app/models.py:40
+msgid "Person"
+msgstr "Персона"
+
+#: app/models.py:41
+msgid "Persons"
+msgstr "Персоны "
+
+#: app/models.py:56
+msgid "Tender"
+msgstr "Тендер"
+
+#: app/models.py:57
+msgid "Tenders"
+msgstr "Тендеры"
+
+#: app/models.py:67
+msgid "License"
+msgstr "Лицензия "
+
+#: app/models.py:68
+msgid "Licenses"
+msgstr "Лицензии"
+
+#: app/models.py:80
+msgid "Year"
+msgstr "Год"
+
+#: app/models.py:81
+msgid "Years"
+msgstr "Года "
+
+#: app/models.py:89
+msgid "Показатель"
+msgstr "Показатель"
+
+#: app/models.py:90
+msgid "Ед. изм."
+msgstr "Ед. изм"
+
+#: app/models.py:96 app/models.py:97
+msgid "FinancialData"
+msgstr "Финансовые показатели "
+
+#: app/models.py:109 app/models.py:110
+msgid "FinancialYearData"
+msgstr "Данные финансового года"
+
+#: app/templates/base.html:100 app/templates/base.html:236
+>>>>>>> 8325d2a
 #: app/templates/includes/footer.html:16
 msgid "Logo"
 msgstr " Логотип"
 
+<<<<<<< HEAD
 #: app/templates/base.html:68
 msgid "Menu"
 msgstr " Меню"
@@ -59,23 +133,77 @@ msgid "Loyihalar"
 msgstr "Проекты"
 
 #: app/templates/base.html:92 app/templates/includes/footer.html:24
+=======
+#: app/templates/base.html:110
+msgid "Menu"
+msgstr " Меню"
+
+#: app/templates/base.html:118
+msgid "Toggle navigation"
+msgstr "Переключить навигацию"
+
+#: app/templates/base.html:132
+msgid "| Asosiy sahifa"
+msgstr "| Главная "
+
+#: app/templates/base.html:133 app/templates/includes/footer.html:24
+>>>>>>> 8325d2a
 #: app/templates/includes/news_detail.html:162
 #: app/templates/news_detail.html:164
 msgid "Yangiliklar"
 msgstr "Новости "
 
+<<<<<<< HEAD
 #: app/templates/base.html:93 app/templates/includes/footer.html:25
 msgid "Contact"
 msgstr "Контакты "
 
 #: app/templates/base.html:94 app/templates/includes/footer.html:26
+=======
+#: app/templates/base.html:134 app/templates/includes/footer.html:25
+msgid "Contact"
+msgstr "Контакты "
+
+#: app/templates/base.html:135 app/templates/includes/footer.html:26
+>>>>>>> 8325d2a
 #: app/templates/license.html:9
 msgid "Akkreditsiya"
 msgstr "Аккредитация"
 
+<<<<<<< HEAD
+=======
+#: app/templates/base.html:183
+msgid "Tanlang"
+msgstr "Выбрать"
+
+#: app/templates/base.html:184 app/templates/tenders.html:6
+msgid "Tenderlar"
+msgstr "Тендеры"
+
+#: app/templates/base.html:185
+msgid "Ijro organi a'zolari"
+msgstr "Члены исполнительного органа"
+
+#: app/templates/base.html:186
+msgid "Tashkiliy tuzilma"
+msgstr "Организационная структура"
+
+#: app/templates/base.html:187
+msgid "Moliyaviy ko'rsatkichlar"
+msgstr " Финансовые показатели"
+
+#: app/templates/includes/footer.html:21
+msgid "Asosiy sahifa"
+msgstr "Главная "
+
+>>>>>>> 8325d2a
 #: app/templates/includes/footer.html:22
 msgid "Biz haqimizda"
 msgstr "О Нас "
+
+#: app/templates/includes/footer.html:23
+msgid "Loyihalar"
+msgstr "Проекты"
 
 #: app/templates/includes/news_detail.html:171
 #: app/templates/news_detail.html:172
@@ -217,6 +345,7 @@ msgid "ko'proq"
 msgstr "больше"
 
 #: app/templates/index.html:248
+<<<<<<< HEAD
 #, fuzzy
 #| msgid "Bizning yo'nalishlar"
 msgid "Bizning afzalliklarimiz"
@@ -226,14 +355,25 @@ msgstr "Проекты"
 msgid ""
 "Faoliyat yo'nalishlari bo'yicha yuqori malakali mutaxassislarning mavjudligi."
 msgstr ""
+=======
+msgid "Bizning afzalliklarimiz"
+msgstr "Наши преимущества"
+
+#: app/templates/index.html:249
+msgid ""
+"Faoliyat yo'nalishlari bo'yicha yuqori malakali mutaxassislarning "
+"mavjudligi."
+msgstr "Наличие высококвалифицированных специалистов в области деятельности."
+>>>>>>> 8325d2a
 
 #: app/templates/index.html:259
 msgid "Sifat va narx hamohangligi"
 msgstr "Соотношение качества и цены"
 
 #: app/templates/index.html:260
-msgid "Premium xizmat paketlari."
-msgstr "Премиум пакеты услуг"
+msgid ""
+"Premium xizmat paketlari va tadqiqot va ishlanmalar uchun optimal narxlar."
+msgstr "Премиум пакеты услуг и оптимальные цены на исследования и разработки."
 
 #: app/templates/index.html:269
 msgid "24/7 qo'llab quvvatlash"
@@ -243,71 +383,58 @@ msgstr "Поддержка 24/7"
 msgid "Konsalting yechimlar va qulay takliflar."
 msgstr "Консультационные решения и удобные предложения"
 
-#: app/templates/index.html:286
+#: app/templates/index.html:287
 msgid "Biz qanday ishlaymiz"
 msgstr "Как мы работаем "
 
-#: app/templates/index.html:287
+#: app/templates/index.html:288
 msgid "Oson & Ishonchli"
 msgstr "Просто & Надежный"
 
-#: app/templates/index.html:287
+#: app/templates/index.html:288
 msgid "Jarayon"
 msgstr "Процесс"
 
-#: app/templates/index.html:289
+#: app/templates/index.html:290
 msgid "Biz shuni tushunamizki siz bizga fikringizni eshitishimiz"
 msgstr "Мы понимаем, что ваше мнение для нас важно."
 
-#: app/templates/index.html:290
+#: app/templates/index.html:291
 msgid "va eng muhimi sizning qarashlaringizni tushunishimiz"
 msgstr " и что для нас особенно важно"
 
-#: app/templates/index.html:291
+#: app/templates/index.html:292
 msgid "uchun murojaat qilasiz."
 msgstr " понимать ваши взгляды."
 
-#: app/templates/index.html:292
+#: app/templates/index.html:293
 msgid "Shunday ekan, avvalo, loyiha yakunlangach, unda o'z"
 msgstr "Поэтому, в первую очередь, мы стараемся сделать так, "
 
-#: app/templates/index.html:293
+#: app/templates/index.html:294
 msgid "xohishlaringiz aksini ko'rishingiz uchun harakat qilamiz."
 msgstr "чтобы после завершения проекта в нем отразились ваши пожелания."
 
-#: app/templates/index.html:315
-msgid "Arxitekturaga o'rgatib - bo'lmaydi"
-msgstr "Архитектуру нельзя научить"
+#: app/templates/index.html:316
+msgid " Xalqaro sertifikatlangan"
+msgstr "Международно сертифицированный"
 
-#: app/templates/index.html:315
-msgid "faqatgina odamlarni ilhomlantirish mumkin."
-msgstr "ее можно только вдохновить людей"
-
-#: app/templates/index.html:315
-msgid "Zaha Hadid"
-msgstr "Захи Хадид"
+#: app/templates/index.html:316
+msgid "yuqori sifatli tadqiqotlar."
+msgstr "исследования высокого качества."
 
 #: app/templates/index.html:325
-msgid "12000 dollarlik uyni"
-msgstr "Дом за 12000 долларов"
+#| msgid "AO 'Neftgaztadqiqot' AJ tashkiliy tuzilmasi"
+msgid "'Neftgaztadqiqot' AJ negizida"
+msgstr "На базе АО \"Нефтгазтадқиқот\" имеется "
 
 #: app/templates/index.html:325
-msgid "12000 dollarga qura olaman,- deb o'ylagan odam optimistdir."
-msgstr ""
-"человек, который думает, что сможет построить его за 12 000 долларов, "
-"является оптимистом."
+msgid "xalqaro akkreditatsiyadan o'tgan "
+msgstr "исследовательская лаборатория, "
 
 #: app/templates/index.html:325
-msgid "Frensis Rodman"
-msgstr "Frensis Rodman"
-
-#: app/templates/index.html:336
-msgid "Arxitektura bu ovozsiz musiqadir."
-msgstr "Архитектура — это безмолвная музыка."
-
-#: app/templates/index.html:336
-msgid "Iogan Volfgang Fon Gyote."
-msgstr "Иоганн Вольфганг фон Гёте"
+msgid "tadqiqot laboratoriyasi mavjud."
+msgstr "прошедшая международную аккредитацию."
 
 #: app/templates/license.html:12
 msgid ""
@@ -336,6 +463,55 @@ msgstr "Скрыть "
 msgid "Davomini oqish"
 msgstr "Читать далее"
 
+#: app/templates/persons.html:174
+msgid "Jamiyatning ijro organi a'zolari haqida ma'lumot"
+msgstr "Информация о членах исполнительного органа общества"
+
+#: app/templates/persons.html:185
+msgid "Lavozim"
+msgstr "Должность "
+
+#: app/templates/structure.html:7
+msgid "AO 'Neftgaztadqiqot' AJ tashkiliy tuzilmasi"
+msgstr "Организационная структура АО 'Нефтгазтадкикот'"
+
+#: app/templates/structure.html:9
+msgid "Structure Image"
+msgstr "Схема структуры"
+
+#: app/templates/structure.html:14
+msgid ""
+" \"Neftgaztadqiqot\" AJning Oliy boshqaruv organi aksiyadorlarning Umumiy "
+"yig‘ilishi hisoblanadi. Umumiy yig‘ilish tomonidan saylanadigan Kuzatuv "
+"kengashi jamiyatning umumiy rahbarligini amalga oshirib, faoliyatning "
+"ustivor yo‘nalishlarini, rivojlanish istiqbollari va strategiyasini aniqlab "
+"beradi, hamda jamiyat oldida turgan yaqin muddatdagi maqsadlarni va ularga "
+"erishish taktikasini ishlab chiqadi. Joriy rahbarlik kollegial ijroya organi"
+" – Boshqaruv, tomonidan amalga oshirilib, mazkur organ Umumiy yig‘ilish va "
+"Kuzatuv kengashi tomonidan qabul qilingan qarorlarning bajarilishini "
+"tashkillashtiradi va nazorat qiladi."
+msgstr ""
+" Высшим органом управления АО «Нефтгазтадқиқот» является Общее собрание "
+"акционеров. Наблюдательный совет, избранный Общим собранием, осуществляет "
+"общее руководство обществом, определяет приоритетные направления "
+"деятельности, перспективы развития и стратегию, а также разрабатывает "
+"ближайшие цели и тактику их достижения. Текущим управлением занимается "
+"коллегиальный исполнительный орган – Управление, которое организует и "
+"контролирует выполнение решений, принятых Общим собранием и Наблюдательным "
+"советом."
+
+#: app/templates/tenders.html:19
+msgid "Дата публикации:"
+msgstr "Дата публикации:"
+
+#: app/templates/tenders.html:23
+msgid "Дата окончания конкурса:"
+msgstr "Дата окончания конкурса:"
+
+#: app/templates/tenders.html:28
+msgid "Скачать PDF"
+msgstr "Скачать PDF"
+
 #: development/settings.py:117
 msgid "Russian"
 msgstr "Русский"
@@ -348,9 +524,44 @@ msgstr "Англиский"
 msgid "Uzbek"
 msgstr "Узбекский"
 
+<<<<<<< HEAD
 #~ msgid "Biz murakkablikdan voz kechdik "
 #~ msgstr "Мы отказались от сложности"
 
+=======
+#~ msgid "12000 dollarlik uyni"
+#~ msgstr "Дом за 12000 долларов"
+
+#~ msgid "12000 dollarga qura olaman,- deb o'ylagan odam optimistdir."
+#~ msgstr ""
+#~ "человек, который думает, что сможет построить его за 12 000 долларов, "
+#~ "является оптимистом."
+
+#~ msgid "Frensis Rodman"
+#~ msgstr "Frensis Rodman"
+
+#~ msgid "Arxitekturaga o'rgatib - bo'lmaydi"
+#~ msgstr "Архитектуру нельзя научить"
+
+#~ msgid "faqatgina odamlarni ilhomlantirish mumkin."
+#~ msgstr "ее можно только вдохновить людей"
+
+#~ msgid "Zaha Hadid"
+#~ msgstr "Захи Хадид"
+
+#~ msgid "Arxitektura bu ovozsiz musiqadir."
+#~ msgstr "Архитектура — это безмолвная музыка."
+
+#~ msgid "Iogan Volfgang Fon Gyote."
+#~ msgstr "Иоганн Вольфганг фон Гёте"
+
+#~ msgid "Biz murakkablikdan voz kechdik "
+#~ msgstr "Мы отказались от сложности"
+
+#~ msgid "Premium xizmat paketlari."
+#~ msgstr "Премиум пакеты услуг"
+
+>>>>>>> 8325d2a
 #~ msgid "Takrorlanmas dizayn"
 #~ msgstr "Уникальный дизайн"
 

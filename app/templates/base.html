@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nefti Gaz Tadqiqot</title>
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
@@ -19,9 +19,16 @@
         <header class="main-header" >
     
             <!-- Header Upper -->
+<<<<<<< HEAD
             <div class="header-upper" style="background-color: rgb(91, 91, 91);">
                 <div class="outer-container" >
                     <div class="inner-container clearfix" >
+=======
+            <div class="header-upper"  >
+                <div class="outer-container" style="background-color: rgba(102, 102, 102, 0.4);">
+
+                    <div class="inner-container clearfix"  >
+>>>>>>> 8325d2a
                         <style>
                             @media (min-width: 1200px) {
                                 .logo-box img{
@@ -32,6 +39,24 @@
                                 .logo img {
                                     width: 140px;
                                     height: 120px;
+<<<<<<< HEAD
+                                }
+                            }
+                        
+                            @media (min-width: 200px) {
+                                .logo-box {
+                                    /* Можно добавить стили для экранов шире 630px, если это необходимо */
+                                    font-size: 100px;
+                                    margin-top: -20px; /* Отрегулируйте это значение по вашему усмотрению */
+                                    /* Поднимаем логотип выше для экранов шире 1200px */
+
+                                }
+                                .logo img {
+                                    /* Можно добавить стили для изображений на экранах шире 630px, если это необходимо */
+                                    max-width: 120px;
+
+=======
+>>>>>>> 8325d2a
                                 }
                             }
                         
@@ -49,6 +74,48 @@
 
                                 }
                             }
+
+                            /* Стили для select */
+                            .navbar-collapse select {
+                                background-color: transparent; /* Прозрачный фон, как у навигационных ссылок */
+                                border: none; /* Убираем стандартную рамку */
+                                font-size: 16px; /* Размер шрифта, как у ссылок */
+                                color: white; /* Цвет текста, чтобы соответствовать ссылкам */
+                                padding: 8px 16px; /* Внутренние отступы для соответствия отступам ссылок */
+                                cursor: pointer; /* Курсор указателя, как у ссылок */
+                                appearance: none; /* Убираем стандартный вид браузера */
+                                -webkit-appearance: none; /* Для Safari */
+                                -moz-appearance: none; /* Для Firefox */
+                            }
+
+                            /* Стили для раскрывающегося списка (стрелочки вниз) */
+                            .navbar-collapse select::after {
+                                content: ''; /* Псевдоэлемент */
+                                position: absolute;
+                                right: 10px;
+                                top: 50%;
+                                width: 0;
+                                height: 0;
+                                border-left: 5px solid transparent;
+                                border-right: 5px solid transparent;
+                                border-top: 5px solid white; /* Белая стрелочка */
+                                pointer-events: none;
+                                transform: translateY(-50%);
+                            }
+
+                            /* Стили для раскрытых опций */
+                            .navbar-collapse select option {
+                                background-color: #333; /* Цвет фона опций */
+                                color: white; /* Цвет текста опций */
+                            }
+
+                            /* Дополнительно: стили для hover и focus */
+                            .navbar-collapse select:hover,
+                            .navbar-collapse select:focus {
+                                outline: none; /* Убираем фокус-рамку */
+                                background-color: rgba(255, 255, 255, 0.2); /* Легкое затемнение при наведении */
+                            }
+
                         </style>
                         
                         <div class="pull-left logo-box">
@@ -82,25 +149,92 @@
                                     </button>
                                     
                                 </div>
-    
+                                
                                 <div class="navbar-collapse show collapse clearfix" id="navbarSupportedContent">
+                                    {% include 'includes/language.html' %}  
+
                                     <ul class="navigation clearfix">
                                         
-                                        <li><a href="{% url 'index' %}">{% trans 'Asosiy sahifa' %}</a></li>
-
-                                        <li><a href="{% url 'index' %}#loyihalar">{% trans 'Loyihalar' %}</a></li>
-                                        <li><a href="#allnews">{% trans 'Yangiliklar' %}</a></li>
+                                        <li><a href="{% url 'index' %}">{% trans '| Asosiy sahifa' %}</a></li>
+                                        <li><a href="{% url 'index' %}#allnews">{% trans 'Yangiliklar' %}</a></li>
                                         <li><a href="{% url 'index' %}#contact">{% trans 'Contact' %}</a></li>
                                         <li><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></li>
+
+                                        <style>
+                                            /* Стили для select */
+                                            select {
+                                                /* Убирает старую стрелку во всех браузерах */
+                                                background-color: black;
+                                                -webkit-appearance: none;
+                                                -moz-appearance: none;
+                                                appearance: none;
+                                                
+                                                background-image: url(https://img.icons8.com/fluency/48/sort-down.png);
+                                                background-size: 20px;
+                                                background-repeat: no-repeat;
+                                                background-position: right 0.2em top 50%;
+                                                color: black;
+                                                width: 205px;
+                                                padding: 10px; /* Внутренние отступы */
+                                                background-color: #535353;
+                                                border-radius: 10px;
+                                            }
+                                        
+                                            /* Стили для option */
+                                            select option {
+                                                background-color: #333; /* Темный фон для опций */
+                                                color: black; /* Цвет текста */
+                                                padding: 10px; /* Отступы внутри опций */
+                                                font-size: 16px; /* Размер шрифта */
+                                                border: none; /* Убираем рамку */
+                                                text-align: left; /* Выравнивание текста по левому краю */
+                                            }
+                                        
+                                            /* Стили при наведении на option */
+                                            select option:hover {
+                                                background-color: #444; /* Темнее при наведении */
+                                                color: #f1f1f1; /* Легкое изменение цвета текста */
+                                            }
+                                        
+                                            /* Добавляем отступы между select */
+                                            .select-container {
+                                                margin-bottom: 15px; /* Отступ между селектами */
+                                            }
+                                        </style>
+                                        
+
+                                        
+
+                                            <select style="background-color: rgb(134, 134, 134);" class="select_1" name="foods" id="hr-select" onchange="navigateToUrl(this)">
+                                                <option value="">{% trans 'Tanlang' %}...</option>
+                                                <option value="{% url 'tenders' %}#tenders">{% trans 'Tenderlar' %}</option>
+                                                <option value="{% url 'person' %}#persons">{% trans "Ijro organi a'zolari" %}</option>
+                                                <option value="{% url 'structure' %}#structure">{% trans 'Tashkiliy tuzilma' %}</option>
+                                                <option value="{% url 'finance' %}#finances">{% trans "Moliyaviy ko'rsatkichlar" %}</option>
+                                            </select>
+
+                                        
+                                        <script>
+                                            function navigateToUrl(select) {
+                                                var url = select.value;
+                                                if (url) {
+                                                    window.location.href = url;
+                                                }
+                                            }
+                                        </script>
+                                        
+                                        
+                                        
+
                                     </ul>
-                                    {% include 'includes/language.html' %}  
+
+                                    
                                 </div>
                                 
-    
                             </nav>
-    
+                            
                         </div>
-    
+                        
                         <!-- Outer Box -->
                         <div class="outer-box clearfix">
                             <!-- Mobile Navigation Toggler -->
@@ -108,12 +242,12 @@
                                 <span class="icon ion-android-menu"></span>
                             </div>
                         </div>
-    
+                        
                     </div>
                 </div>
             </div>
             <!--End Header Upper-->
-    
+            
             <!-- Mobile Menu -->
             <div class="mobile-menu">
                 <div class="menu-backdrop"></div>
@@ -121,7 +255,7 @@
                     <span class="icon lnr lnr-cross"></span>
                     
                 </div>
-    
+                
                 <nav class="menu-box">
                     <div class="nav-logo">
                         <a href="index.html">
@@ -133,38 +267,44 @@
                     </div>
                 </nav>
             </div><!-- End Mobile Menu -->
-    
+            
         </header>
     </div>
     
+<<<<<<< HEAD
 
 
         <style>
 
+=======
+    
+    
+    <style>
+        .slide {
+            background-image: url('{% static 'images/bgimgasd.jpg' %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* Для мобильных устройств */
+        @media only screen and (max-width: 768px) {
+>>>>>>> 8325d2a
             .slide {
-                background-image: url('{% static 'images/bgimgasd.jpg' %}');
+                background-image: url('{% static 'images/bgimgasd.jpg' %}'); /* Версия изображения для мобильных */
                 background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat;
             }
+        }
+        
+        /* Для устройств с высоким разрешением (Retina-дисплеи) */
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+            .slide {
+                background-image: url('{% static 'images/bgimgasd.jpg' %}'); /* Изображение с высоким разрешением */
+            }
+        }
+    </style>
     
-            /* Для мобильных устройств */
-            @media only screen and (max-width: 768px) {
-                .slide {
-                    background-image: url('{% static 'images/bgimgasd.jpg' %}'); /* Версия изображения для мобильных */
-                    background-size: cover;
-                    background-position: center;
-                }
-            }
-    
-            /* Для устройств с высоким разрешением (Retina-дисплеи) */
-            @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-                .slide {
-                    background-image: url('{% static 'images/bgimgasd.jpg' %}'); /* Изображение с высоким разрешением */
-                }
-            }
-        </style>
-
     
     <section class="banner-section">
         <div class="main-slider-carousel owl-carousel owl-theme">
@@ -196,13 +336,21 @@
 
                             </style>
                             <div class="title"></div>
+<<<<<<< HEAD
                                 <h1>NeftGazTadqiqot</h1>
+=======
+                            <h1 style="font-size: 61px; text-align:center">Nefti Gaz <br> Tadqiqot</h1>
+                            <p></p>
+                            
+                            <br><br><br>
+>>>>>>> 8325d2a
                             <div class="btn-box"></div>
                         </div>
                     </div>
                 </div>
             </div>
-    
+            
+
             <div class="slide">
                 <div class="auto-container">
                     <!-- Content Boxed -->
@@ -227,8 +375,15 @@
                                 
                             </style>
                             <div class="title"></div>
+<<<<<<< HEAD
                             <h1 style="font-size: 60px;" >NeftGazTadqiqot</h1>
 
+=======
+                            <h1 style="font-size: 61px; text-align:center">Nefti Gaz <br> Tadqiqot</h1>
+                            <p></p>
+                            <p></p>
+                            <br><br><br><br>
+>>>>>>> 8325d2a
                             <div class="btn-box"></div>
                         </div>
                     </div>
@@ -248,6 +403,8 @@
             <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-instagram"></a></li>
             <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-facebook"></a></li>
             <li><a href="https://t.me/freedom_architecture" class="fab fa-telegram"></a></li>
+
+
         </ul>
     </section>
     

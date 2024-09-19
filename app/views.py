@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
-from django.http import Http404
 
 # Create your views here.
 
@@ -11,15 +10,6 @@ def index(request):
         'news': news
     }
     return render(request, 'index.html', context)
-
-
-def news(request):
-    news = News.objects.all()
-    context = {
-        'news': news
-    }
-    return render(request, 'all_news.html', context)
-
 
 
 def news_detail(request, news_slug):
@@ -37,3 +27,29 @@ def license_view(request):
     licenses = License.objects.all()  # Получаем все объекты
     return render(request, 'license.html', {'licenses': licenses})
 
+def person(request):
+    context = {
+        'persons': Person.objects.all()
+    }
+    return render(request, 'persons.html', context)
+
+
+def structure(request):
+    return render(request, 'structure.html')
+
+def tenders(request):
+    context = {
+        'tenders': Tenders.objects.all()
+    }
+    return render(request, 'tenders.html', context)
+
+
+
+def financе(request):
+    years = Year.objects.all().order_by('year')  
+    financial_data = FinancialData.objects.all() 
+    context = {
+        'years': years,
+        'financial_data': financial_data,
+    }
+    return render(request, 'finance.html', context)

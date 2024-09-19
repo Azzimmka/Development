@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<style>
+        /* Центровка формы */
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Высота на весь экран */
+        padding: 20px;
+    }
+
+    .login-form {
+        width: 100%;
+        max-width: 400px; /* Ширина формы */
+        background-color: #f9f9f9; /* Светлый фон */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для формы */
+    }
+
+    /* Стили для кнопки входа */
+    .btn-login {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #4CAF50; /* Зеленый цвет кнопки */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .btn-login:hover {
+        background-color: #45a049; /* Более темный цвет при наведении */
+    }
+
+    /* Стили для заголовка */
+    h2 {
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Стили для элементов формы */
+    form input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+</style>
+<div class="login-container">
+    <h2>Login</h2>
+    <form method="post" class="login-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-login">Login</button>
+    </form>
+</div>
+{% endblock %}
+
