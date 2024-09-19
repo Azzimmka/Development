@@ -19,11 +19,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
+from django.contrib.auth import views as auth_views
 
 urlpatterns = i18n_patterns (
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
     path('rosetta/', include('rosetta.urls')),
+    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
     prefix_default_language=False,
 )
 

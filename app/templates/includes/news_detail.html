@@ -96,7 +96,7 @@
         /* Изображение новости */
         .news-card img {
             width: 600px;
-            height: 500px;
+            height: 300px;
             border-radius: 6px;
             object-fit: cover;
             margin-bottom: 15px;
@@ -149,7 +149,7 @@
         /* Большие экраны */
         @media (min-width: 1200px) {
             .news-container {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
             }
         }
     </style>
@@ -159,7 +159,7 @@
     <!-- Контейнер для новостей -->
      <br>
      <hr>
-    <h1 style="font-size: 60px;">{% trans 'Yangiliklar' %}</h1>
+    <h1 id="allnews" style="font-size: 60px;">{% trans 'Yangiliklar' %}</h1>
     <hr>
     <div class="news-container" id="news-container">
         {% for new in news %}

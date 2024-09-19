@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-17 03:13+0000\n"
-"PO-Revision-Date: 2024-09-17 03:53+0000\n"
+"POT-Creation-Date: 2024-09-19 08:16+0000\n"
+"PO-Revision-Date: 2024-09-19 08:21+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: app/models.py:10
+#: app/models.py:10 app/models.py:48
 msgid "title"
 msgstr "Sarlavha"
 
-#: app/models.py:11
+#: app/models.py:11 app/models.py:49
 msgid "description"
 msgstr "Tavsif"
 
@@ -35,49 +35,133 @@ msgstr "Yangilik "
 msgid "News"
 msgstr "Yangiliklar"
 
-#: app/templates/base.html:41 app/templates/base.html:112
+#: app/models.py:33
+msgid "name"
+msgstr "Ism "
+
+#: app/models.py:34
+msgid "department"
+msgstr "bo'lim"
+
+#: app/models.py:35
+msgid "share_capital"
+msgstr "kapital ulushi"
+
+#: app/models.py:36
+msgid "share_fund"
+msgstr "fond ulushi"
+
+#: app/models.py:40
+msgid "Person"
+msgstr "Shaxs "
+
+#: app/models.py:41
+msgid "Persons"
+msgstr "Shaxslar"
+
+#: app/models.py:56
+msgid "Tender"
+msgstr "Tender"
+
+#: app/models.py:57
+msgid "Tenders"
+msgstr "Tenderlar"
+
+#: app/models.py:67
+msgid "License"
+msgstr "Litsenziya"
+
+#: app/models.py:68
+msgid "Licenses"
+msgstr "Litsenziyalar"
+
+#: app/models.py:80
+msgid "Year"
+msgstr "Yil"
+
+#: app/models.py:81
+msgid "Years"
+msgstr "Yillar "
+
+#: app/models.py:89
+msgid "Показатель"
+msgstr "Ko‘rsatkich"
+
+#: app/models.py:90
+msgid "Ед. изм."
+msgstr "O‘lchov birligi"
+
+#: app/models.py:96 app/models.py:97
+msgid "FinancialData"
+msgstr "Moliyaviy ko'rsatkichlar"
+
+#: app/models.py:109 app/models.py:110
+msgid "FinancialYearData"
+msgstr "Moliyaviy yil ko'rsatkichlari"
+
+#: app/templates/base.html:100 app/templates/base.html:236
 #: app/templates/includes/footer.html:16
 msgid "Logo"
 msgstr "Logo"
 
-#: app/templates/base.html:53 app/templates/base.html:92
+#: app/templates/base.html:110
 msgid "Menu"
 msgstr "Menu"
 
-#: app/templates/base.html:61
+#: app/templates/base.html:118
 msgid "Toggle navigation"
 msgstr "Navigatsiyani almashtirish"
 
-#: app/templates/base.html:73 app/templates/includes/footer.html:21
-msgid "Asosiy sahifa"
-msgstr "Asosiy sahifa"
+#: app/templates/base.html:132
+msgid "| Asosiy sahifa"
+msgstr "| Asosiy sahifa"
 
-#: app/templates/base.html:75 app/templates/includes/footer.html:23
-msgid "Loyihalar"
-msgstr "Loyihalar"
-
-#: app/templates/base.html:76 app/templates/includes/footer.html:24
+#: app/templates/base.html:133 app/templates/includes/footer.html:24
 #: app/templates/includes/news_detail.html:162
 #: app/templates/news_detail.html:164
 msgid "Yangiliklar"
 msgstr "Yangiliklar"
 
-#: app/templates/base.html:77 app/templates/includes/footer.html:25
+#: app/templates/base.html:134 app/templates/includes/footer.html:25
 msgid "Contact"
 msgstr "Contact"
 
-#: app/templates/base.html:78 app/templates/includes/footer.html:26
+#: app/templates/base.html:135 app/templates/includes/footer.html:26
 #: app/templates/license.html:9
 msgid "Akkreditsiya"
 msgstr "Akkreditsiya"
 
-#: app/templates/base.html:162 app/templates/base.html:176
-msgid "Biz murakkablikdan voz kechdik "
-msgstr "Biz murakkablikdan voz kechdik"
+#: app/templates/base.html:183
+msgid "Tanlang"
+msgstr "Tanlang"
+
+#: app/templates/base.html:184 app/templates/tenders.html:6
+msgid "Tenderlar"
+msgstr "Tenderlar"
+
+#: app/templates/base.html:185
+msgid "Ijro organi a'zolari"
+msgstr "Ijro organi a'zolari"
+
+#: app/templates/base.html:186
+msgid "Tashkiliy tuzilma"
+msgstr "Tashkiliy tuzilma"
+
+#: app/templates/base.html:187
+msgid "Moliyaviy ko'rsatkichlar"
+msgstr "Moliyaviy ko'rsatkichlar"
+
+#: app/templates/includes/footer.html:21
+msgid "Asosiy sahifa"
+msgstr "Asosiy sahifa"
 
 #: app/templates/includes/footer.html:22
 msgid "Biz haqimizda"
 msgstr "Biz haqimizda"
+
+#: app/templates/includes/footer.html:23
+msgid "Loyihalar"
+msgstr "Loyihalar"
 
 #: app/templates/includes/news_detail.html:171
 #: app/templates/news_detail.html:172
@@ -215,20 +299,26 @@ msgid "ko'proq"
 msgstr "ko'proq"
 
 #: app/templates/index.html:248
-msgid "Takrorlanmas dizayn"
-msgstr "Takrorlanmas dizayn"
+msgid "Bizning afzalliklarimiz"
+msgstr "Bizning afzalliklarimiz"
 
 #: app/templates/index.html:249
-msgid "Loyihangizga joziba bering va bahra oling."
-msgstr "Loyihangizga joziba bering va bahra oling."
+msgid ""
+"Faoliyat yo'nalishlari bo'yicha yuqori malakali mutaxassislarning "
+"mavjudligi."
+msgstr ""
+"Faoliyat yo'nalishlari bo'yicha yuqori malakali mutaxassislarning "
+"mavjudligi."
 
 #: app/templates/index.html:259
 msgid "Sifat va narx hamohangligi"
 msgstr "Sifat va narx hamohangligi"
 
 #: app/templates/index.html:260
-msgid "Premium xizmat paketlari."
-msgstr "Premium xizmat paketlari."
+msgid ""
+"Premium xizmat paketlari va tadqiqot va ishlanmalar uchun optimal narxlar."
+msgstr ""
+"Premium xizmat paketlari va tadqiqot va ishlanmalar uchun optimal narxlar."
 
 #: app/templates/index.html:269
 msgid "24/7 qo'llab quvvatlash"
@@ -238,76 +328,60 @@ msgstr "24/7 qo'llab quvvatlash"
 msgid "Konsalting yechimlar va qulay takliflar."
 msgstr "Konsalting yechimlar va qulay takliflar."
 
-#: app/templates/index.html:286
+#: app/templates/index.html:287
 msgid "Biz qanday ishlaymiz"
 msgstr "Biz qanday ishlaymiz"
 
-#: app/templates/index.html:287
+#: app/templates/index.html:288
 msgid "Oson & Ishonchli"
 msgstr "Oson & Ishonchli"
 
-#: app/templates/index.html:287
+#: app/templates/index.html:288
 msgid "Jarayon"
 msgstr "Jarayon"
 
-#: app/templates/index.html:289
+#: app/templates/index.html:290
 msgid "Biz shuni tushunamizki siz bizga fikringizni eshitishimiz"
 msgstr "Biz shuni tushunamizki siz bizga fikringizni eshitishimiz"
 
-#: app/templates/index.html:290
+#: app/templates/index.html:291
 msgid "va eng muhimi sizning qarashlaringizni tushunishimiz"
 msgstr "va eng muhimi sizning qarashlaringizni tushunishimiz"
 
-#: app/templates/index.html:291
+#: app/templates/index.html:292
 msgid "uchun murojaat qilasiz."
 msgstr "uchun murojaat qilasiz."
 
-#: app/templates/index.html:292
+#: app/templates/index.html:293
 msgid "Shunday ekan, avvalo, loyiha yakunlangach, unda o'z"
 msgstr "Shunday ekan, avvalo, loyiha yakunlangach, unda o'z"
 
-#: app/templates/index.html:293
+#: app/templates/index.html:294
 msgid "xohishlaringiz aksini ko'rishingiz uchun harakat qilamiz."
 msgstr "xohishlaringiz aksini ko'rishingiz uchun harakat qilamiz."
 
-#: app/templates/index.html:315
-msgid "Arxitekturaga o'rgatib - bo'lmaydi"
-msgstr "Arxitekturaga o'rgatib - bo'lmaydi"
+#: app/templates/index.html:316
+msgid " Xalqaro sertifikatlangan"
+msgstr "Xalqaro sertifikatlangan"
 
-#: app/templates/index.html:315
-msgid "faqatgina odamlarni ilhomlantirish mumkin."
-msgstr "faqatgina odamlarni ilhomlantirish mumkin."
-
-#: app/templates/index.html:315
-msgid "Zaha Hadid"
-msgstr "Zaha Hadid"
+#: app/templates/index.html:316
+msgid "yuqori sifatli tadqiqotlar."
+msgstr "yuqori sifatli tadqiqotlar."
 
 #: app/templates/index.html:325
-msgid "12000 dollarlik uyni"
-msgstr "12000 dollarlik uyni"
+#| msgid "AO 'Neftgaztadqiqot' AJ tashkiliy tuzilmasi"
+msgid "'Neftgaztadqiqot' AJ negizida"
+msgstr "'Neftgaztadqiqot' AJ negizida"
 
 #: app/templates/index.html:325
-msgid "12000 dollarga qura olaman,- deb o'ylagan odam optimistdir."
-msgstr "12000 dollarga qura olaman,- deb o'ylagan odam optimistdir."
+msgid "xalqaro akkreditatsiyadan o'tgan "
+msgstr "xalqaro akkreditatsiyadan o'tgan"
 
 #: app/templates/index.html:325
-msgid "Frensis Rodman"
-msgstr "Frensis Rodman"
-
-#: app/templates/index.html:336
-msgid "Arxitektura bu ovozsiz musiqadir."
-msgstr "Arxitektura bu ovozsiz musiqadir."
-
-#: app/templates/index.html:336
-msgid "Iogan Volfgang Fon Gyote."
-msgstr "Iogan Volfgang Fon Gyote."
+msgid "tadqiqot laboratoriyasi mavjud."
+msgstr "tadqiqot laboratoriyasi mavjud."
 
 #: app/templates/license.html:12
-#| msgid ""
-#| "Ushbu bo‘limda siz kompaniyangizning Akkreditsiya hujjatining PDF-faylini "
-#| "ko‘rishingiz yoki yuklab olishingiz mumkin. Biz shaffoflikka ahamiyat "
-#| "beramiz va faoliyatimizga bo‘lgan ishonchingiz uchun barcha zarur "
-#| "hujjatlarni taqdim etamiz."
 msgid ""
 "Ushbu bo‘limda siz kompaniyangizning Akkreditsiya hujjatining PDF-fayllarini"
 " ko‘rishingiz yoki yuklab olishingiz mumkin. Biz shaffoflikka ahamiyat "
@@ -328,13 +402,62 @@ msgid "Akkreditsiya hujjati mavjud emas"
 msgstr "Akkreditsiya hujjati mavjud emas"
 
 #: app/templates/news_detail.html:185
-#| msgid "Read more"
 msgid "Read less"
-msgstr ""
+msgstr "Read less"
 
 #: app/templates/news_detail.html:185
 msgid "Davomini oqish"
+msgstr "Davomini oqish"
+
+#: app/templates/persons.html:174
+msgid "Jamiyatning ijro organi a'zolari haqida ma'lumot"
+msgstr "Jamiyatning ijro organi a'zolari haqida ma'lumot"
+
+#: app/templates/persons.html:185
+msgid "Lavozim"
+msgstr "Lavozim"
+
+#: app/templates/structure.html:7
+msgid "AO 'Neftgaztadqiqot' AJ tashkiliy tuzilmasi"
+msgstr "AO 'Neftgaztadqiqot' AJ tashkiliy tuzilmasi"
+
+#: app/templates/structure.html:9
+msgid "Structure Image"
+msgstr "Tuzilma rasmi"
+
+#: app/templates/structure.html:14
+msgid ""
+" \"Neftgaztadqiqot\" AJning Oliy boshqaruv organi aksiyadorlarning Umumiy "
+"yig‘ilishi hisoblanadi. Umumiy yig‘ilish tomonidan saylanadigan Kuzatuv "
+"kengashi jamiyatning umumiy rahbarligini amalga oshirib, faoliyatning "
+"ustivor yo‘nalishlarini, rivojlanish istiqbollari va strategiyasini aniqlab "
+"beradi, hamda jamiyat oldida turgan yaqin muddatdagi maqsadlarni va ularga "
+"erishish taktikasini ishlab chiqadi. Joriy rahbarlik kollegial ijroya organi"
+" – Boshqaruv, tomonidan amalga oshirilib, mazkur organ Umumiy yig‘ilish va "
+"Kuzatuv kengashi tomonidan qabul qilingan qarorlarning bajarilishini "
+"tashkillashtiradi va nazorat qiladi."
 msgstr ""
+"\"Neftgaztadqiqot\" AJning Oliy boshqaruv organi aksiyadorlarning Umumiy "
+"yig‘ilishi hisoblanadi. Umumiy yig‘ilish tomonidan saylanadigan Kuzatuv "
+"kengashi jamiyatning umumiy rahbarligini amalga oshirib, faoliyatning "
+"ustivor yo‘nalishlarini, rivojlanish istiqbollari va strategiyasini aniqlab "
+"beradi, hamda jamiyat oldida turgan yaqin muddatdagi maqsadlarni va ularga "
+"erishish taktikasini ishlab chiqadi. Joriy rahbarlik kollegial ijroya organi"
+" – Boshqaruv, tomonidan amalga oshirilib, mazkur organ Umumiy yig‘ilish va "
+"Kuzatuv kengashi tomonidan qabul qilingan qarorlarning bajarilishini "
+"tashkillashtiradi va nazorat qiladi."
+
+#: app/templates/tenders.html:19
+msgid "Дата публикации:"
+msgstr "E'lon qilingan sana:"
+
+#: app/templates/tenders.html:23
+msgid "Дата окончания конкурса:"
+msgstr "Tanlovning tugash sanasi:"
+
+#: app/templates/tenders.html:28
+msgid "Скачать PDF"
+msgstr " PDF-ni yuklab olish"
 
 #: development/settings.py:117
 msgid "Russian"
@@ -347,6 +470,42 @@ msgstr "Ingliz"
 #: development/settings.py:119
 msgid "Uzbek"
 msgstr "O'zbek"
+
+#~ msgid "12000 dollarlik uyni"
+#~ msgstr "12000 dollarlik uyni"
+
+#~ msgid "12000 dollarga qura olaman,- deb o'ylagan odam optimistdir."
+#~ msgstr "12000 dollarga qura olaman,- deb o'ylagan odam optimistdir."
+
+#~ msgid "Frensis Rodman"
+#~ msgstr "Frensis Rodman"
+
+#~ msgid "Arxitekturaga o'rgatib - bo'lmaydi"
+#~ msgstr "Arxitekturaga o'rgatib - bo'lmaydi"
+
+#~ msgid "faqatgina odamlarni ilhomlantirish mumkin."
+#~ msgstr "faqatgina odamlarni ilhomlantirish mumkin."
+
+#~ msgid "Zaha Hadid"
+#~ msgstr "Zaha Hadid"
+
+#~ msgid "Arxitektura bu ovozsiz musiqadir."
+#~ msgstr "Arxitektura bu ovozsiz musiqadir."
+
+#~ msgid "Iogan Volfgang Fon Gyote."
+#~ msgstr "Iogan Volfgang Fon Gyote."
+
+#~ msgid "Biz murakkablikdan voz kechdik "
+#~ msgstr "Biz murakkablikdan voz kechdik"
+
+#~ msgid "Premium xizmat paketlari."
+#~ msgstr "Premium xizmat paketlari."
+
+#~ msgid "Takrorlanmas dizayn"
+#~ msgstr "Takrorlanmas dizayn"
+
+#~ msgid "Loyihangizga joziba bering va bahra oling."
+#~ msgstr "Loyihangizga joziba bering va bahra oling."
 
 #~ msgid "Hammasi"
 #~ msgstr "Hammasi"

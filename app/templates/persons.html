@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            background-image: url('{% static "images/background/pattern-1.png" %}');
+            background-size: cover;
+            animation: fadeInBackground 1s ease-in-out;
+        }
+
+        @keyframes fadeInBackground {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #111;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Ограничение на 3 строки текста */
+        .news-card p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 4.5em;
+            transition: max-height 0.3s ease;
+        }
+
+        .news-card.expanded p {
+            -webkit-line-clamp: unset;
+            max-height: none;
+        }
+
+        .read-more-btn {
+            color: #007bff;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: right;
+            display: block;
+            font-weight: 500;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .read-more-btn:hover {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+        }
+
+        /* Стили контейнера новостей */
+        .news-container {
+            max-width: 2000px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Карточка новости */
+        .news-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 15px;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Изображение новости */
+        .news-card img {
+            width: 600px;
+            height: 300px;
+            border-radius: 6px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        /* Контент внутри карточки */
+        .news-card-content {
+            padding: 0;
+        }
+
+        .news-card h2 {
+            font-size: 18px;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        /* Фильтрация категорий */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            padding: 10px 15px;
+            background-color: #f4f4f9;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Адаптивная вёрстка для мобильных устройств */
+        @media (max-width: 768px) {
+            .news-container {
+                grid-template-columns: 1fr;
+            }
+
+            .news-card img {
+                height: 400px;
+                width: 500px;
+            }
+        }
+
+        /* Большие экраны */
+        @media (min-width: 1200px) {
+            .news-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        hr.custom-hr {
+            border: 0;
+            border-top: 1px solid #ccc; /* Цвет линии */
+            height: 10px; /* Высота линии */
+            margin: 10px auto; /* Отступы сверху и снизу и автоматическое центрирование */
+            width: 50%; /* Ширина линии */
+        }
+    </style>
+
+    <!-- Контейнер фильтра -->
+
+    <!-- Контейнер для новостей -->
+     <br>
+     <hr>
+    <h1 id="persons" >{% trans "Jamiyatning ijro organi a'zolari haqida ma'lumot" %}</h1>
+    <hr>
+    <div class="news-container" >
+
+        <!-- Одна карточка новости -->
+         {% for person in persons %}
+        <div class="news-card">
+            <a href=""><img  src="https://cdn-icons-png.flaticon.com/512/3048/3048127.png" alt="News Image"></a>
+            <div class="news-card-content">
+                <h2>{{ person.name }}</h2>
+                <hr>
+                <strong class="news-text">{% trans 'Lavozim' %} : {{ person.department }}</strong>
+                <br><hr>
+                <tt>{{ person.share_capital }}</tt>
+                <hr  class="custom-hr">
+                <tt>{{ person.share_fund }}</tt>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+{% endblock %}
