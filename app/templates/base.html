@@ -13,8 +13,13 @@
     <link rel="shortcut icon" href="{% static 'images/imorat/logo.jpg' %}" type="image/x-icon">
     <link rel="icon" href="{% static 'images/imorat/logo.jpg' %}" type="image/x-icon">
     <meta name="msapplication-TileImage" content="images/imorat/logo tayyor.png" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    
 </head>
+
 <body>
+
     <div class="page-wrapper" id="home">
         <header class="main-header" >
     
@@ -90,6 +95,7 @@
                             .navbar-collapse select:focus {
                                 outline: none; /* Убираем фокус-рамку */
                                 background-color: rgba(255, 255, 255, 0.2); /* Легкое затемнение при наведении */
+                                
                             }
 
                         </style>
@@ -107,7 +113,6 @@
                             <!-- Mobile Navigation Toggler -->
                             <div class="mobile-nav-toggler">
                                 <span class="icon ti-menu"></span>
-                                {% trans 'Menu' %}
                             </div>
                             <!-- Main Menu -->
                             <nav class="main-menu navbar-expand-md">
@@ -125,97 +130,98 @@
                                 </div>
                                 
                                 <div class="navbar-collapse show collapse clearfix" id="navbarSupportedContent">
-                                    {% include 'includes/language.html' %}  
 
                                     <ul class="navigation clearfix">
-                                        
-                                        <li><a href="{% url 'index' %}">{% trans '| Asosiy sahifa' %}</a></li>
-                                        <li><a href="{% url 'index' %}#allnews">{% trans 'Yangiliklar' %}</a></li>
-                                        <li><a href="{% url 'index' %}#contact">{% trans 'Contact' %}</a></li>
-                                        <li><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></li>
 
-                                        <style>
-                                            /* Стили для select */
-                                            select {
-                                                /* Убирает старую стрелку во всех браузерах */
-                                                background-color: black;
-                                                -webkit-appearance: none;
-                                                -moz-appearance: none;
-                                                appearance: none;
+
+                                        <div class="relative group inline-block">
+                                            <div style="color: white;" class="text-white py-2 rounded-md hover:cursor-pointer flex justify-between items-center gap-4 px-4" onclick="toggleMenu(this)">
                                                 
-                                                background-image: url(https://img.icons8.com/fluency/48/sort-down.png);
-                                                background-size: 20px;
-                                                background-repeat: no-repeat;
-                                                background-position: right 0.2em top 50%;
-                                                color: black;
-                                                width: 205px;
-                                                padding: 10px; /* Внутренние отступы */
-                                                background-color: #535353;
-                                                border-radius: 10px;
-                                            }
-                                        
-                                            /* Стили для option */
-                                            select option {
-                                                background-color: #333; /* Темный фон для опций */
-                                                color: black; /* Цвет текста */
-                                                padding: 10px; /* Отступы внутри опций */
-                                                font-size: 16px; /* Размер шрифта */
-                                                border: none; /* Убираем рамку */
-                                                text-align: left; /* Выравнивание текста по левому краю */
-                                            }
-                                        
-                                            /* Стили при наведении на option */
-                                            select option:hover {
-                                                background-color: #444; /* Темнее при наведении */
-                                                color: #f1f1f1; /* Легкое изменение цвета текста */
-                                            }
-                                        
-                                            /* Добавляем отступы между select */
-                                            .select-container {
-                                                margin-bottom: 15px; /* Отступ между селектами */
-                                            }
-                                        </style>
-                                        
 
+                                                    <p style="color: white; font-weight: bold; font-size: 17px;">{% trans 'Asosiy sahifa' %}</p>
+                                                <!-- <div style="background-color: white; border-radius: 50%; padding: -1px">
+                                                    <img style="width: 30px; padding: 6px" src="{% static 'images/down.png' %}" alt="">
+                                                </div> -->
+                                            </div>
                                         
+                                            <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                                                <ul class="p-4 space-y-1">
+                                                    <li><a href="{% url 'tenders' %}#tenders">{% trans 'Tenderlar' %}</a></li>
+                                                    <li><a href="{% url 'structure' %}#structure">{% trans 'Tashkiliy tuzilma' %}</a></li>
+                                                    <li><a href="{% url 'index' %}#allnews">{% trans 'Yangiliklar' %}</a></li>
+                                                    <li><a href="{% url 'index' %}#contact">{% trans 'Aloqa' %}</a></li>
+                                                    <li><a href=" {% url 'finance' %}#finances">{% trans "Moliyaviy ko'rsatkichlar" %}</a></li>
+                                                    <li><a href="{% url 'boshqaruv' %}#boshqaruv">{% trans "Boshqaruv" %}</a></li>
+                                                    <li><a href="{% url 'index' %}#section_1">{% trans "Tashkilot tarixi" %}</a></li>
+                                                    <li><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <style>
+                                            /* Скрыть вложенные пункты меню для мобильных устройств */
+                                            @media (max-width: 768px) {
+                                                .navigation {
+                                                    
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    align-items: flex-start;
+                                                }
 
-                                            <select style="background-color: rgb(134, 134, 134);" class="select_1" name="foods" id="hr-select" onchange="navigateToUrl(this)">
-                                                <option value="">{% trans 'Tanlang' %}...</option>
-                                                <option value="{% url 'tenders' %}#tenders">{% trans 'Tenderlar' %}</option>
-                                                <option value="{% url 'person' %}#persons">{% trans "Ijro organi a'zolari" %}</option>
-                                                <option value="{% url 'structure' %}#structure">{% trans 'Tashkiliy tuzilma' %}</option>
-                                                <option value="{% url 'finance' %}#finances">{% trans "Moliyaviy ko'rsatkichlar" %}</option>
-                                            </select>
+                                                .navigation li {
+                                                    width: 100%;
+                                                    margin-bottom: 10px;
+                                                }
 
-                                        
-                                        <script>
-                                            function navigateToUrl(select) {
-                                                var url = select.value;
-                                                if (url) {
-                                                    window.location.href = url;
+                                                .relative.group .absolute {
+                                                    display: none;
+                                                }
+
+                                                /* Показываем выпадающее меню по клику */
+                                                .relative.group.active .absolute {
+                                                    display: block;
+                                                    position: relative;
+                                                    width: 100%;
+                                                    left: 0;
+                                                    top: 0;
+                                                    margin-top: 10px;
                                                 }
                                             }
+
+                                        </style>
+                                        <script>
+                                            function toggleMenu(element) {
+                                                element.parentNode.classList.toggle('active');
+                                            }
+                                            
                                         </script>
+
+                                        <div class="relative group inline-block">
+                                            <div style="color: white;" class="text-white py-2 rounded-md hover:cursor-pointer flex justify-between items-center gap-4 px-4" onclick="toggleMenu(this)">
+                                                <p style="color: white; font-weight: bold; font-size: 17px;">{% trans 'Aksiyadorlarga' %}</p>
+                                            </div>
                                         
-                                        
-                                        
+                                            <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                                                <ul class="p-4 space-y-1">
+                                                    <li><a href="{% url 'person' %}#persons">{% trans "Ijro organi a'zolari" %}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <li><a style="color: white;"  href="{% url 'department' %}#bolim">{% trans "Bo'limlar" %}</a></li>
+                                        <li><a style="color: white;"  href="{% url 'more_info' %}#ochiqM">{% trans "Ochiq a'lumotlar" %}</a></li>
+                                        <li><a style="color: white;" href="#">{% trans "Vakantsiya" %}</a></li>
 
                                     </ul>
 
-                                    
+
+                                    {% include 'includes/language.html' %}
                                 </div>
                                 
                             </nav>
                             
                         </div>
-                        
+
                         <!-- Outer Box -->
-                        <div class="outer-box clearfix">
-                            <!-- Mobile Navigation Toggler -->
-                            <div class="mobile-nav-toggler">
-                                <span class="icon ion-android-menu"></span>
-                            </div>
-                        </div>
+                        
                         
                     </div>
                 </div>
@@ -226,13 +232,12 @@
             <div class="mobile-menu">
                 <div class="menu-backdrop"></div>
                 <div class="close-btn">
-                    <span class="icon lnr lnr-cross"></span>
-                    
+                    <span style="color: white;" class="icon lnr lnr-cross"></span>
                 </div>
                 
-                <nav class="menu-box">
-                    <div class="nav-logo">
-                        <a href="index.html">
+                <nav class="menu-box" style="background-color: rgba(102, 102, 102, 0.4);">
+                    <div class="nav-logo" >
+                        <a href="{% url 'index' %}">
                             <img src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt="{% trans 'Logo' %}" title="{% trans 'Logo' %}">
                         </a>
                     </div>
@@ -267,7 +272,7 @@
         /* Для устройств с высоким разрешением (Retina-дисплеи) */
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
             .slide {
-                background-image: url('{% static 'images/bgimgasd.jpg' %}'); /* Изображение с высоким разрешением */
+                background-image: url('{% static "images/bgimgasd.jpg" %}'); /* Изображение с высоким разрешением */
             }
         }
     </style>
@@ -282,10 +287,10 @@
                     <div class="content-boxed">
                         <div class="inner-boxed">
                             <div class="title"></div>
-                            <h1 style="font-size: 61px; text-align:center">Nefti Gaz <br> Tadqiqot</h1>
-                            <p></p>
-                            
-                            <br><br><br>
+
+                            <p></p><p><p></p></p>
+
+                            <br><br><br><br><br><br><br><br>
                             <div class="btn-box"></div>
                         </div>
                     </div>
@@ -293,21 +298,6 @@
             </div>
             
 
-            <div class="slide">
-                <div class="auto-container">
-                    <!-- Content Boxed -->
-                    <div class="content-boxed">
-                        <div class="inner-boxed">
-                            <div class="title"></div>
-                            <h1 style="font-size: 61px; text-align:center">Nefti Gaz <br> Tadqiqot</h1>
-                            <p></p>
-                            <p></p>
-                            <br><br><br><br>
-                            <div class="btn-box"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     
         <!--Scroll Down Btn-->

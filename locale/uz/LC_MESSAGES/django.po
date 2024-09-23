@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-19 08:16+0000\n"
-"PO-Revision-Date: 2024-09-19 08:21+0000\n"
+"POT-Creation-Date: 2024-09-23 13:26+0000\n"
+"PO-Revision-Date: 2024-09-23 13:36+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,141 +19,222 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: app/models.py:10 app/models.py:48
+#: app/models.py:11 app/models.py:49 app/models.py:139
 msgid "title"
 msgstr "Sarlavha"
 
-#: app/models.py:11 app/models.py:49
+#: app/models.py:12 app/models.py:50
 msgid "description"
 msgstr "Tavsif"
 
-#: app/models.py:19
+#: app/models.py:20
 msgid "New"
 msgstr "Yangilik "
 
-#: app/models.py:20
+#: app/models.py:21
 msgid "News"
 msgstr "Yangiliklar"
 
-#: app/models.py:33
+#: app/models.py:34
 msgid "name"
 msgstr "Ism "
 
-#: app/models.py:34
+#: app/models.py:35
 msgid "department"
 msgstr "bo'lim"
 
-#: app/models.py:35
+#: app/models.py:36
 msgid "share_capital"
 msgstr "kapital ulushi"
 
-#: app/models.py:36
+#: app/models.py:37
 msgid "share_fund"
 msgstr "fond ulushi"
 
-#: app/models.py:40
+#: app/models.py:41
 msgid "Person"
 msgstr "Shaxs "
 
-#: app/models.py:41
+#: app/models.py:42
 msgid "Persons"
 msgstr "Shaxslar"
 
-#: app/models.py:56
+#: app/models.py:57
 msgid "Tender"
 msgstr "Tender"
 
-#: app/models.py:57
+#: app/models.py:58
 msgid "Tenders"
 msgstr "Tenderlar"
 
-#: app/models.py:67
+#: app/models.py:68
 msgid "License"
 msgstr "Litsenziya"
 
-#: app/models.py:68
+#: app/models.py:69
 msgid "Licenses"
 msgstr "Litsenziyalar"
 
-#: app/models.py:80
+#: app/models.py:81
 msgid "Year"
 msgstr "Yil"
 
-#: app/models.py:81
+#: app/models.py:82
 msgid "Years"
 msgstr "Yillar "
 
-#: app/models.py:89
+#: app/models.py:90
 msgid "Показатель"
 msgstr "Ko‘rsatkich"
 
-#: app/models.py:90
+#: app/models.py:91
 msgid "Ед. изм."
 msgstr "O‘lchov birligi"
 
-#: app/models.py:96 app/models.py:97
+#: app/models.py:97 app/models.py:98
 msgid "FinancialData"
 msgstr "Moliyaviy ko'rsatkichlar"
 
-#: app/models.py:109 app/models.py:110
+#: app/models.py:110 app/models.py:111
 msgid "FinancialYearData"
 msgstr "Moliyaviy yil ko'rsatkichlari"
 
-#: app/templates/base.html:100 app/templates/base.html:236
+#: app/models.py:119
+msgid "F_I_O"
+msgstr "F I O"
+
+#: app/models.py:120
+msgid "position"
+msgstr "Lavozimi"
+
+#: app/models.py:121
+msgid "еducation"
+msgstr "Ma'lumoti"
+
+#: app/models.py:122
+msgid "specialization"
+msgstr "Mutaxasisligi"
+
+#: app/models.py:123
+msgid "phone"
+msgstr "Telefon raqam "
+
+#: app/models.py:124
+msgid "admission_date"
+msgstr "Qabul kuni "
+
+#: app/models.py:125
+msgid "admission_time"
+msgstr "Qabul soati "
+
+#: app/models.py:130
+msgid "Management"
+msgstr "Boshqaruv "
+
+#: app/models.py:131
+msgid "Managements"
+msgstr "Boshqaruvlar "
+
+#: app/models.py:145
+msgid "MoreInfo"
+msgstr "Ochiq ma'lumot"
+
+#: app/models.py:146
+msgid "MoreInfos"
+msgstr "Ochiq ma'lumotlar"
+
+#: app/templates/base.html:105 app/templates/base.html:240
 #: app/templates/includes/footer.html:16
 msgid "Logo"
 msgstr "Logo"
 
-#: app/templates/base.html:110
-msgid "Menu"
-msgstr "Menu"
-
-#: app/templates/base.html:118
+#: app/templates/base.html:122
 msgid "Toggle navigation"
 msgstr "Navigatsiyani almashtirish"
 
-#: app/templates/base.html:132
-msgid "| Asosiy sahifa"
-msgstr "| Asosiy sahifa"
+#: app/templates/base.html:140 app/templates/includes/footer.html:21
+msgid "Asosiy sahifa"
+msgstr "Asosiy sahifa"
 
-#: app/templates/base.html:133 app/templates/includes/footer.html:24
+#: app/templates/base.html:148 app/templates/tenders.html:6
+msgid "Tenderlar"
+msgstr "Tenderlar"
+
+#: app/templates/base.html:149
+msgid "Tashkiliy tuzilma"
+msgstr "Tashkiliy tuzilma"
+
+#: app/templates/base.html:150 app/templates/includes/footer.html:24
 #: app/templates/includes/news_detail.html:162
 #: app/templates/news_detail.html:164
 msgid "Yangiliklar"
 msgstr "Yangiliklar"
 
-#: app/templates/base.html:134 app/templates/includes/footer.html:25
-msgid "Contact"
-msgstr "Contact"
+#: app/templates/base.html:151
+msgid "Aloqa"
+msgstr "Aloqa"
 
-#: app/templates/base.html:135 app/templates/includes/footer.html:26
+#: app/templates/base.html:152
+msgid "Moliyaviy ko'rsatkichlar"
+msgstr "Moliyaviy ko'rsatkichlar"
+
+#: app/templates/base.html:153
+msgid "Boshqaruv"
+msgstr "Boshqaruv"
+
+#: app/templates/base.html:154
+#| msgid "Tashkiliy tuzilma"
+msgid "Tashkilot tarixi"
+msgstr "Tashkilot tarixi"
+
+#: app/templates/base.html:155 app/templates/includes/footer.html:26
 #: app/templates/license.html:9
 msgid "Akkreditsiya"
 msgstr "Akkreditsiya"
 
-#: app/templates/base.html:183
-msgid "Tanlang"
-msgstr "Tanlang"
+#: app/templates/base.html:199
+msgid "Aksiyadorlarga"
+msgstr "Aksiyadorlarga"
 
-#: app/templates/base.html:184 app/templates/tenders.html:6
-msgid "Tenderlar"
-msgstr "Tenderlar"
-
-#: app/templates/base.html:185
+#: app/templates/base.html:204
 msgid "Ijro organi a'zolari"
 msgstr "Ijro organi a'zolari"
 
-#: app/templates/base.html:186
-msgid "Tashkiliy tuzilma"
-msgstr "Tashkiliy tuzilma"
+#: app/templates/base.html:208
+msgid "Bo'limlar"
+msgstr "Bo'limlar"
 
-#: app/templates/base.html:187
-msgid "Moliyaviy ko'rsatkichlar"
+#: app/templates/base.html:209
+msgid "Ochiq a'lumotlar"
+msgstr "Ochiq a'lumotlar"
+
+#: app/templates/base.html:210
+msgid "Vakantsiya"
+msgstr "Vakansiya"
+
+#: app/templates/boshqaruv.html:6
+msgid "Jamiyatning ijro organi haqida ma'lumot"
+msgstr "Jamiyatning ijro organi a'zolari haqida ma'lumot"
+
+#: app/templates/boshqaruv.html:16
+msgid "Ijro organi a'zosi"
+msgstr "Ijro organi a'zolari"
+
+#: app/templates/finance.html:61
+msgid ""
+"2018 - 2020 yil yakunlari bo‘yicha «Neftgaztadqiqot» AJ asosiy moliyaviy-"
+"iqtisodiy ko‘rsatkichlari haqida ma'lumot"
+msgstr ""
+"2018 - 2020 yil yakunlari bo‘yicha «Neftgaztadqiqot» AJ asosiy moliyaviy-"
+"iqtisodiy ko‘rsatkichlari haqida ma'lumot"
+
+#: app/templates/finance.html:70
+msgid "Ko'rsatkichlar"
 msgstr "Moliyaviy ko'rsatkichlar"
 
-#: app/templates/includes/footer.html:21
-msgid "Asosiy sahifa"
-msgstr "Asosiy sahifa"
+#: app/templates/finance.html:72
+msgid "Faoliyat natijalari bo'yicha"
+msgstr "Faoliyat natijalari bo'yicha"
 
 #: app/templates/includes/footer.html:22
 msgid "Biz haqimizda"
@@ -162,6 +243,10 @@ msgstr "Biz haqimizda"
 #: app/templates/includes/footer.html:23
 msgid "Loyihalar"
 msgstr "Loyihalar"
+
+#: app/templates/includes/footer.html:25
+msgid "Contact"
+msgstr "Contact"
 
 #: app/templates/includes/news_detail.html:171
 #: app/templates/news_detail.html:172
@@ -186,8 +271,8 @@ msgid "Yuqori tajribaga ega arxitektor va injener-konstruktorlar"
 msgstr "Yuqori tajribaga ega arxitektor va injener-konstruktorlar"
 
 #: app/templates/index.html:32
-msgid "Imorat Development"
-msgstr "Imorat Development"
+msgid "NeftGazTadqiqot"
+msgstr "Neft Gaz Tadqiqot"
 
 #: app/templates/index.html:34
 msgid ""
@@ -369,7 +454,6 @@ msgid "yuqori sifatli tadqiqotlar."
 msgstr "yuqori sifatli tadqiqotlar."
 
 #: app/templates/index.html:325
-#| msgid "AO 'Neftgaztadqiqot' AJ tashkiliy tuzilmasi"
 msgid "'Neftgaztadqiqot' AJ negizida"
 msgstr "'Neftgaztadqiqot' AJ negizida"
 
@@ -401,6 +485,19 @@ msgstr "PDF Akkreditsiyani yuklab olish"
 msgid "Akkreditsiya hujjati mavjud emas"
 msgstr "Akkreditsiya hujjati mavjud emas"
 
+#: app/templates/more_info.html:7
+msgid "Ochiq Ma'lumotlar"
+msgstr "Ochiq Ma'lumotlar"
+
+#: app/templates/more_info.html:31
+msgid "Bugalteriya hisoboti"
+msgstr "Bugalteriya hisoboti"
+
+#: app/templates/more_info.html:46
+#| msgid "Moliyaviy ko'rsatkichlar"
+msgid "Moliyaviy natijalar"
+msgstr "Moliyaviy natijalar"
+
 #: app/templates/news_detail.html:185
 msgid "Read less"
 msgstr "Read less"
@@ -409,11 +506,11 @@ msgstr "Read less"
 msgid "Davomini oqish"
 msgstr "Davomini oqish"
 
-#: app/templates/persons.html:174
+#: app/templates/persons.html:176
 msgid "Jamiyatning ijro organi a'zolari haqida ma'lumot"
 msgstr "Jamiyatning ijro organi a'zolari haqida ma'lumot"
 
-#: app/templates/persons.html:185
+#: app/templates/persons.html:187
 msgid "Lavozim"
 msgstr "Lavozim"
 
@@ -470,6 +567,26 @@ msgstr "Ingliz"
 #: development/settings.py:119
 msgid "Uzbek"
 msgstr "O'zbek"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#, fuzzy
+#~ msgid "PDF Akkreditsiyani yuklab olish 1"
+#~ msgstr "PDF Akkreditsiyani yuklab olish"
+
+#, fuzzy
+#~ msgid "PDF Akkreditsiyani yuklab olish 2"
+#~ msgstr "PDF Akkreditsiyani yuklab olish"
+
+#~ msgid "| Asosiy sahifa"
+#~ msgstr "| Asosiy sahifa"
+
+#~ msgid "Tanlang"
+#~ msgstr "Tanlang"
+
+#~ msgid "Imorat Development"
+#~ msgstr "Imorat Development"
 
 #~ msgid "12000 dollarlik uyni"
 #~ msgstr "12000 dollarlik uyni"

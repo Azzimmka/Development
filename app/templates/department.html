@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<style>
+    .main_butt {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* Делает 5 колонок */
+        gap: 20px; /* Расстояние между кнопками */
+        padding: 20px;
+    }
+
+    .custom-button {
+        position: relative;
+        background-color: #27272a; /* bg-neutral-800 */
+        height: 4rem; /* h-16 */
+        width: 16rem; /* w-64 */
+        border: 1px solid transparent; /* hover:border-rose-300 */
+        text-align: left; /* text-left */
+        padding: 0.75rem; /* p-3 */
+        color: #f9fafb; /* text-gray-50 */
+        font-size: 1rem; /* text-base */
+        font-weight: 700; /* font-bold */
+        border-radius: 0.5rem; /* rounded-lg */
+        overflow: hidden;
+        transition: all 0.5s ease; /* duration-500 */
+    }
+
+    .custom-button:hover {
+        text-decoration: underline; /* hover:underline */
+        text-underline-offset: 4px; /* hover:underline-offset-4 */
+        text-decoration-thickness: 2px; /* hover:decoration-2 */
+        color: #7181fb; /* hover:text-rose-300 */
+    }
+
+    .custom-button::before {
+        content: '';
+        position: absolute;
+        width: 3rem; /* before:w-12 */
+        height: 3rem; /* before:h-12 */
+        right: 0.25rem; /* before:right-1 */
+        top: 0.25rem; /* before:top-1 */
+        background-color: #8b5cf6; /* before:bg-violet-500 */
+        border-radius: 9999px; /* before:rounded-full */
+        filter: blur(8px); /* before:blur-lg */
+        transition: all 0.5s ease; /* before:duration-500 */
+        z-index: 10;
+    }
+
+    .custom-button:hover::before {
+        right: 3rem; /* hover:before:right-12 */
+        bottom: 2rem; /* hover:before:-bottom-8 */
+        box-shadow: 20px 20px 20px 30px #a21caf; /* hover:before:[box-shadow:...] */
+    }
+
+    .custom-button::after {
+        content: '';
+        position: absolute;
+        width: 5rem; /* after:w-20 */
+        height: 5rem; /* after:h-20 */
+        right: 2rem; /* after:right-8 */
+        top: 0.75rem; /* after:top-3 */
+
+        border-radius: 9999px; /* after:rounded-full */
+        filter: blur(8px); /* after:blur-lg */
+        transition: all 0.5s ease; /* after:duration-500 */
+        z-index: 10;
+    }
+
+    .custom-button:hover::after {
+        right: -2rem; /* hover:after:-right-8 */
+    }
+
+    @media (max-width: 768px) {
+        .main_butt {
+            display: flex; /* Меняем grid на flex */
+            flex-direction: column; /* Вертикальное расположение кнопок */
+            align-items: center; /* Горизонтальное выравнивание по центру */
+            justify-content: center; /* Вертикальное выравнивание по центру */
+            height: 100vh; /* Высота контейнера на весь экран */
+            gap: 20px; /* Оставляем расстояние между кнопками */
+        }
+    }
+</style>
+<br>
+<h2 id="bolim" style="text-align: center; font-size: 60px;">{% trans "B'olimlar" %}</h2>
+<br><hr>
+<div class="main_butt">
+    <button class="custom-button"><a href="{% url 'index' %}">{% trans 'Asosiy sahifa' %}</a></button>
+    <button class="custom-button"><a href="{% url 'tenders' %}#tenders">{% trans 'Tenderlar' %}</a></button>
+    <button class="custom-button"><a href="{% url 'structure' %}#structure">{% trans 'Tashkiliy tuzilma' %}</a></button>
+    <button class="custom-button"><a href="{% url 'index' %}#allnews">{% trans 'Yangiliklar' %}</a></button>
+    <button class="custom-button"><a href="{% url 'index' %}#contact">{% trans 'Aloqa' %}</a></button>
+    <button class="custom-button"><a href=" {% url 'finance' %}#finances">{% trans "Moliyaviy ko'rsatkichlar" %}</a></button>
+    <button class="custom-button"><a href="{% url 'boshqaruv' %}#boshqaruv">{% trans "Boshqaruv" %}</a></button>
+    <button class="custom-button"><a href="{% url 'index' %}#section_1">{% trans "Tashkilot tarixi" %}</a></button>
+    <button class="custom-button"><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></button>
+    <button class="custom-button"><a href="{% url 'person' %}#persons">{% trans "Ijro organi a'zolari" %}</a></button>
+    <button class="custom-button"><a style="color: white;"  href="{% url 'department' %}#bolim">{% trans "Bo'limlar" %}</a></button>
+    <button class="custom-button"><a style="color: white;"  href="{% url 'more_info' %}#ochiqM">{% trans "Ochiq a'lumotlar" %}</a></button>
+    <button class="custom-button"><a style="color: white;" href="#">{% trans "Vakantsiya" %}</a></button>
+
+</div>
+
+
+{% endblock %}

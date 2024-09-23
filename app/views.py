@@ -53,3 +53,21 @@ def financе(request):
         'financial_data': financial_data,
     }
     return render(request, 'finance.html', context)
+
+
+def boshqaruv(request):
+    management = Management.objects.all()
+    context = {
+        'management': management,
+    }
+    return render(request, 'boshqaruv.html', context)
+
+def more_info(request):
+    info = MoreInfo.objects.all()
+    context = {
+        'info': info,
+    }
+    return render(request, 'more_info.html', context)
+
+def department(request):
+    return render(request, 'department.html')

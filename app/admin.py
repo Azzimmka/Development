@@ -1,9 +1,14 @@
 from django.contrib import admin
 from django.utils.text import slugify
-from .models import News, License, Person, Tenders, Year, FinancialData, FinancialYearData
+from .models import News, License, Person, Tenders, Year, FinancialData, FinancialYearData, Management, MoreInfo
 from parler.admin import TranslatableAdmin
 
+
 admin.site.register(License)
+
+@admin.register(Management)
+class ManagementAdmin(TranslatableAdmin):
+    list_display = ('f_i_o', 'position', 'еducation', 'specialization', 'phone', 'admission_date', 'admission_time')
 
 @admin.register(Person)
 class PersonAdmin(TranslatableAdmin):
@@ -36,3 +41,8 @@ class FinancialDataAdmin(TranslatableAdmin):
 
 admin.site.register(Year)
 admin.site.register(FinancialData, FinancialDataAdmin)
+
+
+@admin.register(MoreInfo)
+class MoreInfoAdmin(TranslatableAdmin):
+    list_display = ('title',) 

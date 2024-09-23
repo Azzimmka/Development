@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import CharField
 from django.utils.translation import gettext_lazy as _
 from parler.models import TranslatableModel, TranslatedFields
 # Create your models here.
@@ -111,3 +112,38 @@ class FinancialYearData(models.Model):
 
     def __str__(self):
         return f'{self.financial_data.safe_translation_getter("indicator_name", any_language=True)} - {self.year.year}'
+
+
+class Management(TranslatableModel):
+    translations = TranslatedFields(
+        f_i_o = models.CharField(_('F_I_O'), max_length=1500),
+        position = models.CharField(_('position'), max_length=1500),
+        еducation = models.CharField(_('еducation'), max_length=1400),
+        specialization = models.CharField(_('specialization'), max_length=1500),
+        phone = models.CharField(_('phone'), max_length=1500),
+        admission_date = models.CharField(_('admission_date'), max_length=1300),
+        admission_time = models.CharField(_('admission_time'),max_length=1300 ),
+    )
+    img = models.ImageField(upload_to='management/', null=True, blank=True)
+
+    class Meta:
+        verbose_name = _('Management')
+        verbose_name_plural = _('Managements')
+
+    def __str__(self):
+        return self.safe_translation_getter('f_i_o', any_language=True)
+
+
+class MoreInfo(TranslatableModel):
+    translations = TranslatedFields(
+        title = models.CharField(_('title'), max_length=1500),
+    )
+    pdf = models.FileField(upload_to='more_info/', null=True, blank=True)
+    pdf2 = models.FileField(upload_to='more_info/', null=True, blank=True)
+
+    class Meta:
+        verbose_name = _('MoreInfo')
+        verbose_name_plural = _('MoreInfos')
+
+    def __str__(self):
+        return self.safe_translation_getter('title', any_language=True)

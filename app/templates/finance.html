@@ -58,15 +58,18 @@
         }
     </style>
 
-    <h2 style="text-align: center;" id="finances"> {% trans "2018 - 2020 yil yakunlari bo‘yicha «Neftgaztadqiqot» AJ asosiy moliyaviy-iqtisodiy ko‘rsatkichlari haqida ma'lumot" %}</h2>
+    <h2 style="text-align: center; font-size: 50px;" id="finances"> {% trans "2018 - 2020 yil yakunlari bo‘yicha «Neftgaztadqiqot» AJ asosiy moliyaviy-iqtisodiy ko‘rsatkichlari haqida ma'lumot" %}</h2>
+    <br>
     <hr>
+    <br>
+
     <div class="table-container">
         <table>
             <thead>
                 <tr>
-                    <th rowspan="2">Показатели</th>
+                    <th rowspan="2">{% trans "Ko'rsatkichlar" %}</th>
                     <th rowspan="2">Ед. изм.</th>
-                    <th colspan="{{ years.count }}">Итоги деятельности в</th>
+                    <th colspan="{{ years.count }}">{% trans "Faoliyat natijalari bo'yicha" %}</th>
                 </tr>
                 <tr>
                     {% for year in years %}
