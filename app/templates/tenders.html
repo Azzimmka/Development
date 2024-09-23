@@ -3,13 +3,13 @@
 {% load i18n %}
 
 {% block content %}
-<h1 id="tenders" style="text-align: center;">{% trans 'Tenderlar' %}</h1>
+<h1 id="tenders" style="text-align: center; font-size: 60px;">{% trans 'Tenderlar' %}</h1>
 <hr>
 <div class="card-container">
     {% for tender in tenders %}
     <div class="card">
         <div class="card-header">
-            <h5 style="font-weight: bold;">{{ tender.title }}</h5>
+            <h5 style="font-weight: bold; font-size: 20px;">{{ tender.title }}</h5>
         </div>
         <div class="card-body">
             <p>{{ tender.description }}</p>
@@ -25,10 +25,15 @@
             </div>
         </div>
         <div class="card-footer">
-            <a href="{{ tender.pdf.url }}" class="btn-download">{% trans 'Скачать PDF' %}</a>
+            {% if tender.pdf %}
+                <a href="{{ tender.pdf.url }}" class="btn-download">{% trans 'Скачать PDF' %}</a>
+            {% else %}
+                <p>{% trans 'PDF недоступен' %}</p>
+            {% endif %}
         </div>
     </div>
     {% endfor %}
+</div>
 
 </div>
 <br>

@@ -2,28 +2,34 @@
 {% load  i18n %}
 <footer class="main-footer">
     <div class="auto-container">
-        <style>
-            .logog {
-                font-size: 100px;
-            }
-            .logog img {
-                width: 200px; /* Установите нужную ширину */
-                height: 200px; /* Автоматическая высота, сохраняющая пропорции */
-            }
-        </style>
-        
-        <div class="logog">
-            <img  src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt="{% trans 'Logo' %}"  style=""/>
-        </div>
+<style>
+    .logog {
+        font-size: 100px;
+        display: flex;
+        justify-content: center; /* Горизонтальное центрирование */
+        align-items: center; /* Вертикальное центрирование */
+
+    }
+    .logog img {
+        width: 200px; /* Установите нужную ширину */
+        height: auto; /* Автоматическая высота, сохраняющая пропорции */
+    }
+</style>
+
+<div class="logog">
+    <img src="{% static 'images/imorat/NeftGazTadqiqot logo copy.png' %}" alt="{% trans 'Logo' %}">
+</div>
+
         
         
         <ul class="footer-page-nav">
             <li><a href="{% url 'index' %}">{% trans 'Asosiy sahifa' %}</a></li>
-            <li><a href="{% url 'index' %}#section_1">{% trans 'Biz haqimizda' %}</a></li>
-            <li><a href="{% url 'index' %}#loyihalar">{% trans 'Loyihalar' %}</a></li>
             <li><a href="#allnews">{% trans 'Yangiliklar' %}</a></li>
-            <li><a href="{% url 'index' %}#contact">{% trans 'Contact' %}</a></li>
+            <li><a href="{% url 'index' %}#contact">{% trans 'Aloqa' %}</a></li>
             <li><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></li>
+            <li><a href="{% url 'tenders' %}#tenders">{% trans 'Tenderlar' %}</a></li>
+            <li><a href="{% url 'structure' %}#structure">{% trans 'Tashkiliy tuzilma' %}</a></li>
+            <li><a href=" {% url 'finance' %}#finances">{% trans "Moliyaviy ko'rsatkichlar" %}</a></li>
         </ul>
         <div class="contact-info">Islom Karimov 1 Buxoro, O'zbekiston<br> <a
                 href="tel:+998-33-055-10-00">(+998) 33 055-10-00</a> <br> <a
