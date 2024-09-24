@@ -208,7 +208,8 @@
                                         </div>
                                         <li><a style="color: white;"  href="{% url 'department' %}#bolim">{% trans "Bo'limlar" %}</a></li>
                                         <li><a style="color: white;"  href="{% url 'more_info' %}#ochiqM">{% trans "Ochiq a'lumotlar" %}</a></li>
-                                        <li><a style="color: white;" href="#">{% trans "Vakantsiya" %}</a></li>
+                                        <li><a style="color: white;" href="{% url 'vacancy' %}">{% trans "Vakantsiya" %}</a></li>
+                                        
 
                                     </ul>
 
@@ -254,7 +255,7 @@
     
     <style>
         .slide {
-            background-image: url('{% static 'images/bgimgasd.jpg' %}');
+            background-image: url('{% static "imorat/neft_gaz.jpeg" %}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -263,7 +264,7 @@
         /* Для мобильных устройств */
         @media only screen and (max-width: 768px) {
             .slide {
-                background-image: url('{% static 'images/bgimgasd.jpg' %}'); /* Версия изображения для мобильных */
+
                 background-size: cover;
                 background-position: center;
             }

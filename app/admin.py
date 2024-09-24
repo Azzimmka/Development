@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.text import slugify
-from .models import News, License, Person, Tenders, Year, FinancialData, FinancialYearData, Management, MoreInfo
+from .models import *
 from parler.admin import TranslatableAdmin
 
 
@@ -46,3 +46,7 @@ admin.site.register(FinancialData, FinancialDataAdmin)
 @admin.register(MoreInfo)
 class MoreInfoAdmin(TranslatableAdmin):
     list_display = ('title',) 
+
+@admin.register(Vacancy)
+class VacancyAdmin(TranslatableAdmin):
+    list_display = ('title', 'description')

@@ -80,28 +80,239 @@
             justify-content: center; /* Вертикальное выравнивание по центру */
             height: 100vh; /* Высота контейнера на весь экран */
             gap: 20px; /* Оставляем расстояние между кнопками */
+
+        }
+        .image-text-container {
+            flex-direction: column; /* Изменяем расположение на вертикальное */
+            text-align: center; /* Выравниваем текст по центру */
+            gap: 20px; /* Расстояние между изображением и текстом */
+        }
+    
+        .image-section img {
+            max-width: 100%; /* Изображение на всю ширину */
+            height: auto; /* Сохраняем пропорции изображения */
+        }
+    
+        .text-section {
+            margin-top: 20px; /* Отступ сверху для текста */
         }
     }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .image-text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .image-section img {
+        max-width: 450px;
+        height: auto;
+        border-radius: 10px;
+    }
+    
+    .text-section h1 {
+        font-size: 24px;
+
+        text-align: center;
+        max-width: 300px;
+    }
+    
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card input {
+        max-width: 20px;
+        height: 20px;
+    }
+    
+    .card p {
+        font-size: 16px;
+        color: #333;
+    }
+
+    /* Основные стили для десктопной версии */
+.image-text-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки для изображений и текста */
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-text {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .image-text-section {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных устройствах */
+    }
+
+    .image-text-container {
+        margin-bottom: 20px;
+    }
+
+    .section-image {
+        order: 1; /* Картинка сверху */
+        
+    }
+
+    .section-text {
+        order: 2; /* Текст снизу */
+        font-size: 1em;
+    
+    }
+}
+
+    
 </style>
 <br>
 <h2 id="bolim" style="text-align: center; font-size: 60px;">{% trans "B'olimlar" %}</h2>
-<br><hr>
+<br><hr><br><br>
 <div class="main_butt">
-    <button class="custom-button"><a href="{% url 'index' %}">{% trans 'Asosiy sahifa' %}</a></button>
-    <button class="custom-button"><a href="{% url 'tenders' %}#tenders">{% trans 'Tenderlar' %}</a></button>
-    <button class="custom-button"><a href="{% url 'structure' %}#structure">{% trans 'Tashkiliy tuzilma' %}</a></button>
-    <button class="custom-button"><a href="{% url 'index' %}#allnews">{% trans 'Yangiliklar' %}</a></button>
-    <button class="custom-button"><a href="{% url 'index' %}#contact">{% trans 'Aloqa' %}</a></button>
-    <button class="custom-button"><a href=" {% url 'finance' %}#finances">{% trans "Moliyaviy ko'rsatkichlar" %}</a></button>
-    <button class="custom-button"><a href="{% url 'boshqaruv' %}#boshqaruv">{% trans "Boshqaruv" %}</a></button>
-    <button class="custom-button"><a href="{% url 'index' %}#section_1">{% trans "Tashkilot tarixi" %}</a></button>
-    <button class="custom-button"><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></button>
-    <button class="custom-button"><a href="{% url 'person' %}#persons">{% trans "Ijro organi a'zolari" %}</a></button>
-    <button class="custom-button"><a style="color: white;"  href="{% url 'department' %}#bolim">{% trans "Bo'limlar" %}</a></button>
-    <button class="custom-button"><a style="color: white;"  href="{% url 'more_info' %}#ochiqM">{% trans "Ochiq a'lumotlar" %}</a></button>
-    <button class="custom-button"><a style="color: white;" href="#">{% trans "Vakantsiya" %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'index' %}">{% trans 'Asosiy sahifa' %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'tenders' %}#tenders">{% trans 'Tenderlar' %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'structure' %}#structure">{% trans 'Tashkiliy tuzilma' %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'index' %}#allnews">{% trans 'Yangiliklar' %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'index' %}#contact">{% trans 'Aloqa' %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a href=" {% url 'finance' %}#finances">{% trans "Moliyaviy ko'rsatkichlar" %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'boshqaruv' %}#boshqaruv">{% trans "Boshqaruv" %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'index' %}#section_1">{% trans "Tashkilot tarixi" %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'person' %}#persons">{% trans "Ijro organi a'zolari" %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a style="color: white;"  href="{% url 'department' %}#bolim">{% trans "Bo'limlar" %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a style="color: white;"  href="{% url 'more_info' %}#ochiqM">{% trans "Ochiq a'lumotlar" %}</a></button>
+    <button style="padding-bottom: 30px;"  class="custom-button"><a style="color: white;" href="#">{% trans "Vakantsiya" %}</a></button>
+</div>
 
+<br><br>
+
+<div class="container">
+    <div class="image-text-container">
+        <div class="image-section">
+            <img src="{% static 'images/3.jpg' %}" alt="{% trans 'Worker' %}" class="image">
+        </div>
+        
+        <div class="text-section">
+            <h1>{% trans "Neft va gaz konlarini tadqiq etish bo'limi neft va gaz qazib olish konlarida:" %}</h1>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <input type="checkbox" checked disabled>
+            <p>{% trans "ishlatilayotgan quduqlarning joriy mahsuldorlik xarakteristikalarini" %}</p>
+        </div>
+        <div class="card">
+            <input type="checkbox" checked disabled>
+            <p>{% trans "qazib olinayotgan gazning gaz-kondensat xarakteristikalarini" %}</p>
+        </div>
+        <div class="card">
+            <input type="checkbox" checked disabled>
+            <p>{% trans "quduqlarning joriy suv ko'rsatgichlarini" %}</p>
+        </div>
+        <div class="card">
+            <input type="checkbox" checked disabled>
+            <p>{% trans "quduqlarning qatlam bosimini hamda qazib olinayotgan neftning suvlanish darajasi" %}</p>
+        </div>
+    </div>
 </div>
 
 
+<section class="image-text-section">
+    <div class="image-text-container">
+        <img style="height: 400px;" src="{% static 'images/1_3.jpg' %}" alt="{% trans 'Image 1' %}" class="section-image">
+
+        <div class="card">
+            <input type="checkbox" checked disabled>
+            <p>{% trans "Gazlar, gaz kondensatlari, neftlar va qatlam suvlari tadqiq etish masalasi." %}</p>
+        </div>
+    </div>
+    <div class="image-text-container">
+        <img src="{% static 'images/1_2.jpg' %}" alt="{% trans 'Image 2' %}" class="section-image">
+
+        <div class="card">
+            <input type="checkbox" checked disabled>
+            <p>{% trans "Gazni tayyorlash, qayta ishlash va atrof muhitni muxofaza qilish boʻlimi." %}</p>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <div class="image-text-container">
+        <div class="image-section">
+            <img src="{% static 'images/1_1.jpg' %}" alt="Worker" class="image">
+        </div>
+        
+        <div class="text-section">
+            <h1>{% trans 'Kon uskunalari va quvurlarning ingibitorlik himoyasi bo‘limida' %}</h1>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <input type="checkbox" checked disabled>
+            <p>{% trans 'ishlatilayotgan quduqlarning joriy mahsuldorlik xarakteristikalarini' %}</p>
+        </div>
+        <div class="card">
+            <input type="checkbox" checked disabled>
+            <p>{% trans 'metallning vodorodlanish darajasini' %}</p>
+        </div>
+        <div class="card">
+            <input type="checkbox" checked disabled>
+            <p>{% trans 'qo‘llanilayotgan ingibitorlarning samaradorligini aniqlash' %}</p>
+        </div>
+        <div class="card">
+            <input type="checkbox" checked disabled>
+            <p>{% trans 'tuproqning metallni yemirilishi xavfi yuqori bo‘lgan joylarini aniqlash' %}</p>
+        </div>
+    </div>
+</div>
+</div>
+<br><br>
 {% endblock %}

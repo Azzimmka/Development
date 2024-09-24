@@ -1,3 +1,5 @@
+from lib2to3.fixes.fix_input import context
+
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 
@@ -71,3 +73,11 @@ def more_info(request):
 
 def department(request):
     return render(request, 'department.html')
+
+
+def vacancy(request):
+    vacancy = Vacancy.objects.all()
+    context = {
+        'vacancy': vacancy,
+    }
+    return render(request, 'vacancy.html', context)

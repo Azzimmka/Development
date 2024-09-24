@@ -147,3 +147,18 @@ class MoreInfo(TranslatableModel):
 
     def __str__(self):
         return self.safe_translation_getter('title', any_language=True)
+    
+
+class Vacancy(TranslatableModel):
+    translations = TranslatedFields(
+        title = models.CharField(_('title'), max_length=1500),
+        description = models.CharField(_('description'), max_length=1500),
+    )
+    phone = models.CharField(_('phone'), max_length=1500)
+
+    class Meta:
+        verbose_name = _('Vacancy')
+        verbose_name_plural = _('Vacancies')
+
+    def __str__(self):
+        return self.safe_translation_getter('title', any_language=True)
