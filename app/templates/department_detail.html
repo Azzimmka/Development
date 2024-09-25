@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<br><br>
+<div id="dep"></div>
+<section class="department">
+    <div class="department-content">
+        <h1 class="department-title">{{ departments.title }}</h1>
+        <p class="department-description">{{ departments.descriptions }}</p>
+        
+        {% if departments.img %}
+            <div class="department-image">
+                <img src="{{ departments.img.url }}" alt="{{ departments.title }}">
+            </div>
+        {% else %}
+            <p class="no-image">{% trans 'Изображение отсутствует' %}</p>
+        {% endif %}
+    </div>
+</section>
+<br><br>
+
+<style>
+    .department {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 800px;
+        text-align: center;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .department-title {
+        font-size: 48px;
+        margin: 10px 0;
+        color: #333;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .department-description {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 20px 0;
+        color: #666;
+        font-family: 'Georgia', serif;
+    }
+
+    .department-image {
+        text-align: center; /* Центрирование блока с изображением */
+        margin-top: 20px;
+        display: flex; /* Используем flex для центрирования */
+        justify-content: center; /* Центрируем содержимое по горизонтали */
+    }
+
+    .department-image img {
+        max-width: 100%; /* Изображение не превышает ширину родительского элемента */
+        height: auto; /* Высота изображения подстраивается под ширину */
+        border-radius: 8px;
+    }
+
+    .no-image {
+        font-style: italic;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+        .department {
+            padding: 10px;
+        }
+
+        .department-title {
+            font-size: 32px;
+        }
+
+        .department-description {
+            font-size: 14px;
+        }
+
+        .department-image img {
+            max-width: 90%; /* Чтобы изображение занимало 90% ширины на мобильных устройствах */
+            margin: 0 auto; /* Центрирование изображения */
+        }
+    }
+</style>
+{% endblock %}

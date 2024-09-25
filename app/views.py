@@ -72,8 +72,20 @@ def more_info(request):
     return render(request, 'more_info.html', context)
 
 def department(request):
-    return render(request, 'department.html')
+    departments = Department.objects.all()
+    context = {
+        'departments': departments,
+    }
+    return render(request, 'department.html', context)
 
+
+def department_detail(request, slug):
+    # Используем get_object_or_404 для обработки случаев, когда новость не найдена
+    departments = get_object_or_404(Department, slug=slug)
+    context = {
+        'departments': departments
+    }
+    return render(request, 'department_detail.html', context)
 
 def vacancy(request):
     vacancy = Vacancy.objects.all()

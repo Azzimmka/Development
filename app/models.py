@@ -1,9 +1,7 @@
 from django.db import models
-from django.db.models import CharField
+from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 from parler.models import TranslatableModel, TranslatedFields
-# Create your models here.
-
 from django.utils.text import slugify
 
 class News(TranslatableModel):
@@ -25,8 +23,8 @@ class News(TranslatableModel):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title)
-        super().save(*args, **kwargs)
+            self.slug = slugify(self.safe_translation_getter('title', any_language=True))
+        super(News, self).save(*args, **kwargs)
 
 
 class Person(TranslatableModel):
@@ -162,3 +160,27 @@ class Vacancy(TranslatableModel):
 
     def __str__(self):
         return self.safe_translation_getter('title', any_language=True)
+    
+
+
+
+class Department(TranslatableModel):
+    translations = TranslatedFields(
+        title=models.CharField(_('title'), max_length=1500),
+        descriptions=models.TextField(_('descriptions'), blank=True, null=True)
+    )
+    slug = models.SlugField(_('slug'), max_length=255, unique=True, blank=True, null=True)
+    img = models.ImageField(upload_to='Department/', blank=True, null=True)
+
+    def __str__(self):
+        return self.safe_translation_getter('title', any_language=True)
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            # Заполняем slug по индексу объекта
+            self.slug = f'department-{self.id}' if self.id else None
+        super().save(*args, **kwargs)
+
+    class Meta:
+        verbose_name = _('Department')
+        verbose_name_plural = _('Departments')

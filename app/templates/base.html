@@ -12,9 +12,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="{% static 'images/imorat/logo.jpg' %}" type="image/x-icon">
     <link rel="icon" href="{% static 'images/imorat/logo.jpg' %}" type="image/x-icon">
-    <meta name="msapplication-TileImage" content="images/imorat/logo tayyor.png" />
+    <meta name="msapplication-TileImage" content="images/imorat/NeftGazTadqiqot logo copy.png" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- ------------------ -->
 
+    
+    
+    <meta name="description" content="Официальный сайт Ассоциации предприятий нефтегазовой индустрии Узбекистана (AONGI). Информация о деятельности, членах ассоциации, событиях и новостях индустрии.">
+    <meta name="keywords" content="AONGI, нефтегаз, Узбекистан, Ассоциация нефтегазовой индустрии, энергетика, газовая промышленность, нефть">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="canonical" href="domen/ru">
+    <meta name="language" content="ru">
+    
+
+    <meta name="description" content="O'zbekiston neft va gaz sanoati korxonalari assotsiatsiyasining (AONGI) rasmiy sayti. Assotsiatsiya faoliyati, a'zolari, voqealar va yangiliklar haqida ma'lumotlar.">
+    <meta name="keywords" content="AONGI, neft va gaz, O'zbekiston, neft sanoati, energetika, neft, gaz sanoati">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="canonical" href="domen">
+    <meta name="language" content="uz">
+    
+
+    <meta name="description" content="Official website of the Association of Oil and Gas Enterprises of Uzbekistan (AONGI). Information about activities, members, events, and news of the oil and gas industry.">
+    <meta name="keywords" content="AONGI, oil and gas, Uzbekistan, oil industry, energy, gas industry">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="canonical" href="domen/en">
+    <meta name="language" content="en">
+
+
+    <link rel="alternate" hreflang="ru" href="domen/ru" />
+    <link rel="alternate" hreflang="uz" href="domen" />
+    <link rel="alternate" hreflang="en" href="domen/en" />
     
 </head>
 
@@ -146,14 +178,14 @@
                                         
                                             <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
                                                 <ul class="p-4 space-y-1">
-                                                    <li><a href="{% url 'tenders' %}#tenders">{% trans 'Tenderlar' %}</a></li>
-                                                    <li><a href="{% url 'structure' %}#structure">{% trans 'Tashkiliy tuzilma' %}</a></li>
-                                                    <li><a href="{% url 'index' %}#allnews">{% trans 'Yangiliklar' %}</a></li>
-                                                    <li><a href="{% url 'index' %}#contact">{% trans 'Aloqa' %}</a></li>
-                                                    <li><a href=" {% url 'finance' %}#finances">{% trans "Moliyaviy ko'rsatkichlar" %}</a></li>
-                                                    <li><a href="{% url 'boshqaruv' %}#boshqaruv">{% trans "Boshqaruv" %}</a></li>
                                                     <li><a href="{% url 'index' %}#section_1">{% trans "Tashkilot tarixi" %}</a></li>
+                                                    <li><a href="{% url 'structure' %}#structure">{% trans 'Tashkiliy tuzilma' %}</a></li>
+                                                    <li><a href="{% url 'boshqaruv' %}#boshqaruv">{% trans "Boshqaruv" %}</a></li>
+                                                    <li><a href=" {% url 'finance' %}#finances">{% trans "Moliyaviy ko'rsatkichlar" %}</a></li>
+                                                    <li><a href="{% url 'index' %}#allnews">{% trans 'Yangiliklar' %}</a></li>
+                                                    <li><a href="{% url 'tenders' %}#tenders">{% trans 'Tenderlar' %}</a></li>
                                                     <li><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></li>
+                                                    <li><a href="{% url 'index' %}#contact">{% trans 'Aloqa' %}</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -207,8 +239,8 @@
                                             </div>
                                         </div>
                                         <li><a style="color: white;"  href="{% url 'department' %}#bolim">{% trans "Bo'limlar" %}</a></li>
-                                        <li><a style="color: white;"  href="{% url 'more_info' %}#ochiqM">{% trans "Ochiq a'lumotlar" %}</a></li>
-                                        <li><a style="color: white;" href="{% url 'vacancy' %}">{% trans "Vakantsiya" %}</a></li>
+                                        <li><a style="color: white;"  href="{% url 'more_info' %}#ochiqM">{% trans "Ochiq ma'lumotlar" %}</a></li>
+                                        <li><a style="color: white;" href="{% url 'vacancy' %}#vacancy">{% trans "Vakantsiya" %}</a></li>
                                         
 
                                     </ul>
@@ -255,7 +287,7 @@
     
     <style>
         .slide {
-            background-image: url('{% static "imorat/neft_gaz.jpeg" %}');
+            background-image: url('{% static "images/imorat/neft_gaz.jpeg" %}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -273,7 +305,7 @@
         /* Для устройств с высоким разрешением (Retina-дисплеи) */
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
             .slide {
-                background-image: url('{% static "images/bgimgasd.jpg" %}'); /* Изображение с высоким разрешением */
+                background-image: url('{% static "images/imorat/neft_gaz.jpeg" %}'); /* Изображение с высоким разрешением */
             }
         }
     </style>
@@ -310,9 +342,9 @@
     
         <!-- Social Box -->
         <ul class="social-box">
-            <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-instagram"></a></li>
-            <li><a href="https://www.instagram.com/imorat_development/" class="ion-social-facebook"></a></li>
-            <li><a href="https://t.me/freedom_architecture" class="fab fa-telegram"></a></li>
+            <li><a href="https://web.telegram.org/a/#1243118142" class="ion-social-instagram"></a></li>
+            <li><a href="https://web.telegram.org/a/#1243118142" class="ion-social-facebook"></a></li>
+            <li><a href="https://web.telegram.org/a/#1243118142" class="fab fa-telegram"></a></li>
 
 
         </ul>

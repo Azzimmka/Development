@@ -13,5 +13,6 @@ urlpatterns = [
     path('more_info/', more_info, name='more_info'),
     path('department/', department, name='department'),
     path('news/<slug:news_slug>/', news_detail, name='news_detail'),
+    path('department/<slug:slug>/', department_detail, name='department_detail'),
 
 ]

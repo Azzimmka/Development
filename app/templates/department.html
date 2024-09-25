@@ -211,25 +211,118 @@
 }
 
     
+
+/* From Uiverse.io by eslam-hany */ 
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Расстояние между карточками */
+    padding: 20px;
+}
+
+.cardU {
+    width: 1020px;
+    height: 120px;
+    background: mediumturquoise;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cardU a {
+    color: black;
+    text-decoration: none;
+}
+
+.cardU a:first-child {
+    position: relative;
+    z-index: 1;
+}
+
+.cardU .read-more {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: underline;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.cardU:hover .read-more {
+    opacity: 1;
+}
+
+/* Адаптация для мониторов */
+@media (min-width: 1024px) {
+    .card-container {
+        flex-direction: column; /* Одноколоночная структура на мониторах */
+    }
+
+    .cardU {
+        width: 1320px;
+        margin: 10px 0; /* Отступы между карточками */
+    }
+    .department-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 1; /* Количество строк (можно указать 1 или больше) */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 20px;
+    }
+}
+
+/* Адаптация для телефонов */
+@media (max-width: 768px) {
+    .cardU {
+        width: 90%; /* Уменьшение ширины для мобильных устройств */
+        height: auto;
+        font-size: 20px; /* Уменьшение размера текста */
+        padding: 20px;
+    }
+
+
+    .cardU .read-more {
+        bottom: 5px;
+        right: 10px;
+        font-size: 14px; /* Уменьшение размера текста для ссылок на мобильных */
+    }
+
+    /* Ограничение количества строк для заголовка */
+    .department-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 1; /* Количество строк (можно указать 1 или больше) */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 18px;
+    }
+}
+
 </style>
 <br>
 <h2 id="bolim" style="text-align: center; font-size: 60px;">{% trans "B'olimlar" %}</h2>
 <br><hr><br><br>
-<div class="main_butt">
-    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'index' %}">{% trans 'Asosiy sahifa' %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'tenders' %}#tenders">{% trans 'Tenderlar' %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'structure' %}#structure">{% trans 'Tashkiliy tuzilma' %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'index' %}#allnews">{% trans 'Yangiliklar' %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'index' %}#contact">{% trans 'Aloqa' %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a href=" {% url 'finance' %}#finances">{% trans "Moliyaviy ko'rsatkichlar" %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'boshqaruv' %}#boshqaruv">{% trans "Boshqaruv" %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'index' %}#section_1">{% trans "Tashkilot tarixi" %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'license' %}#license">{% trans "Akkreditsiya" %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a href="{% url 'person' %}#persons">{% trans "Ijro organi a'zolari" %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a style="color: white;"  href="{% url 'department' %}#bolim">{% trans "Bo'limlar" %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a style="color: white;"  href="{% url 'more_info' %}#ochiqM">{% trans "Ochiq a'lumotlar" %}</a></button>
-    <button style="padding-bottom: 30px;"  class="custom-button"><a style="color: white;" href="#">{% trans "Vakantsiya" %}</a></button>
+<div class="card-container">
+    {% for dep in departments %}
+    <div class="cardU">
+        <a class="department-title" href="{% url 'department_detail' dep.slug %}#dep">{{ dep.title }}</a>
+        <a href="{% url 'department_detail' dep.slug %}" class="read-more">{% trans "Ko'proq bilib olish" %}</a>
+    </div>
+    {% endfor %}
 </div>
+
 
 <br><br>
 

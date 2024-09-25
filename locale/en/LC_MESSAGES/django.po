@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-24 14:43+0000\n"
-"PO-Revision-Date: 2024-09-24 15:09+0000\n"
+"POT-Creation-Date: 2024-09-25 09:07+0000\n"
+"PO-Revision-Date: 2024-09-25 09:09+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,137 +19,157 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: app/models.py:11 app/models.py:49 app/models.py:139 app/models.py:154
+#: app/models.py:12 app/models.py:50 app/models.py:140 app/models.py:155
+#: app/models.py:172
 msgid "title"
 msgstr "Title"
 
-#: app/models.py:12 app/models.py:50 app/models.py:155
+#: app/models.py:13 app/models.py:51 app/models.py:156
 msgid "description"
 msgstr "Description"
 
-#: app/models.py:20
+#: app/models.py:21
 msgid "New"
 msgstr "New"
 
-#: app/models.py:21
+#: app/models.py:22
 msgid "News"
 msgstr "News"
 
-#: app/models.py:34
+#: app/models.py:35
 msgid "name"
 msgstr "name"
 
-#: app/models.py:35
+#: app/models.py:36
 msgid "department"
 msgstr "department"
 
-#: app/models.py:36
+#: app/models.py:37
 msgid "share_capital"
 msgstr "sharе capital"
 
-#: app/models.py:37
+#: app/models.py:38
 msgid "share_fund"
 msgstr "share fund"
 
-#: app/models.py:41
+#: app/models.py:42
 msgid "Person"
 msgstr "Person"
 
-#: app/models.py:42
+#: app/models.py:43
 msgid "Persons"
 msgstr "Persons"
 
-#: app/models.py:57
+#: app/models.py:58
 msgid "Tender"
 msgstr "Tender"
 
-#: app/models.py:58
+#: app/models.py:59
 msgid "Tenders"
 msgstr "Tenders"
 
-#: app/models.py:68
+#: app/models.py:69
 msgid "License"
 msgstr "License"
 
-#: app/models.py:69
+#: app/models.py:70
 msgid "Licenses"
 msgstr "Licenses"
 
-#: app/models.py:81
+#: app/models.py:82
 msgid "Year"
 msgstr "Year"
 
-#: app/models.py:82
+#: app/models.py:83
 msgid "Years"
 msgstr "Years"
 
-#: app/models.py:90
+#: app/models.py:91
 msgid "Показатель"
 msgstr "Indicator"
 
-#: app/models.py:91
+#: app/models.py:92
 msgid "Ед. изм."
 msgstr "Unit"
 
-#: app/models.py:97 app/models.py:98
+#: app/models.py:98 app/models.py:99
 msgid "FinancialData"
 msgstr " Financial Data"
 
-#: app/models.py:110 app/models.py:111
+#: app/models.py:111 app/models.py:112
 msgid "FinancialYearData"
 msgstr "Financial Year Data"
 
-#: app/models.py:119
+#: app/models.py:120
 msgid "F_I_O"
 msgstr "F I O"
 
-#: app/models.py:120
+#: app/models.py:121
 msgid "position"
 msgstr "Position"
 
-#: app/models.py:121
+#: app/models.py:122
 msgid "еducation"
 msgstr "Education"
 
-#: app/models.py:122
+#: app/models.py:123
 msgid "specialization"
 msgstr "Specialization"
 
-#: app/models.py:123 app/models.py:157
+#: app/models.py:124 app/models.py:158
 msgid "phone"
 msgstr "Phone number"
 
-#: app/models.py:124
+#: app/models.py:125
 msgid "admission_date"
 msgstr "Admission date "
 
-#: app/models.py:125
+#: app/models.py:126
 msgid "admission_time"
 msgstr "Admission time"
 
-#: app/models.py:130
+#: app/models.py:131
 msgid "Management"
 msgstr "Management"
 
-#: app/models.py:131
+#: app/models.py:132
 msgid "Managements"
 msgstr "Managements"
 
-#: app/models.py:145
+#: app/models.py:146
 msgid "MoreInfo"
 msgstr " Open data"
 
-#: app/models.py:146
+#: app/models.py:147
 msgid "MoreInfos"
 msgstr " Open data"
 
-#: app/models.py:160
+#: app/models.py:161
 msgid "Vacancy"
 msgstr "Vacancy"
 
-#: app/models.py:161
+#: app/models.py:162
 msgid "Vacancies"
 msgstr "Vacancies"
+
+#: app/models.py:173
+#| msgid "description"
+msgid "descriptions"
+msgstr "Description"
+
+#: app/models.py:175
+msgid "slug"
+msgstr "slug"
+
+#: app/models.py:188
+#| msgid "department"
+msgid "Department"
+msgstr "Department"
+
+#: app/models.py:189
+#| msgid "department"
+msgid "Departments"
+msgstr "Departments"
 
 #: app/templates/base.html:106 app/templates/base.html:242
 #: app/templates/includes/footer.html:20
@@ -160,68 +180,64 @@ msgstr "Logo"
 msgid "Toggle navigation"
 msgstr "Toggle navigation"
 
-#: app/templates/base.html:141 app/templates/department.html:219
-#: app/templates/includes/footer.html:26
+#: app/templates/base.html:141 app/templates/includes/footer.html:26
 msgid "Asosiy sahifa"
 msgstr "Home"
 
-#: app/templates/base.html:149 app/templates/department.html:220
-#: app/templates/includes/footer.html:30 app/templates/tenders.html:6
-msgid "Tenderlar"
-msgstr "Tenders"
+#: app/templates/base.html:149
+msgid "Tashkilot tarixi"
+msgstr "History of organization"
 
-#: app/templates/base.html:150 app/templates/department.html:221
-#: app/templates/includes/footer.html:31
+#: app/templates/base.html:150 app/templates/includes/footer.html:31
 msgid "Tashkiliy tuzilma"
 msgstr "Organizational structure"
 
-#: app/templates/base.html:151 app/templates/department.html:222
-#: app/templates/includes/footer.html:27
+#: app/templates/base.html:151
+msgid "Boshqaruv"
+msgstr "Management"
+
+#: app/templates/base.html:152 app/templates/includes/footer.html:32
+msgid "Moliyaviy ko'rsatkichlar"
+msgstr "Financial indicators"
+
+#: app/templates/base.html:153 app/templates/includes/footer.html:27
 #: app/templates/includes/news_detail.html:162
 #: app/templates/news_detail.html:164
 msgid "Yangiliklar"
 msgstr "News "
 
-#: app/templates/base.html:152 app/templates/department.html:223
-#: app/templates/includes/footer.html:28
-msgid "Aloqa"
-msgstr "Contacts "
+#: app/templates/base.html:154 app/templates/includes/footer.html:30
+#: app/templates/tenders.html:6
+msgid "Tenderlar"
+msgstr "Tenders"
 
-#: app/templates/base.html:153 app/templates/department.html:224
-#: app/templates/includes/footer.html:32
-msgid "Moliyaviy ko'rsatkichlar"
-msgstr "Financial indicators"
-
-#: app/templates/base.html:154 app/templates/department.html:225
-msgid "Boshqaruv"
-msgstr "Management"
-
-#: app/templates/base.html:155 app/templates/department.html:226
-msgid "Tashkilot tarixi"
-msgstr "History of organization"
-
-#: app/templates/base.html:156 app/templates/department.html:227
-#: app/templates/includes/footer.html:29 app/templates/license.html:9
+#: app/templates/base.html:155 app/templates/includes/footer.html:29
+#: app/templates/license.html:9
 msgid "Akkreditsiya"
 msgstr "Accreditation"
+
+#: app/templates/base.html:156 app/templates/includes/footer.html:28
+msgid "Aloqa"
+msgstr "Contacts "
 
 #: app/templates/base.html:200
 msgid "Aksiyadorlarga"
 msgstr "Shareholders"
 
-#: app/templates/base.html:205 app/templates/department.html:228
+#: app/templates/base.html:205
 msgid "Ijro organi a'zolari"
 msgstr "Members of the executive body"
 
-#: app/templates/base.html:209 app/templates/department.html:229
+#: app/templates/base.html:209
 msgid "Bo'limlar"
 msgstr "Departments"
 
-#: app/templates/base.html:210 app/templates/department.html:230
-msgid "Ochiq a'lumotlar"
+#: app/templates/base.html:210
+#| msgid "Ochiq a'lumotlar"
+msgid "Ochiq ma'lumotlar"
 msgstr "Open data "
 
-#: app/templates/base.html:211 app/templates/department.html:231
+#: app/templates/base.html:211
 msgid "Vakantsiya"
 msgstr "Vacancy"
 
@@ -233,16 +249,20 @@ msgstr "Information about the members of the executive body of the company"
 msgid "Ijro organi a'zosi"
 msgstr "Members of the executive body"
 
-#: app/templates/department.html:216
-#| msgid "Bo'limlar"
+#: app/templates/department.html:315
 msgid "B'olimlar"
 msgstr "Departments"
 
-#: app/templates/department.html:239
+#: app/templates/department.html:321
+#: app/templates/includes/news_detail.html:176
+msgid "Ko'proq bilib olish"
+msgstr "Learn more"
+
+#: app/templates/department.html:332
 msgid "Worker"
 msgstr "Worker"
 
-#: app/templates/department.html:243
+#: app/templates/department.html:336
 msgid ""
 "Neft va gaz konlarini tadqiq etish bo'limi neft va gaz qazib olish "
 "konlarida:"
@@ -250,19 +270,19 @@ msgstr ""
 "The department for the exploration of oil and gas fields at oil and gas "
 "extraction sites."
 
-#: app/templates/department.html:249 app/templates/department.html:300
+#: app/templates/department.html:342 app/templates/department.html:393
 msgid "ishlatilayotgan quduqlarning joriy mahsuldorlik xarakteristikalarini"
 msgstr "Current productivity characteristics of the wells in use."
 
-#: app/templates/department.html:253
+#: app/templates/department.html:346
 msgid "qazib olinayotgan gazning gaz-kondensat xarakteristikalarini"
 msgstr "Gas-condensate characteristics of the extracted gas."
 
-#: app/templates/department.html:257
+#: app/templates/department.html:350
 msgid "quduqlarning joriy suv ko'rsatgichlarini"
 msgstr "Current water indicators of the wells."
 
-#: app/templates/department.html:261
+#: app/templates/department.html:354
 msgid ""
 "quduqlarning qatlam bosimini hamda qazib olinayotgan neftning suvlanish "
 "darajasi"
@@ -270,44 +290,48 @@ msgstr ""
 "Formation pressure of the wells and the water content level of the extracted"
 " oil."
 
-#: app/templates/department.html:269
+#: app/templates/department.html:362
 msgid "Image 1"
 msgstr "Image 1"
 
-#: app/templates/department.html:273
+#: app/templates/department.html:366
 msgid ""
 "Gazlar, gaz kondensatlari, neftlar va qatlam suvlari tadqiq etish masalasi."
 msgstr ""
 "Issues related to the study of gases, gas condensates, oils, and formation "
 "waters."
 
-#: app/templates/department.html:277
+#: app/templates/department.html:370
 msgid "Image 2"
 msgstr "Image 2"
 
-#: app/templates/department.html:281
+#: app/templates/department.html:374
 msgid ""
 "Gazni tayyorlash, qayta ishlash va atrof muhitni muxofaza qilish boʻlimi."
 msgstr ""
 "Department of Gas Preparation, Processing, and Environmental Protection."
 
-#: app/templates/department.html:294
+#: app/templates/department.html:387
 msgid "Kon uskunalari va quvurlarning ingibitorlik himoyasi bo‘limida"
 msgstr ""
 "Department of Inhibitory Protection of Mining Equipment and Pipelines."
 
-#: app/templates/department.html:304
+#: app/templates/department.html:397
 msgid "metallning vodorodlanish darajasini"
 msgstr "Hydrogenation level of the metal."
 
-#: app/templates/department.html:308
+#: app/templates/department.html:401
 msgid "qo‘llanilayotgan ingibitorlarning samaradorligini aniqlash"
 msgstr "Determining the effectiveness of the applied inhibitors."
 
-#: app/templates/department.html:312
+#: app/templates/department.html:405
 msgid ""
 "tuproqning metallni yemirilishi xavfi yuqori bo‘lgan joylarini aniqlash"
 msgstr "Identifying areas with a high risk of metal corrosion in the soil."
+
+#: app/templates/department_detail.html:17
+msgid "Изображение отсутствует"
+msgstr "Image not found "
 
 #: app/templates/finance.html:61
 msgid ""
@@ -334,10 +358,6 @@ msgstr "Published"
 #: app/templates/news_detail.html:174
 msgid "Davomini o'qish"
 msgstr "Read more"
-
-#: app/templates/includes/news_detail.html:176
-msgid "Ko'proq bilib olish"
-msgstr "Learn more"
 
 #: app/templates/index.html:19
 msgid "+10 yil tajriba"
@@ -634,7 +654,6 @@ msgstr "PDF is unavailable."
 
 #: app/templates/vacancy.html:7 app/templates/vacancy.html:13
 #: app/templates/vacancy.html:14
-#| msgid "Vakantsiya"
 msgid "Vakansiya"
 msgstr "Vacancy"
 

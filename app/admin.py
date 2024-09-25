@@ -23,13 +23,6 @@ class TendersAdmin(TranslatableAdmin):
 class NewsAdmin(TranslatableAdmin):
     exclude = ('created',)  # Исключаем поле 'created' из формы
 
-    def save_model(self, request, obj, form, change):
-        # Генерируем slug на основе title, если он не установлен
-        if not obj.slug:
-            obj.slug = slugify(obj.title)
-        super().save_model(request, obj, form, change)
-
-
 
 class FinancialYearDataInline(admin.TabularInline):
     model = FinancialYearData
@@ -50,3 +43,15 @@ class MoreInfoAdmin(TranslatableAdmin):
 @admin.register(Vacancy)
 class VacancyAdmin(TranslatableAdmin):
     list_display = ('title', 'description')
+
+from django.contrib import admin
+from .models import Department
+from parler.admin import TranslatableAdmin
+
+@admin.register(Department)
+class DepartmentAdmin(TranslatableAdmin):
+    list_display = ('title', 'slug')
+    
+    # Делаем поле slug только для чтения в форме
+    readonly_fields = ('slug',)
+    
